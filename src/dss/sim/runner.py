@@ -38,7 +38,7 @@ def _sensor_cfg(scn: dict, key: str, default: str) -> dict:
 
 def simulate(scn: dict, seed: int, surface_z=None, gt_hz: float = 100.0) -> SimOutput:
     surface_z = surface_z or flat_surface(scn.get("ground_z", 0.0))
-    traj = trajectory.from_config(scn["trajectory"])
+    traj = trajectory.from_config(scn["trajectory"], ground_fn=surface_z)
     out = SimOutput(scn, seed, traj)
     enabled = scn.get("enable", ["imu", "baro", "mag", "gnss", "lidar", "flow"])
     faults = scn.get("faults", {})

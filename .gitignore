@@ -222,3 +222,4 @@ __marimo__/
 /runs/
 *.rrd
 .DS_Store
+MUJOCO_LOG.TXT

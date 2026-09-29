@@ -114,6 +114,13 @@ def route(
     turn_wavelength_m: float = 1000.0,
     ground_z: float = 0.0,
     knot_hz: float = 20.0,
+    ground_fn=None,
+    terrain_smooth_m: float = 80.0,
+    yaw_wobble_rad: float = 0.0,
+    yaw_wobble_hz: float = 0.0,
+    turn_start_m: float = 0.0,
+    turn_len_m: float = 0.0,
+    turn_delta_rad: float = 0.0,
 ) -> Trajectory:
     """S-turn route: static init, climb, cruise at ``speed`` for ``length_m``, descend, land."""
     cruise_dist = length_m - speed * t_ramp  # two septic ramps each cover v*t_ramp/2
@@ -132,12 +139,31 @@ def route(
     ds = 0.05
     sg = np.arange(0.0, length_m + 50.0, ds)
     psi_g = heading0 + turn_amp_rad * np.sin(2 * np.pi * sg / turn_wavelength_m)
+    if turn_len_m > 0:  # smooth heading change (e.g. a U-turn) between turn_start_m and +turn_len_m
+        psi_g = psi_g + turn_delta_rad * smoothstep7((sg - turn_start_m) / turn_len_m)
     xg = np.concatenate([[0.0], np.cumsum(0.5 * (np.cos(psi_g[1:]) + np.cos(psi_g[:-1])) * ds)])
     yg = np.concatenate([[0.0], np.cumsum(0.5 * (np.sin(psi_g[1:]) + np.sin(psi_g[:-1])) * ds)])
     x = np.interp(s, sg, xg)
     y = np.interp(s, sg, yg)
     yaw = np.interp(s, sg, psi_g)
-    z = ground_z + agl_m * (_ramp(tt, t_takeoff, t_climb_end) - _ramp(tt, t_desc0, t_land))
+    if yaw_wobble_rad:
+        env = _ramp(tt, t_accel, t_accel + t_ramp) - _ramp(tt, t_decel, t_stop)
+        yaw = yaw + yaw_wobble_rad * env * np.sin(2 * np.pi * yaw_wobble_hz * tt)
+    if ground_fn is not None:
+        # terrain following: ground height along the path, Gaussian-smoothed in arc length
+        from scipy.ndimage import gaussian_filter1d
+
+        sc = np.arange(0.0, length_m + 50.0, 1.0)
+        gc = ground_fn(np.interp(sc, sg, xg), np.interp(sc, sg, yg))
+        gc = gaussian_filter1d(gc, terrain_smooth_m, mode="nearest")
+        gz = np.interp(s, sc, gc)
+        # takeoff and touchdown points sit exactly on the (unsmoothed) ground
+        gz = gz + (ground_fn(np.array([0.0]), np.array([0.0]))[0] - gc[0]) * (1 - _ramp(tt, t_takeoff, t_climb_end))
+        ge = ground_fn(np.array([x[-1]]), np.array([y[-1]]))[0]
+        gz = gz + (ge - np.interp(s[-1], sc, gc)) * _ramp(tt, t_desc0, t_land)
+    else:
+        gz = ground_z
+    z = gz + agl_m * (_ramp(tt, t_takeoff, t_climb_end) - _ramp(tt, t_desc0, t_land))
     traj = Trajectory(tt, np.stack([x, y, z], axis=1), yaw)
     traj.events = {  # type: ignore[attr-defined]
         "takeoff": t_takeoff,
@@ -151,9 +177,11 @@ def route(
     return traj
 
 
-def from_config(cfg: dict) -> Trajectory:
+def from_config(cfg: dict, ground_fn=None) -> Trajectory:
     kind = cfg.get("kind", "route")
-    params = {k: v for k, v in cfg.items() if k != "kind"}
+    params = {k: v for k, v in cfg.items() if k not in ("kind", "terrain")}
+    if kind == "route" and ground_fn is not None and cfg.get("terrain", False):
+        params["ground_fn"] = ground_fn
     if kind == "static":
         return static(**params)
     if kind == "route":

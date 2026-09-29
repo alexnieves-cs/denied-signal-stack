@@ -293,7 +293,10 @@ struct Server {
       }
       msg.sensor_ids.push_back(cam);
       msg.images.push_back(img);
-      msg.masks.push_back(cv::Mat::zeros(img.rows, img.cols, CV_8UC1));
+      if (params->use_mask && params->masks.count(static_cast<size_t>(cam)) && params->masks.at(cam).size() == img.size())
+        msg.masks.push_back(params->masks.at(cam));
+      else
+        msg.masks.push_back(cv::Mat::zeros(img.rows, img.cols, CV_8UC1));
     }
     if (r.i != r.n) return reply_state(ST_BAD_REQUEST);
     if (ncams == 2 && msg.sensor_ids[0] == msg.sensor_ids[1]) return reply_state(ST_BAD_REQUEST);
