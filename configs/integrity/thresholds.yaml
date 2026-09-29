@@ -1,0 +1,15 @@
+# Frozen GNSS-gate thresholds (commit before the first suite run)
+cusum_gm_inflation: 2.0
+gm_sigma_h: 1.27
+gm_tau_s: 60.0
+gps_vel_sigma: 0.05
+pos_h: 12.0
+pos_k: 2.0
+pregate: 13.82
+probation_s: 35.0
+ref_vel_floor: 0.08
+sep_K: 5.0
+sigma_ref_max: 5.0
+suspect_to_reject_s: 1.0
+vel_h: 10.0
+vel_k: 2.0

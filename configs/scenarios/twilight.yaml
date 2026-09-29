@@ -1,0 +1,4 @@
+name: twilight
+extends: scenarios/_flagstaff_base.yaml
+jam: {t0: 40.0, t_full: 45.0, drop_dbhz: 30.0}
+camera: {enabled: true, rate_hz: 20.0, events: [{t0: 0.0, t1: 1000.0, scale: 0.13}]}

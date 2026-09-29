@@ -1,0 +1,6 @@
+# SPEC definition of done / PLAN F15 timeline
+name: demo
+extends: scenarios/_flagstaff_base.yaml
+jam: {t0: 55.0, t_full: 60.0, drop_dbhz: 30.0}                       # jam ramp 55-60 s, outage from 60 s
+spoof: {kind: dragoff, t0: 120.0, rate_mps: 1.0, drag_delay_s: 5.0, dir: [0.0, 1.0, 0.0], seamless: true}  # capture 120 s, drag 125 s
+camera: {enabled: true, rate_hz: 20.0, events: [{t0: 150.0, t1: 195.0, scale: 0.03, ramp_s: 2.0}]}  # forest canopy

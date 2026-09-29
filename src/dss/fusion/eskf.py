@@ -33,20 +33,34 @@ class ImuNoise:
 
 
 class ESKF:
-    def __init__(self, p, v, r, bg, ba, P0: np.ndarray, noise: ImuNoise, g_w: np.ndarray = G_W):
+    def __init__(self, p, v, r, bg, ba, P0: np.ndarray, noise: ImuNoise, g_w: np.ndarray = G_W, n_aug: int = 0,
+                 aug_sigma: float = 0.15, aug_tau: float = 60.0):
         self.p = np.array(p, dtype=float)
         self.v = np.array(v, dtype=float)
         self.R = np.array(r, dtype=float)
         self.bg = np.array(bg, dtype=float)
         self.ba = np.array(ba, dtype=float)
-        self.P = np.array(P0, dtype=float)
+        self.nx = 15 + n_aug
+        self.n_aug = n_aug
+        P = np.array(P0, dtype=float)
+        if P.shape[0] < self.nx:
+            Pa = np.zeros((self.nx, self.nx))
+            Pa[:15, :15] = P
+            Pa[15:, 15:] = np.eye(n_aug) * aug_sigma**2
+            P = Pa
+        self.P = P
+        self.b_aug = np.zeros(n_aug)  # augmented states: VIO velocity bias (Gauss-Markov)
+        self.aug_sigma, self.aug_tau = aug_sigma, aug_tau
         self.n = noise
         self.g = np.asarray(g_w, dtype=float)
         self.last_imu: tuple[np.ndarray, np.ndarray] | None = None
+        self.q_vel_extra = 0.0  # m/s/sqrt(s): unmodelled correlated aiding error (e.g. VIO velocity bias)
 
     def copy(self) -> ESKF:
-        e = ESKF(self.p, self.v, self.R, self.bg, self.ba, self.P, self.n, self.g)
+        e = ESKF(self.p, self.v, self.R, self.bg, self.ba, self.P, self.n, self.g, self.n_aug, self.aug_sigma, self.aug_tau)
+        e.b_aug = self.b_aug.copy()
         e.last_imu = self.last_imu
+        e.q_vel_extra = self.q_vel_extra
         return e
 
     # --- propagation -------------------------------------------------------------------
@@ -63,15 +77,21 @@ class ESKF:
         dr = so3_exp(w * dt)
         self.R = r @ dr
         # error-state transition (first order in dt, exact rotation block)
-        F = np.eye(15)
+        nx = self.nx
+        F = np.eye(nx)
         F[IP, IV] = np.eye(3) * dt
         F[IV, IT] = -r @ skew(a) * dt
         F[IV, IBA] = -r * dt
         F[IT, IT] = dr.T
         F[IT, IBG] = -np.eye(3) * dt
-        Q = np.zeros((15, 15))
+        Q = np.zeros((nx, nx))
         n = self.n
-        Q[IV, IV] = np.eye(3) * n.sigma_a**2 * dt
+        if self.n_aug:
+            phi = np.exp(-dt / self.aug_tau)
+            F[15:, 15:] = np.eye(self.n_aug) * phi
+            Q[15:, 15:] = np.eye(self.n_aug) * self.aug_sigma**2 * (1 - phi**2)
+            self.b_aug = self.b_aug * phi
+        Q[IV, IV] = np.eye(3) * (n.sigma_a**2 + self.q_vel_extra**2) * dt
         Q[IT, IT] = np.eye(3) * n.sigma_g**2 * dt
         Q[IBG, IBG] = np.eye(3) * n.sigma_bg**2 * dt
         Q[IBA, IBA] = np.eye(3) * n.sigma_ba**2 * dt
@@ -93,7 +113,7 @@ class ESKF:
             return False, nis
         K = self.P @ H.T @ Si
         dx = K @ r
-        ikh = np.eye(15) - K @ H
+        ikh = np.eye(self.nx) - K @ H
         self.P = ikh @ self.P @ ikh.T + K @ Rm @ K.T
         self.P = 0.5 * (self.P + self.P.T)
         self.inject(dx)
@@ -105,26 +125,44 @@ class ESKF:
         self.R = self.R @ so3_exp(dx[IT])
         self.bg = self.bg + dx[IBG]
         self.ba = self.ba + dx[IBA]
+        if self.n_aug:
+            self.b_aug = self.b_aug + dx[15:]
         # reset Jacobian G = I - 0.5 skew(dtheta) (first order); negligible for small dtheta
-        G = np.eye(15)
+        G = np.eye(self.nx)
         G[IT, IT] = np.eye(3) - 0.5 * skew(dx[IT])
         self.P = G @ self.P @ G.T
 
     def update_position(self, z: np.ndarray, cov: np.ndarray, gate_chi2=None, dims=(0, 1, 2)):
         dims = list(dims)
-        H = np.zeros((len(dims), 15))
+        H = np.zeros((len(dims), self.nx))
         for i, d in enumerate(dims):
             H[i, d] = 1.0
         return self.update(np.asarray(z)[dims] - self.p[dims] if len(z) == 3 else np.asarray(z) - self.p[dims],
                            H, np.asarray(cov), gate_chi2)
 
-    def update_velocity(self, z: np.ndarray, cov: np.ndarray, gate_chi2=None):
-        H = np.zeros((3, 15))
+    def update_velocity(self, z: np.ndarray, cov: np.ndarray, gate_chi2=None, with_bias: bool = False, dims=(0, 1, 2)):
+        dims = list(dims)
+        H = np.zeros((3, self.nx))
         H[:, IV] = np.eye(3)
-        return self.update(z - self.v, H, cov, gate_chi2)
+        pred = self.v.copy()
+        if with_bias and self.n_aug:
+            H[:, 15:18] = np.eye(3)
+            pred = pred + self.b_aug[:3]
+        H = H[dims]
+        return self.update((z - pred)[dims], H, np.asarray(cov)[np.ix_(dims, dims)], gate_chi2)
+
+    def reset_vio_bias_correlated(self):
+        """A VIO seeded with this filter's velocity inherits its velocity error: b = -dv exactly."""
+        if not self.n_aug:
+            return
+        self.b_aug[:3] = 0.0
+        Pvv = self.P[IV, IV].copy()
+        self.P[15:18, :] = -self.P[IV, :]
+        self.P[:, 15:18] = -self.P[:, IV]
+        self.P[15:18, 15:18] = Pvv + np.eye(3) * 1e-4
 
     def update_altitude(self, z: float, var: float, gate_chi2=None):
-        H = np.zeros((1, 15))
+        H = np.zeros((1, self.nx))
         H[0, 2] = 1.0
         return self.update(np.array([z - self.p[2]]), H, np.array([[var]]), gate_chi2)
 
@@ -132,7 +170,7 @@ class ESKF:
         """Yaw about world z. With a local attitude error, d(yaw)/d(dtheta) = e_z^T R (third row)."""
         yaw = np.arctan2(self.R[1, 0], self.R[0, 0])
         r = (yaw_meas - yaw + np.pi) % (2 * np.pi) - np.pi
-        H = np.zeros((1, 15))
+        H = np.zeros((1, self.nx))
         H[0, IT] = self.R[2, :]
         return self.update(np.array([r]), H, np.array([[var]]), gate_chi2)
 

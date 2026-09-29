@@ -1,0 +1,4 @@
+# Seamless capture of a TRUSTED receiver at 100 s, then a 1 m/s drag-off
+name: dragoff_spoof
+extends: scenarios/_flagstaff_base.yaml
+spoof: {kind: dragoff, t0: 100.0, rate_mps: 1.0, drag_delay_s: 0.0, dir: [0.6, 0.8, 0.0], seamless: true}

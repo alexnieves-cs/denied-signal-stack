@@ -1,0 +1,7 @@
+# Yaw oscillation up to ~115 deg/s during cruise, faster flight; GPS denied from 30 s
+name: aggressive
+extends: scenarios/_flagstaff_base.yaml
+trajectory: {kind: route, terrain: true, length_m: 2000.0, agl_m: 100.0, speed: 12.0, heading0: 3.14159265, t_takeoff: 5.0,
+             yaw_wobble_rad: 0.8, yaw_wobble_hz: 0.4, turn_amp_rad: 0.9, turn_wavelength_m: 600.0}
+jam: {t0: 30.0, t_full: 30.0, drop_dbhz: 30.0}
+camera: {enabled: true, rate_hz: 20.0, events: [], photometric: {exposure_s: 0.008}}

@@ -6,7 +6,6 @@ Tokens last ~45 min, so each crop is extracted once into data/geo/<aoi>/ as .npz
 from __future__ import annotations
 
 import json
-from pathlib import Path
 
 import numpy as np
 
@@ -77,7 +76,8 @@ def fetch(aoi_name: str, epochs=(2023,), res_img: float = 0.3, res_map: float = 
     return info
 
 
-def load_image(aoi_name: str, epoch: int) -> tuple[Raster, dict]:
+def load_image(aoi_name: str, epoch) -> tuple[Raster, dict]:
+    """epoch: 2023 / 2021 / 2019 / 2017, or e.g. "2017_coreg" (co-registered to the render epoch, dss.geo.coreg)."""
     z = np.load(GEO / aoi_name / f"naip_{epoch}.npz")
     return Raster(z["rgbn"], float(z["xmin"]), float(z["ymax"]), float(z["res"])), {"item": str(z["item"]), "date": str(z["date"])}
 

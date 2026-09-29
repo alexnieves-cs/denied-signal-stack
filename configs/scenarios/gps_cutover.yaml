@@ -1,0 +1,3 @@
+name: gps_cutover
+extends: scenarios/_flagstaff_base.yaml
+jam: {t0: 100.0, t_full: 100.0, drop_dbhz: 35.0}

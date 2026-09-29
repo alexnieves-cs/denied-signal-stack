@@ -1,0 +1,4 @@
+# Phase 2 gate scenario: no GPS for the whole flight, map aiding on, no forest darkness
+name: denied_route
+extends: scenarios/_flagstaff_base.yaml
+jam: {t0: 0.0, t_full: 0.0, drop_dbhz: 30.0}

@@ -1,0 +1,4 @@
+# Phase 2 ratio baseline: same as denied_route but map aiding off (VIO + IMU + baro + lidar + mag only)
+name: denied_vio_only
+extends: scenarios/denied_route.yaml
+fusion: {map_aiding: false}

@@ -84,3 +84,32 @@ Files:
 - `reports/phase1/*`, `tests/{vio,sim/test_render.py}`
 
 Risks: sim VIO position covariance is optimistic (spike NEES ≈9), so fusion uses a VIO-bias state instead of trusting ovserver's covariance.
+
+## Phase 2: orthoimagery aiding + fusion backend (2026-09-29 00:45)
+**Verdict: PARTIAL, core gates PASS.**
+- Pass: fix quality, bounded error, VIO/aided ratio and honest covariance, all on 5 seeds.
+- Cut: GTSAM backend, full-scene buildings/trees, ALTO real-data check, the 25-seed N, and the <1 m co-registration gate.
+
+| Exit | Result | Evidence |
+|---|---|---|
+| 1 Geo | **PARTIAL**. STAC returns 7 NAIP epochs; map epoch = **2017-06-27** (same season as the 2023-06 render; 6-year gap). Raw epoch-to-epoch misregistration is 3–16 m, locally systematic: 2021 is off by (−7, +11) m over the downtown/U-turn legs. Phase-correlation residual 3.6 m (2017) / 5.1 m (2021), **above the <1 m gate**. The fix is a dense patch-NCC displacement field (40 m grid, robust median), used to warp 2017 onto the render epoch (PLAN 2.1 "co-register the epochs"). R13 note: map geometry is now tied to the render epoch; content is still 6 years apart | `reports/phase2/coregistration.json`, `src/dss/geo/coreg.py` |
+| 2 Tier-A speed | **PASS**: 96² patch over a ≤400² window at 1 m takes <20 ms (tested). A 512² template over a 712² window is <0.5 s, i.e. the literal 512² gate is not met; the operational patch is 96² | `tests/aiding/test_matcher.py` |
+| 3 Fix quality | **PASS** (textured segments, all suite scenarios, cross-epoch): 4,124 attempts, 3,744 accepted; **median 1.02 m, p95 3.15 m, success 89.9%, false-accept 0%**. Fix NIS mean 0.23: covariance conservative, by design, for spatially correlated registration error. ALTO not run (CUT). Time-to-first-fix after σ_REF>50 m: post-forest first accepted fix arrives 13–16 s after light returns | `reports/phase2/gates.json` |
+| 4 Bounded error | **PASS** (denied_route, no GPS for the whole flight, 5 seeds, real OpenVINS): per-seed textured RMSE 1.07–1.54 m (≤5), pooled p99 4.27 m (≤10), median 0.98 m (≤3), **0 HMI epochs**, RMSE_VIO/RMSE_aided median **5.8** (≥3; every seed ≥3.3). REF RMSE 1.2–2.1 m (≤3.4). Vertical p95 0.78 m; touchdown vertical 0.08–1.5 m | same |
+| 5 Honest covariance | **PASS at N=5** (PLAN: N=25): REF 3-DoF position ANEES 4.31, inside [1.25, 5.50] | same |
+| 6 Robustness | **CUT/REPLACED**. GTSAM IFLS not used: an **18-state ES-EKF** (15 INS + 3 VIO velocity-bias Gauss-Markov) is the backend, behind the same `NavFilter` interface; outage mode is IMU + baro + lidar + mag coasting. No IndeterminateSystem risk. p95 update cost is far below 20 ms (fusion totals ≈7 s CPU per 278 s run) | `src/dss/fusion/*` |
+| 7 Full scene | **CUT**: no buildings/trees meshes; the "forest" is photometric canopy darkness over NAIP forest texture | — |
+| 8 Budget | **PASS** | — |
+
+Design decisions made during this phase (all logged in code docstrings):
+- Map fixes: χ²₂ ≤ 9.21 gate. After a >15 s gap they need 3 pairwise-consistent fixes with peak ratio ≥1.8. Consensus relocalization runs when ≥4 strong rejected fixes agree.
+- Fix covariance = peak curvature + 1.5 m floor + 1 m registration + tilt term, ×2 for spatial correlation.
+- Orthorectification is per-pixel onto the DEM.
+- GPS is de-weighted ×20 at 1 Hz for its τ=60 s coloured error.
+- VIO: horizontal velocity only, with a bias state reset on re-anchor.
+- The 2021 epoch was tried first and abandoned for its ~10–16 m systematic misregistration; 2017 co-registered is used.
+
+Forest leg (reported separately, as the PLAN requires): the 45 s dark segment coasts on IMU + baro + lidar + mag.
+- Horizontal error reaches 25–66 m (median 2–12 m over the segment).
+- VIO FAILED is announced 2.0 s after the canopy starts (ramp 2 s).
+- After light returns, REF is within 0.7–2.8 m of truth 10 s after the first accepted fix.

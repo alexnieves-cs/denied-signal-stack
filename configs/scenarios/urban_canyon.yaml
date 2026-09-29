@@ -1,0 +1,4 @@
+# NLOS multipath bias injected on GPS through the downtown leg (sky-mask geometry not modelled; see LEDGER)
+name: urban_canyon
+extends: scenarios/_flagstaff_base.yaml
+nlos: {t0: 70.0, t1: 130.0, bias_m: [14.0, -9.0, 20.0]}
