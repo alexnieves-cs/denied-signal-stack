@@ -1,0 +1,226 @@
+{
+ "ref_valid_logs": {
+  "step 20 m": {
+   "segments": 140,
+   "detected": 140,
+   "censored": 0,
+   "p50_latency_s": 0.0,
+   "p95_latency_s": 15.0,
+   "p95_from_detectable_s": 15.0,
+   "max_offset_at_flag_m": 20.0,
+   "envelope_s": 1.2,
+   "pass_envelope": false
+  },
+  "0.1 m/s": {
+   "segments": 140,
+   "detected": 123,
+   "censored": 17,
+   "p50_latency_s": 74.2,
+   "p95_latency_s": 132.39999999999998,
+   "p95_from_detectable_s": 1.2000000000000028,
+   "max_offset_at_flag_m": 13.920500000000004,
+   "envelope_s": null,
+   "pass_envelope": true
+  },
+  "0.3 m/s": {
+   "segments": 140,
+   "detected": 138,
+   "censored": 2,
+   "p50_latency_s": 27.0,
+   "p95_latency_s": 38.60000000000001,
+   "p95_from_detectable_s": -6.400000000000006,
+   "max_offset_at_flag_m": 32.10150000000001,
+   "envelope_s": null,
+   "pass_envelope": true
+  },
+  "0.5 m/s": {
+   "segments": 140,
+   "detected": 138,
+   "censored": 2,
+   "p50_latency_s": 17.0,
+   "p95_latency_s": 25.549999999999997,
+   "p95_from_detectable_s": -1.679999999999993,
+   "max_offset_at_flag_m": 18.80250000000001,
+   "envelope_s": 35.0,
+   "pass_envelope": false
+  },
+  "1.0 m/s": {
+   "segments": 140,
+   "detected": 140,
+   "censored": 0,
+   "p50_latency_s": 2.0,
+   "p95_latency_s": 15.0,
+   "p95_from_detectable_s": 2.6000000000000085,
+   "max_offset_at_flag_m": 24.405000000000005,
+   "envelope_s": 20.0,
+   "pass_envelope": true
+  },
+  "2.0 m/s": {
+   "segments": 140,
+   "detected": 140,
+   "censored": 0,
+   "p50_latency_s": 0.0,
+   "p95_latency_s": 15.0,
+   "p95_from_detectable_s": 8.799999999999997,
+   "max_offset_at_flag_m": 48.81000000000001,
+   "envelope_s": 8.0,
+   "pass_envelope": false
+  },
+  "3.0 m/s": {
+   "segments": 140,
+   "detected": 140,
+   "censored": 0,
+   "p50_latency_s": 0.0,
+   "p95_latency_s": 15.0,
+   "p95_from_detectable_s": 10.799999999999997,
+   "max_offset_at_flag_m": 73.215,
+   "envelope_s": null,
+   "pass_envelope": true
+  },
+  "0.01 m/s^2": {
+   "segments": 140,
+   "detected": 135,
+   "censored": 5,
+   "p50_latency_s": 39.0,
+   "p95_latency_s": 59.63999999999992,
+   "p95_from_detectable_s": 9.339999999999925,
+   "max_offset_at_flag_m": 57.25035012500003,
+   "envelope_s": null,
+   "pass_envelope": true
+  },
+  "0.05 m/s^2": {
+   "segments": 140,
+   "detected": 138,
+   "censored": 2,
+   "p50_latency_s": 16.799999999999997,
+   "p95_latency_s": 21.460000000000022,
+   "p95_from_detectable_s": -0.9199999999999751,
+   "max_offset_at_flag_m": 35.35340062500004,
+   "envelope_s": null,
+   "pass_envelope": true
+  },
+  "0.2 m/s^2": {
+   "segments": 140,
+   "detected": 140,
+   "censored": 0,
+   "p50_latency_s": 6.0,
+   "p95_latency_s": 15.0,
+   "p95_from_detectable_s": 3.799999999999997,
+   "max_offset_at_flag_m": 59.56040250000001,
+   "envelope_s": null,
+   "pass_envelope": true
+  }
+ },
+ "ref_degraded_logs_blind_spot": {
+  "step 20 m": {
+   "segments": 20,
+   "detected": 0,
+   "censored": 20,
+   "p50_latency_s": null,
+   "p95_latency_s": null,
+   "p95_from_detectable_s": null,
+   "max_offset_at_flag_m": null,
+   "envelope_s": 1.2,
+   "pass_envelope": false
+  },
+  "0.1 m/s": {
+   "segments": 20,
+   "detected": 0,
+   "censored": 20,
+   "p50_latency_s": null,
+   "p95_latency_s": null,
+   "p95_from_detectable_s": null,
+   "max_offset_at_flag_m": null,
+   "envelope_s": null,
+   "pass_envelope": true
+  },
+  "0.3 m/s": {
+   "segments": 20,
+   "detected": 0,
+   "censored": 20,
+   "p50_latency_s": null,
+   "p95_latency_s": null,
+   "p95_from_detectable_s": null,
+   "max_offset_at_flag_m": null,
+   "envelope_s": null,
+   "pass_envelope": true
+  },
+  "0.5 m/s": {
+   "segments": 20,
+   "detected": 0,
+   "censored": 20,
+   "p50_latency_s": null,
+   "p95_latency_s": null,
+   "p95_from_detectable_s": null,
+   "max_offset_at_flag_m": null,
+   "envelope_s": 35.0,
+   "pass_envelope": false
+  },
+  "1.0 m/s": {
+   "segments": 20,
+   "detected": 0,
+   "censored": 20,
+   "p50_latency_s": null,
+   "p95_latency_s": null,
+   "p95_from_detectable_s": null,
+   "max_offset_at_flag_m": null,
+   "envelope_s": 20.0,
+   "pass_envelope": false
+  },
+  "2.0 m/s": {
+   "segments": 20,
+   "detected": 0,
+   "censored": 20,
+   "p50_latency_s": null,
+   "p95_latency_s": null,
+   "p95_from_detectable_s": null,
+   "max_offset_at_flag_m": null,
+   "envelope_s": 8.0,
+   "pass_envelope": false
+  },
+  "3.0 m/s": {
+   "segments": 20,
+   "detected": 0,
+   "censored": 20,
+   "p50_latency_s": null,
+   "p95_latency_s": null,
+   "p95_from_detectable_s": null,
+   "max_offset_at_flag_m": null,
+   "envelope_s": null,
+   "pass_envelope": true
+  },
+  "0.01 m/s^2": {
+   "segments": 20,
+   "detected": 0,
+   "censored": 20,
+   "p50_latency_s": null,
+   "p95_latency_s": null,
+   "p95_from_detectable_s": null,
+   "max_offset_at_flag_m": null,
+   "envelope_s": null,
+   "pass_envelope": true
+  },
+  "0.05 m/s^2": {
+   "segments": 20,
+   "detected": 0,
+   "censored": 20,
+   "p50_latency_s": null,
+   "p95_latency_s": null,
+   "p95_from_detectable_s": null,
+   "max_offset_at_flag_m": null,
+   "envelope_s": null,
+   "pass_envelope": true
+  },
+  "0.2 m/s^2": {
+   "segments": 20,
+   "detected": 0,
+   "censored": 20,
+   "p50_latency_s": null,
+   "p95_latency_s": null,
+   "p95_from_detectable_s": null,
+   "max_offset_at_flag_m": null,
+   "envelope_s": null,
+   "pass_envelope": true
+  }
+ }
+}

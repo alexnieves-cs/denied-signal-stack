@@ -1,0 +1,169 @@
+{
+ "health": [
+  [
+   0.0,
+   "RANGE",
+   "UNAVAILABLE",
+   ""
+  ],
+  [
+   0.0,
+   "GPS",
+   "PROBATION",
+   "fix acquired"
+  ],
+  [
+   0.05,
+   "VIO",
+   "FAILED",
+   "dark"
+  ],
+  [
+   0.05,
+   "MAP",
+   "DISABLED",
+   "illumination below threshold"
+  ],
+  [
+   6.8500000000000005,
+   "RANGE",
+   "OK",
+   ""
+  ],
+  [
+   9.450000000000001,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   35.0,
+   "GPS",
+   "TRUSTED",
+   "probation passed"
+  ],
+  [
+   42.400000000000006,
+   "GPS",
+   "UNAVAILABLE",
+   "no fix"
+  ],
+  [
+   190.95000000000002,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   191.95000000000002,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   195.55,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   196.55,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   198.95000000000002,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   199.95000000000002,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   203.75,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   204.75,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   208.15,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   209.15,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   217.55,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   218.55,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   235.35000000000002,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   236.35000000000002,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   270.40000000000003,
+   "VIO",
+   "FAILED",
+   "collapse"
+  ],
+  [
+   270.95,
+   "RANGE",
+   "UNAVAILABLE",
+   ""
+  ]
+ ],
+ "gate": [
+  [
+   0.0,
+   "UNAVAILABLE",
+   "PROBATION",
+   "fix acquired"
+  ],
+  [
+   35.0,
+   "PROBATION",
+   "TRUSTED",
+   "probation passed"
+  ],
+  [
+   42.400000000000006,
+   "TRUSTED",
+   "UNAVAILABLE",
+   "no fix"
+  ]
+ ],
+ "fixes": []
+}

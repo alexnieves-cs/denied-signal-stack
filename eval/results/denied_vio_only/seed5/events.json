@@ -1,0 +1,73 @@
+{
+ "health": [
+  [
+   0.0,
+   "RANGE",
+   "UNAVAILABLE",
+   ""
+  ],
+  [
+   0.0,
+   "GPS",
+   "PROBATION",
+   "fix acquired"
+  ],
+  [
+   0.05,
+   "VIO",
+   "FAILED",
+   "dark"
+  ],
+  [
+   0.05,
+   "MAP",
+   "DISABLED",
+   "illumination below threshold"
+  ],
+  [
+   0.2,
+   "GPS",
+   "UNAVAILABLE",
+   "no fix"
+  ],
+  [
+   6.8500000000000005,
+   "RANGE",
+   "OK",
+   ""
+  ],
+  [
+   8.1,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   270.45,
+   "VIO",
+   "FAILED",
+   "collapse,shock"
+  ],
+  [
+   270.95,
+   "RANGE",
+   "UNAVAILABLE",
+   ""
+  ]
+ ],
+ "gate": [
+  [
+   0.0,
+   "UNAVAILABLE",
+   "PROBATION",
+   "fix acquired"
+  ],
+  [
+   0.2,
+   "PROBATION",
+   "UNAVAILABLE",
+   "no fix"
+  ]
+ ],
+ "fixes": []
+}

@@ -1,0 +1,278 @@
+{
+  "all_h": {
+    "rmse": 18.939202734
+  },
+  "continuity": {
+    "max_bleed_mps": 0.5,
+    "max_jump_m": 0.0175,
+    "p99_jump_m": 0.0175,
+    "reset_counter_increments": 0,
+    "vpe_bad_frames": 0,
+    "vpe_frames": 8347,
+    "vpe_rate_hz": 30.004133791
+  },
+  "filter_stats": {
+    "ALL": {
+      "baro": 1390,
+      "flow": 200,
+      "gps": 8,
+      "gps_rej": 0,
+      "lidar": 1320,
+      "mag": 2782,
+      "map_acc": 0,
+      "map_rej": 0,
+      "vio": 1248,
+      "vio_rej": 29
+    },
+    "REF": {
+      "baro": 1390,
+      "flow": 200,
+      "gps": 0,
+      "gps_rej": 0,
+      "lidar": 1320,
+      "mag": 2782,
+      "map_acc": 0,
+      "map_rej": 0,
+      "vio": 1248,
+      "vio_rej": 29
+    }
+  },
+  "final_after_recovery": {
+    "hpl_m": 133.006566998,
+    "pub_h_m": 22.705043854,
+    "ref_h_m": 20.151581894,
+    "t": 248.005
+  },
+  "gate_events": [
+    [
+      0.0,
+      "UNAVAILABLE",
+      "PROBATION",
+      "fix acquired"
+    ],
+    [
+      35.0,
+      "PROBATION",
+      "TRUSTED",
+      "probation passed"
+    ],
+    [
+      42.4,
+      "TRUSTED",
+      "UNAVAILABLE",
+      "no fix"
+    ]
+  ],
+  "gate_final": "UNAVAILABLE",
+  "headline": "pub RMSE 17.76 m, final(after recovery) 22.71 m, touchdown 27.3 m, max 27.3 m, HMI 0, gate UNAVAILABLE",
+  "health_events": [
+    [
+      0.0,
+      "RANGE",
+      "UNAVAILABLE",
+      ""
+    ],
+    [
+      0.0,
+      "GPS",
+      "PROBATION",
+      "fix acquired"
+    ],
+    [
+      0.05,
+      "VIO",
+      "FAILED",
+      "dark"
+    ],
+    [
+      0.05,
+      "MAP",
+      "DISABLED",
+      "illumination below threshold"
+    ],
+    [
+      6.85,
+      "RANGE",
+      "OK",
+      ""
+    ],
+    [
+      9.45,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      35.0,
+      "GPS",
+      "TRUSTED",
+      "probation passed"
+    ],
+    [
+      42.4,
+      "GPS",
+      "UNAVAILABLE",
+      "no fix"
+    ],
+    [
+      178.55,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      179.55,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      245.75,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      246.75,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      258.75,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      259.75,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      270.4,
+      "VIO",
+      "FAILED",
+      "collapse"
+    ],
+    [
+      270.95,
+      "RANGE",
+      "UNAVAILABLE",
+      ""
+    ]
+  ],
+  "hmi_epochs": 0,
+  "hpl_exceed_epochs": 0,
+  "hpl_median": 98.642797091,
+  "manifest": {
+    "config_sha256": "015b6e33ef26df63199ba6e1ef00f716dc5f5d122885d71468ecf8665c5cc734",
+    "git_sha": "6ec7510903c7b33a891ae7baa718cafd19e1e404",
+    "imagery": {
+      "map": {
+        "date": "2017-06-27",
+        "item": "az_m_3511151_ne_12_.6_20170627_20171128+coreg2023"
+      },
+      "render": {
+        "date": "2023-06-15",
+        "item": "az_m_3511151_ne_12_030_20230615_20240328"
+      }
+    },
+    "ovserver": "dd2fdd9b399ad2f154061d01231a48774749265c9351022ba70f8e2976eb1537",
+    "seed": 5,
+    "uv_lock_sha256": "109a24953a7fe1549b8e006af72b1195808dd6d0bb9fec00a1675d386ef3c266",
+    "vio": "ovserver"
+  },
+  "map": {
+    "attempts": 0
+  },
+  "path_m": 2216.761563201,
+  "pub_h": {
+    "final": 27.341485808,
+    "max": 27.341485808,
+    "median": 18.731104326,
+    "p95": 25.454682344,
+    "rmse": 17.763676629
+  },
+  "pub_nees_mean": 40.804829831,
+  "pub_v": {
+    "p95": 4.575526023,
+    "touchdown": 0.535519816
+  },
+  "ref_h": {
+    "max": 33.167594931,
+    "rmse": 18.946035028
+  },
+  "ref_nees_mean": 55.594149961,
+  "scenario": "twilight",
+  "scoreboard": {
+    "gate_final": "UNAVAILABLE",
+    "hmi_epochs": 0,
+    "map_accept": 0,
+    "map_median_m": null,
+    "max_jump_m": 0.0175,
+    "pub_final_h_m": 22.705043854,
+    "pub_max_h_m": 27.341485808,
+    "pub_rmse_h_m": 17.763676629,
+    "pub_touchdown_h_m": 27.341485808,
+    "textured_median_h_m": 12.224454053,
+    "textured_rmse_h_m": 14.240661523,
+    "ttr_s": null,
+    "vision_fail_latency_s": 0.105
+  },
+  "seed": 5,
+  "segments": {
+    "seg_forest": {
+      "kind": "forest",
+      "max": 24.430755429,
+      "median": 20.768012721,
+      "p99": 24.426013605,
+      "rmse": 21.548696357
+    },
+    "seg_landing": {
+      "kind": "landing",
+      "max": 27.251444533,
+      "median": 22.691084687,
+      "p99": 27.118388234,
+      "rmse": 23.423483015
+    },
+    "seg_tail": {
+      "kind": "textured",
+      "max": 24.566732619,
+      "median": 23.01999713,
+      "p99": 24.562327832,
+      "rmse": 23.102930752
+    },
+    "seg_town_a": {
+      "kind": "textured",
+      "max": 12.431186434,
+      "median": 7.564863585,
+      "p99": 12.263064145,
+      "rmse": 7.784955706
+    },
+    "seg_town_b": {
+      "kind": "textured",
+      "max": 19.259422022,
+      "median": 15.838669377,
+      "p99": 19.190462534,
+      "rmse": 15.963414364
+    }
+  },
+  "textured": {
+    "median": 12.224454053,
+    "p99": 24.503546434,
+    "rmse": 14.240661523
+  },
+  "ttr": {
+    "censored": true,
+    "t_star": null,
+    "ttr_s": null
+  },
+  "vision": {
+    "collapse_t": 0.0,
+    "failed_t": 0.105,
+    "latency_s": 0.105,
+    "max_err_in_outage": 27.341485808
+  }
+}

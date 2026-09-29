@@ -1,0 +1,327 @@
+{
+  "all_h": {
+    "rmse": 1.458957231
+  },
+  "continuity": {
+    "max_bleed_mps": 0.5,
+    "max_jump_m": 0.0175,
+    "p99_jump_m": 0.0175,
+    "reset_counter_increments": 0,
+    "vpe_bad_frames": 0,
+    "vpe_frames": 8347,
+    "vpe_rate_hz": 30.004133791
+  },
+  "filter_stats": {
+    "ALL": {
+      "baro": 1391,
+      "flow": 170,
+      "gps": 66,
+      "gps_rej": 0,
+      "lidar": 1320,
+      "mag": 2782,
+      "map_acc": 209,
+      "map_rej": 0,
+      "vio": 1201,
+      "vio_rej": 61
+    },
+    "REF": {
+      "baro": 1391,
+      "flow": 170,
+      "gps": 0,
+      "gps_rej": 0,
+      "lidar": 1320,
+      "mag": 2782,
+      "map_acc": 209,
+      "map_rej": 0,
+      "vio": 1201,
+      "vio_rej": 61
+    }
+  },
+  "final_after_recovery": {
+    "hpl_m": 8.703802729,
+    "pub_h_m": 3.913882481,
+    "ref_h_m": 3.586630743,
+    "t": 248.005
+  },
+  "gate_events": [
+    [
+      0.0,
+      "UNAVAILABLE",
+      "PROBATION",
+      "fix acquired"
+    ],
+    [
+      35.0,
+      "PROBATION",
+      "TRUSTED",
+      "probation passed"
+    ],
+    [
+      100.2,
+      "TRUSTED",
+      "UNAVAILABLE",
+      "no fix"
+    ]
+  ],
+  "gate_final": "UNAVAILABLE",
+  "headline": "pub RMSE 1.65 m, final(after recovery) 3.91 m, touchdown 0.9 m, max 5.1 m, HMI 0, gate UNAVAILABLE",
+  "health_events": [
+    [
+      0.0,
+      "RANGE",
+      "UNAVAILABLE",
+      ""
+    ],
+    [
+      0.0,
+      "GPS",
+      "PROBATION",
+      "fix acquired"
+    ],
+    [
+      0.05,
+      "VIO",
+      "FAILED",
+      "dark"
+    ],
+    [
+      0.05,
+      "MAP",
+      "DISABLED",
+      "illumination below threshold"
+    ],
+    [
+      6.85,
+      "RANGE",
+      "OK",
+      ""
+    ],
+    [
+      8.1,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      19.1,
+      "MAP",
+      "OK",
+      ""
+    ],
+    [
+      35.0,
+      "GPS",
+      "TRUSTED",
+      "probation passed"
+    ],
+    [
+      100.2,
+      "GPS",
+      "UNAVAILABLE",
+      "no fix"
+    ],
+    [
+      191.15,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      192.15,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      197.75,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      198.75,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      200.35,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      201.35,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      202.95,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      203.95,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      205.55,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      206.55,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      208.15,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      209.15,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      270.4,
+      "VIO",
+      "FAILED",
+      "collapse"
+    ],
+    [
+      270.5,
+      "MAP",
+      "DISABLED",
+      "illumination below threshold"
+    ],
+    [
+      270.95,
+      "RANGE",
+      "UNAVAILABLE",
+      ""
+    ]
+  ],
+  "hmi_epochs": 0,
+  "hpl_exceed_epochs": 0,
+  "hpl_median": 6.639413318,
+  "manifest": {
+    "config_sha256": "feb791b8226c30779d47704a6f4e686740d773b3f037b0ead23020ba72e9546e",
+    "git_sha": "6ec7510903c7b33a891ae7baa718cafd19e1e404",
+    "imagery": {
+      "map": {
+        "date": "2017-06-27",
+        "item": "az_m_3511151_ne_12_.6_20170627_20171128+coreg2023"
+      },
+      "render": {
+        "date": "2023-06-15",
+        "item": "az_m_3511151_ne_12_030_20230615_20240328"
+      }
+    },
+    "ovserver": "dd2fdd9b399ad2f154061d01231a48774749265c9351022ba70f8e2976eb1537",
+    "seed": 1,
+    "uv_lock_sha256": "109a24953a7fe1549b8e006af72b1195808dd6d0bb9fec00a1675d386ef3c266",
+    "vio": "ovserver"
+  },
+  "map": {
+    "accepted": 209,
+    "accepted_median_m": 0.962091627,
+    "attempts": 245,
+    "candidates": 211,
+    "false_accept_rate": 0.0,
+    "median_m": 0.962091627,
+    "p95_m": 3.081341064,
+    "precision": 0.995215311,
+    "success_rate": 0.848979592
+  },
+  "path_m": 2216.761563201,
+  "pub_h": {
+    "final": 0.905026146,
+    "max": 5.063250072,
+    "median": 1.035555092,
+    "p95": 3.557476124,
+    "rmse": 1.649097662
+  },
+  "pub_nees_mean": 3.018521897,
+  "pub_v": {
+    "p95": 0.852253568,
+    "touchdown": 1.524694209
+  },
+  "ref_h": {
+    "max": 4.989474941,
+    "rmse": 1.483634083
+  },
+  "ref_nees_mean": 3.155870648,
+  "scenario": "gps_cutover",
+  "scoreboard": {
+    "gate_final": "UNAVAILABLE",
+    "hmi_epochs": 0,
+    "map_accept": 209,
+    "map_median_m": 0.962091627,
+    "max_jump_m": 0.0175,
+    "pub_final_h_m": 3.913882481,
+    "pub_max_h_m": 5.063250072,
+    "pub_rmse_h_m": 1.649097662,
+    "pub_touchdown_h_m": 0.905026146,
+    "textured_median_h_m": 1.060269506,
+    "textured_rmse_h_m": 1.622289393,
+    "ttr_s": 0.005
+  },
+  "seed": 1,
+  "segments": {
+    "seg_forest": {
+      "kind": "forest",
+      "max": 2.084827981,
+      "median": 0.703483709,
+      "p99": 2.047235513,
+      "rmse": 1.025020246
+    },
+    "seg_landing": {
+      "kind": "landing",
+      "max": 4.018936007,
+      "median": 1.320648561,
+      "p99": 4.012140275,
+      "rmse": 2.117186582
+    },
+    "seg_tail": {
+      "kind": "textured",
+      "max": 3.88843114,
+      "median": 1.368374945,
+      "p99": 3.842413827,
+      "rmse": 1.634482511
+    },
+    "seg_town_a": {
+      "kind": "textured",
+      "max": 2.027987475,
+      "median": 0.683627932,
+      "p99": 1.926664343,
+      "rmse": 0.880665743
+    },
+    "seg_town_b": {
+      "kind": "textured",
+      "max": 3.947607874,
+      "median": 1.777625748,
+      "p99": 3.903026433,
+      "rmse": 2.34500057
+    }
+  },
+  "textured": {
+    "median": 1.060269506,
+    "p99": 3.864150596,
+    "rmse": 1.622289393
+  },
+  "ttr": {
+    "censored": false,
+    "t_star": 100.005,
+    "ttr_s": 0.005
+  }
+}

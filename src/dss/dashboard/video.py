@@ -146,8 +146,7 @@ def make(run_dir: Path, out: Path | None = None, fps_sim: int = 5, width_px: int
                        transform=axl.transAxes)
     axl.set_title("event log", fontsize=11, **txt)
 
-    hev = sorted([(float(a), s_, st, why) for a, s_, st, why in ev["health"]] +
-                 [(float(a), "GPS", c, why) for a, b, c, why in ev["gate"]])
+    hev = sorted({(round(float(a), 2), s_, st, why) for a, s_, st, why in ev["health"]})
     from dss.integrity.health import LEVEL
 
     ff = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgba", "-s",

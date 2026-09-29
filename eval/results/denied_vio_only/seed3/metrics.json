@@ -1,0 +1,223 @@
+{
+  "all_h": {
+    "rmse": 10.517315794
+  },
+  "continuity": {
+    "max_bleed_mps": 0.5,
+    "max_jump_m": 0.0175,
+    "p99_jump_m": 0.0175,
+    "reset_counter_increments": 0,
+    "vpe_bad_frames": 0,
+    "vpe_frames": 8347,
+    "vpe_rate_hz": 30.004133791
+  },
+  "filter_stats": {
+    "ALL": {
+      "baro": 1391,
+      "flow": 210,
+      "gps": 0,
+      "gps_rej": 0,
+      "lidar": 1320,
+      "mag": 2782,
+      "map_acc": 0,
+      "map_rej": 0,
+      "vio": 1281,
+      "vio_rej": 11
+    },
+    "REF": {
+      "baro": 1391,
+      "flow": 210,
+      "gps": 0,
+      "gps_rej": 0,
+      "lidar": 1320,
+      "mag": 2782,
+      "map_acc": 0,
+      "map_rej": 0,
+      "vio": 1281,
+      "vio_rej": 11
+    }
+  },
+  "final_after_recovery": {
+    "hpl_m": 150.197243306,
+    "pub_h_m": 13.137555591,
+    "ref_h_m": 13.27829985,
+    "t": 248.005
+  },
+  "gate_events": [
+    [
+      0.0,
+      "UNAVAILABLE",
+      "PROBATION",
+      "fix acquired"
+    ],
+    [
+      0.2,
+      "PROBATION",
+      "UNAVAILABLE",
+      "no fix"
+    ]
+  ],
+  "gate_final": "UNAVAILABLE",
+  "headline": "pub RMSE 10.55 m, final(after recovery) 13.14 m, touchdown 10.1 m, max 14.4 m, HMI 0, gate UNAVAILABLE",
+  "health_events": [
+    [
+      0.0,
+      "RANGE",
+      "UNAVAILABLE",
+      ""
+    ],
+    [
+      0.0,
+      "GPS",
+      "PROBATION",
+      "fix acquired"
+    ],
+    [
+      0.05,
+      "VIO",
+      "FAILED",
+      "dark"
+    ],
+    [
+      0.05,
+      "MAP",
+      "DISABLED",
+      "illumination below threshold"
+    ],
+    [
+      0.2,
+      "GPS",
+      "UNAVAILABLE",
+      "no fix"
+    ],
+    [
+      6.85,
+      "RANGE",
+      "OK",
+      ""
+    ],
+    [
+      8.1,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      270.45,
+      "VIO",
+      "FAILED",
+      "collapse,shock"
+    ],
+    [
+      270.95,
+      "RANGE",
+      "UNAVAILABLE",
+      ""
+    ]
+  ],
+  "hmi_epochs": 0,
+  "hpl_exceed_epochs": 0,
+  "hpl_median": 98.704063381,
+  "manifest": {
+    "config_sha256": "59f15e2d1c7a4c5110528685b3e2f137b0b9e5c38b21a1d6b9886217acd1767a",
+    "git_sha": "6ec7510903c7b33a891ae7baa718cafd19e1e404",
+    "imagery": {
+      "map": {
+        "date": "2017-06-27",
+        "item": "az_m_3511151_ne_12_.6_20170627_20171128+coreg2023"
+      },
+      "render": {
+        "date": "2023-06-15",
+        "item": "az_m_3511151_ne_12_030_20230615_20240328"
+      }
+    },
+    "ovserver": "dd2fdd9b399ad2f154061d01231a48774749265c9351022ba70f8e2976eb1537",
+    "seed": 3,
+    "uv_lock_sha256": "109a24953a7fe1549b8e006af72b1195808dd6d0bb9fec00a1675d386ef3c266",
+    "vio": "ovserver"
+  },
+  "map": {
+    "attempts": 0
+  },
+  "path_m": 2216.761563201,
+  "pub_h": {
+    "final": 10.086710861,
+    "max": 14.437200027,
+    "median": 11.059188576,
+    "p95": 13.627486835,
+    "rmse": 10.554490396
+  },
+  "pub_nees_mean": 15.943203447,
+  "pub_v": {
+    "p95": 2.459846599,
+    "touchdown": 1.081735152
+  },
+  "ref_h": {
+    "max": 18.002947777,
+    "rmse": 10.517315794
+  },
+  "ref_nees_mean": 16.048350771,
+  "scenario": "denied_vio_only",
+  "scoreboard": {
+    "gate_final": "UNAVAILABLE",
+    "hmi_epochs": 0,
+    "map_accept": 0,
+    "map_median_m": null,
+    "max_jump_m": 0.0175,
+    "pub_final_h_m": 13.137555591,
+    "pub_max_h_m": 14.437200027,
+    "pub_rmse_h_m": 10.554490396,
+    "pub_touchdown_h_m": 10.086710861,
+    "textured_median_h_m": 11.039129617,
+    "textured_rmse_h_m": 10.517818944,
+    "ttr_s": 0.005
+  },
+  "seed": 3,
+  "segments": {
+    "seg_forest": {
+      "kind": "forest",
+      "max": 11.800487146,
+      "median": 10.798760975,
+      "p99": 11.772259609,
+      "rmse": 10.803226723
+    },
+    "seg_landing": {
+      "kind": "landing",
+      "max": 14.437200027,
+      "median": 13.597182586,
+      "p99": 14.411382181,
+      "rmse": 13.079959936
+    },
+    "seg_tail": {
+      "kind": "textured",
+      "max": 13.291219896,
+      "median": 12.377535728,
+      "p99": 13.279488853,
+      "rmse": 12.515105771
+    },
+    "seg_town_a": {
+      "kind": "textured",
+      "max": 11.198738289,
+      "median": 10.677920674,
+      "p99": 11.19427657,
+      "rmse": 9.281452194
+    },
+    "seg_town_b": {
+      "kind": "textured",
+      "max": 11.721188968,
+      "median": 11.13086943,
+      "p99": 11.715205972,
+      "rmse": 11.188850811
+    }
+  },
+  "textured": {
+    "median": 11.039129617,
+    "p99": 13.161580255,
+    "rmse": 10.517818944
+  },
+  "ttr": {
+    "censored": false,
+    "t_star": 0.005,
+    "ttr_s": 0.005
+  }
+}

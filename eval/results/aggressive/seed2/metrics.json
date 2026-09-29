@@ -1,0 +1,421 @@
+{
+  "all_h": {
+    "rmse": 3.080836824
+  },
+  "continuity": {
+    "max_bleed_mps": 0.5,
+    "max_jump_m": 0.0175,
+    "p99_jump_m": 0.0175,
+    "reset_counter_increments": 0,
+    "vpe_bad_frames": 0,
+    "vpe_frames": 6680,
+    "vpe_rate_hz": 30.004940933
+  },
+  "filter_stats": {
+    "ALL": {
+      "baro": 1114,
+      "flow": 207,
+      "gps": 0,
+      "gps_rej": 0,
+      "lidar": 1030,
+      "mag": 2227,
+      "map_acc": 99,
+      "map_rej": 0,
+      "vio": 756,
+      "vio_rej": 178
+    },
+    "REF": {
+      "baro": 1114,
+      "flow": 207,
+      "gps": 0,
+      "gps_rej": 0,
+      "lidar": 1030,
+      "mag": 2227,
+      "map_acc": 99,
+      "map_rej": 0,
+      "vio": 756,
+      "vio_rej": 178
+    }
+  },
+  "final_after_recovery": {
+    "hpl_m": 8.029785476,
+    "pub_h_m": 0.978776244,
+    "ref_h_m": 0.9791202,
+    "t": 222.605
+  },
+  "gate_events": [
+    [
+      0.0,
+      "UNAVAILABLE",
+      "PROBATION",
+      "fix acquired"
+    ],
+    [
+      30.2,
+      "PROBATION",
+      "UNAVAILABLE",
+      "no fix"
+    ]
+  ],
+  "gate_final": "UNAVAILABLE",
+  "headline": "pub RMSE 4.48 m, final(after recovery) 0.98 m, touchdown 1.0 m, max 14.3 m, HMI 0, gate UNAVAILABLE",
+  "health_events": [
+    [
+      0.0,
+      "RANGE",
+      "UNAVAILABLE",
+      ""
+    ],
+    [
+      0.0,
+      "GPS",
+      "PROBATION",
+      "fix acquired"
+    ],
+    [
+      0.05,
+      "VIO",
+      "FAILED",
+      "dark"
+    ],
+    [
+      0.05,
+      "MAP",
+      "DISABLED",
+      "illumination below threshold"
+    ],
+    [
+      6.85,
+      "RANGE",
+      "OK",
+      ""
+    ],
+    [
+      8.1,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      28.1,
+      "MAP",
+      "OK",
+      ""
+    ],
+    [
+      30.2,
+      "GPS",
+      "UNAVAILABLE",
+      "no fix"
+    ],
+    [
+      68.15,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      69.15,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      78.15,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      79.15,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      80.75,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      81.75,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      83.15,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      84.15,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      85.75,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      86.75,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      88.35,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      89.35,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      90.75,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      91.75,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      93.15,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      94.15,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      135.75,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      136.75,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      142.15,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      143.15,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      144.15,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      145.15,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      146.75,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      147.75,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      148.75,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      149.75,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      150.75,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      151.75,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      155.75,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      156.75,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      158.15,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      159.15,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      214.8,
+      "VIO",
+      "FAILED",
+      "collapse"
+    ],
+    [
+      214.85,
+      "MAP",
+      "DISABLED",
+      "illumination below threshold"
+    ],
+    [
+      215.45,
+      "RANGE",
+      "UNAVAILABLE",
+      ""
+    ]
+  ],
+  "hmi_epochs": 0,
+  "hpl_exceed_epochs": 0,
+  "hpl_median": 9.223907224,
+  "manifest": {
+    "config_sha256": "6ca3f28865ecdfdfc3682cf9ffcfc92769ca6bb15b42db78303c87a3399e0df3",
+    "git_sha": "6ec7510903c7b33a891ae7baa718cafd19e1e404",
+    "imagery": {
+      "map": {
+        "date": "2017-06-27",
+        "item": "az_m_3511151_ne_12_.6_20170627_20171128+coreg2023"
+      },
+      "render": {
+        "date": "2023-06-15",
+        "item": "az_m_3511151_ne_12_030_20230615_20240328"
+      }
+    },
+    "ovserver": "dd2fdd9b399ad2f154061d01231a48774749265c9351022ba70f8e2976eb1537",
+    "seed": 2,
+    "uv_lock_sha256": "109a24953a7fe1549b8e006af72b1195808dd6d0bb9fec00a1675d386ef3c266",
+    "vio": "ovserver"
+  },
+  "map": {
+    "accepted": 99,
+    "accepted_median_m": 1.214598499,
+    "attempts": 188,
+    "candidates": 101,
+    "false_accept_rate": 0.0,
+    "median_m": 1.214598499,
+    "p95_m": 3.179938123,
+    "precision": 0.98989899,
+    "success_rate": 0.521276596
+  },
+  "path_m": 2215.137091252,
+  "pub_h": {
+    "final": 0.978776244,
+    "max": 14.298890096,
+    "median": 2.060976297,
+    "p95": 10.672476526,
+    "rmse": 4.481489402
+  },
+  "pub_nees_mean": 13.821492349,
+  "pub_v": {
+    "p95": 2.390970756,
+    "touchdown": 0.002415263
+  },
+  "ref_h": {
+    "max": 14.025476425,
+    "rmse": 3.080836824
+  },
+  "ref_nees_mean": 20.621450203,
+  "scenario": "aggressive",
+  "scoreboard": {
+    "gate_final": "UNAVAILABLE",
+    "hmi_epochs": 0,
+    "map_accept": 99,
+    "map_median_m": 1.214598499,
+    "max_jump_m": 0.0175,
+    "pub_final_h_m": 0.978776244,
+    "pub_max_h_m": 14.298890096,
+    "pub_rmse_h_m": 4.481489402,
+    "pub_touchdown_h_m": 0.978776244,
+    "textured_median_h_m": 2.745962726,
+    "textured_rmse_h_m": 3.446754166,
+    "ttr_s": 0.005
+  },
+  "seed": 2,
+  "segments": {
+    "seg_forest": {
+      "kind": "forest",
+      "max": 14.298890096,
+      "median": 3.117916495,
+      "p99": 14.290943347,
+      "rmse": 7.305135876
+    },
+    "seg_town_a": {
+      "kind": "textured",
+      "max": 5.694023107,
+      "median": 1.332185212,
+      "p99": 5.246414727,
+      "rmse": 2.129469203
+    },
+    "seg_town_b": {
+      "kind": "textured",
+      "max": 7.201876624,
+      "median": 4.607513921,
+      "p99": 7.199396561,
+      "rmse": 4.82767118
+    }
+  },
+  "textured": {
+    "median": 2.745962726,
+    "p99": 7.174103046,
+    "rmse": 3.446754166
+  },
+  "ttr": {
+    "censored": false,
+    "t_star": 30.005,
+    "ttr_s": 0.005
+  }
+}

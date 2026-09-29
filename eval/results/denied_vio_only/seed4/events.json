@@ -1,0 +1,181 @@
+{
+ "health": [
+  [
+   0.0,
+   "RANGE",
+   "UNAVAILABLE",
+   ""
+  ],
+  [
+   0.0,
+   "GPS",
+   "PROBATION",
+   "fix acquired"
+  ],
+  [
+   0.05,
+   "VIO",
+   "FAILED",
+   "dark"
+  ],
+  [
+   0.05,
+   "MAP",
+   "DISABLED",
+   "illumination below threshold"
+  ],
+  [
+   0.2,
+   "GPS",
+   "UNAVAILABLE",
+   "no fix"
+  ],
+  [
+   6.8500000000000005,
+   "RANGE",
+   "OK",
+   ""
+  ],
+  [
+   8.1,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   160.55,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   161.55,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   163.15,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   164.15,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   166.15,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   167.15,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   170.95000000000002,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   171.95000000000002,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   185.95000000000002,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   186.95000000000002,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   200.55,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   201.55,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   205.55,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   206.55,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   244.95000000000002,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   245.95000000000002,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   258.95,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   259.95,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   270.45,
+   "VIO",
+   "FAILED",
+   "collapse,shock"
+  ],
+  [
+   270.95,
+   "RANGE",
+   "UNAVAILABLE",
+   ""
+  ]
+ ],
+ "gate": [
+  [
+   0.0,
+   "UNAVAILABLE",
+   "PROBATION",
+   "fix acquired"
+  ],
+  [
+   0.2,
+   "PROBATION",
+   "UNAVAILABLE",
+   "no fix"
+  ]
+ ],
+ "fixes": []
+}

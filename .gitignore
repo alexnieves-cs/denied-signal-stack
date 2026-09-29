@@ -223,3 +223,6 @@ __marimo__/
 *.rrd
 .DS_Store
 MUJOCO_LOG.TXT
+eval/results/**/log.npz
+eval/results/**/vpe.mavlink
+*.mp4

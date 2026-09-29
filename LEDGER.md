@@ -113,3 +113,38 @@ Forest leg (reported separately, as the PLAN requires): the 45 s dark segment co
 - Horizontal error reaches 25–66 m (median 2–12 m over the segment).
 - VIO FAILED is announced 2.0 s after the canopy starts (ramp 2 s).
 - After light returns, REF is within 0.7–2.8 m of truth 10 s after the first accepted fix.
+
+## Phase 3: integrity monitor, GPS attack interface, output, dashboard, demo (2026-09-29 02:05)
+**Verdict: DoD MET; Phase 3 PARTIAL.**
+- **The demo** runs end to end. It is deterministic (`metrics.json` byte-identical on re-run) and `demo.mp4` is recorded. `eval/results/` holds trajectory/error/timeline plots + metrics for all 9 scenarios × 5 seeds, all on real OpenVINS.
+- **Fail:** the 0-false-alarm gate (1.18/h on held-out set H), aggressive HMI, and part of the committed spoof envelope.
+- **Cut:** PX4 SIH, the webcam run itself (TCC), full-length ≥10 h rendered corpora, and per-source fault injection.
+
+Demo, `uv run dss demo --seed 42 --lockstep` → `runs/demo-42/{run.rrd,metrics.json,vpe.mavlink,*.png}`; `bash scripts/record_demo.sh runs/demo-42` → `demo.mp4`.
+
+**Timeline** (F15): jam ramp 55–60 s, outage, spoofer capture at 120 s, 1 m/s drag-off at 125 s, Mars Hill forest canopy 150–195 s, textured tail, landing 248–273 s.
+
+**Numbers:**
+- **Accuracy:** published horizontal RMSE 5.68 m. Final error after the post-forest recovery (t=248 s) is 2.12 m against HPL 7.1 m; touchdown 2.13 m.
+- **Integrity:** **0 HMI epochs**. Max 30 Hz jump 0.018 m; bleed ≤ 0.50 m/s; 0 `reset_counter` increments.
+- **Output:** VPE at 30.00 Hz, 8,347 frames, all starting 0xFD with 21 finite covariance values.
+- **Spoof:** flagged 6.0 s after drag-off onset, before PROBATION ended, and 4.8 s before the offset was even detectable (MDB). The published position stayed within HPL until the flag.
+- **Vision:** VIO FAILED announced 2.0 s after the canopy starts (2 s darkness ramp). REF was within 1.4 m 10 s after the first post-forest fix.
+
+**Determinism:** two runs give identical `metrics.json` (sha256 db5bf2fa…).
+
+**The video** is 1920×1080, 30 fps, 278 s at 1×. It is rendered offline from the run logs, in the same 3-column layout as the Rerun blueprint, because screen capture needs a TCC grant.
+
+| Exit | Result |
+|---|---|
+| 1 Definition of done | **PASS** (above) |
+| 2 Spoof detection | **PARTIAL**. Offline sweep: frozen gate vs REF logs from 35 rendered runs, fresh GNSS seeds, onset at 100 s while TRUSTED; 140 segments per point. p50 latency 0–2 s for the 20 m step and for ≥1 m/s drags; 17 s at 0.5 m/s; 27 s at 0.3 m/s. p95 has a ≈15 s tail from segments whose onset fell inside a REF-degraded hold. **Envelope:** 1 m/s ≤20 s **PASS** (p95 15 s); 20 m step ≤1.2 s **FAIL** (p95 15 s); 2 m/s ≤8 s **FAIL** (p95 15 s); 0.5 m/s ≤35 s **FAIL** (p95 25.6 s but 2 of 140 censored). **Blind spot (documented):** with REF degraded (twilight, VIO-only, vision outages) the gate holds and cannot flag; 40/40 censored. SID stays small for fast drags; for slow drags it is 13–57 m at flag time. In-suite: dragoff_spoof flagged a median 2.8 s after onset; demo 4–6 s |
+| 3 False alarms | **FAIL**. 32 alarms over 27.2 h of held-out set H: 45 rendered REF logs × 8 GNSS seeds 2000+; thresholds tuned on seeds 1000+ (set T) and frozen in `configs/integrity/thresholds.yaml`, sha256 646f0fe9…. Rate UB95 1.58/h. **Root cause:** REF overconfidence in two flight phases, climb/accel (~33 s: 3.5 m error at σ 1.2 m) and landing deceleration (~247 s: 1 m/s velocity error at σ 0.17 m/s), not GNSS noise. Deviation: set H reuses the same REF logs as T with disjoint GNSS seeds (PLAN wants disjoint ≥10 h rendered corpora) |
+| 4 Failover continuity | **PASS**: 0 `reset_counter` increments; max jump 0.018 m (≤0.05); bleed ≤0.5 m/s; `px4_ev_gate` replay shows **0 rejections** in every scenario |
+| 5 Honest output | **PARTIAL**. HMI = **0 in 8/9 scenarios**; aggressive 50 epochs, in descent after the yaw-oscillation leg. Published NEES time-average (N=5): 3.5–4.6 on nominal / forest / demo, inside [1.25, 5.50]; 14–26 on aggressive / VIO-only / twilight (overconfident). REF independence holds: demo ≡ forest and denied_route ≡ gps_cutover ≡ urban ≡ dragoff give byte-identical REF trajectories, and GPS never reaches REF (tested import contract) |
+| 6 Degradation | **PARTIAL**. Forest: VIO FAILED 2.0 s after onset (the ≤1 s gate is missed because the darkness ramps over 2 s); announced via event, health bar and inflated VPE covariance. REF back within 1.4 m (≤10 m) 10 s after the first fix. The blur and illumination-shock detectors are implemented (`integrity/vision.py`) but their ≥95%-detection gates were not run |
+| 7 Fault injection | **CUT** (hooks exist in the sim runner: baro step, mag anomaly, lidar dropout/bias, flow scale; not swept) |
+| 8 Scenario suite | 9 scenarios × 5 seeds, all on real OpenVINS; `eval/results/scoreboard.md`. **urban_canyon:** NLOS GPS REJECTED 0.2 s after the bias appears, 0 HMI. **aggressive** (≤≈115°/s yaw, 12 m/s): no divergence, RMSE median 4.5 m, HMI 50 (FAIL). **twilight:** map disabled and announced in 5/5; RMSE 18 m. **forest:** as demo. **gps_cutover:** TTR 0.005 s (published was already REF-consistent at loss). **dragoff_spoof:** as exit 2 |
+| 9 Output interface | **PASS**: 0xFD frames, 21 finite covariance values, 30.0 Hz, pymavlink round-trip, import contract. **CUT:** PX4 SIH (no time; the `px4_ev_gate` emulator stands in); latency p99 not measured separately (lockstep) |
+| 10 Dashboard / live / CPU | **PARTIAL**. Rerun `.rrd` with the fixed 3-column blueprint (0.38 API). Live mode (`dss.live.webcam`, KLT + up-to-scale VO, "scale: arbitrary") is tested on a rendered loop: Sim(3) error <10%. FaceTime run not attempted (Camera TCC prompt would block an unattended session). Stack RTF ≈1.2–1.9 including rendering on M1 Pro; E-core runs not done |
+| 11 Budget | **PASS**: data 7.9 GB, C++ 1.5 GB, eval/results 115 MB (logs gitignored), 60+ GB free |

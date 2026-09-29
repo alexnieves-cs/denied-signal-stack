@@ -1,0 +1,505 @@
+{
+ "exit1_demo": {
+  "1": {
+   "flagged_s": 4.0,
+   "final_after_recovery_m": 5.392648774,
+   "rmse_h_m": 8.577658935,
+   "hmi": 0,
+   "within_hpl_until_flag": true
+  },
+  "2": {
+   "flagged_s": 6.0,
+   "final_after_recovery_m": 16.263325629,
+   "rmse_h_m": 14.483805503,
+   "hmi": 0,
+   "within_hpl_until_flag": true
+  },
+  "3": {
+   "flagged_s": 4.0,
+   "final_after_recovery_m": 18.829623289,
+   "rmse_h_m": 16.846476016,
+   "hmi": 0,
+   "within_hpl_until_flag": true
+  },
+  "4": {
+   "flagged_s": 5.0,
+   "final_after_recovery_m": 57.149717567,
+   "rmse_h_m": 38.505327671,
+   "hmi": 0,
+   "within_hpl_until_flag": true
+  },
+  "5": {
+   "flagged_s": 4.0,
+   "final_after_recovery_m": 60.522391463,
+   "rmse_h_m": 38.837444131,
+   "hmi": 0,
+   "within_hpl_until_flag": true
+  }
+ },
+ "exit2_dragoff_in_suite": {
+  "1": {
+   "gps_ever_trusted_after_onset": true,
+   "latency_from_detectable_s": -10.8,
+   "latency_from_onset_s": 1.8,
+   "max_pub_minus_ref_after_onset_m": 3.120935773,
+   "sigma_innov_m": 2.14287942,
+   "t_detectable": 112.805,
+   "t_flag": 102.005,
+   "t_onset": 100.205,
+   "within_hpl_until_flag": true
+  },
+  "2": {
+   "gps_ever_trusted_after_onset": true,
+   "latency_from_detectable_s": -11.2,
+   "latency_from_onset_s": 2.8,
+   "max_pub_minus_ref_after_onset_m": 2.607112423,
+   "sigma_innov_m": 2.385640815,
+   "t_detectable": 114.205,
+   "t_flag": 103.005,
+   "t_onset": 100.205,
+   "within_hpl_until_flag": true
+  },
+  "3": {
+   "gps_ever_trusted_after_onset": true,
+   "latency_from_detectable_s": -12.0,
+   "latency_from_onset_s": 2.8,
+   "max_pub_minus_ref_after_onset_m": 1.264455799,
+   "sigma_innov_m": 2.497912189,
+   "t_detectable": 115.005,
+   "t_flag": 103.005,
+   "t_onset": 100.205,
+   "within_hpl_until_flag": true
+  },
+  "4": {
+   "gps_ever_trusted_after_onset": true,
+   "latency_from_detectable_s": -12.2,
+   "latency_from_onset_s": 1.8,
+   "max_pub_minus_ref_after_onset_m": 5.983287038,
+   "sigma_innov_m": 2.38562442,
+   "t_detectable": 114.205,
+   "t_flag": 102.005,
+   "t_onset": 100.205,
+   "within_hpl_until_flag": true
+  },
+  "5": {
+   "gps_ever_trusted_after_onset": true,
+   "latency_from_detectable_s": -11.2,
+   "latency_from_onset_s": 2.8,
+   "max_pub_minus_ref_after_onset_m": 1.519497657,
+   "sigma_innov_m": 2.384790277,
+   "t_detectable": 114.205,
+   "t_flag": 103.005,
+   "t_onset": 100.205,
+   "within_hpl_until_flag": true
+  }
+ },
+ "exit4_continuity_max_jump_m": {
+  "aggressive": 0.0175,
+  "demo": 0.0175,
+  "denied_route": 0.0175,
+  "denied_vio_only": 0.0175,
+  "dragoff_spoof": 0.0175,
+  "forest": 0.0175,
+  "gps_cutover": 0.0175,
+  "twilight": 0.0175,
+  "urban_canyon": 0.0175
+ },
+ "exit4_ev_gate_replay": {
+  "aggressive": {
+   "rejections": 0,
+   "max_streak_s": 0.0,
+   "samples": 6680,
+   "frames": 6680,
+   "rate_hz": 30.004940933387235,
+   "all_cov_finite_21": true,
+   "first_byte_0xFD": true
+  },
+  "demo": {
+   "rejections": 0,
+   "max_streak_s": 0.0,
+   "samples": 8347,
+   "frames": 8347,
+   "rate_hz": 30.00413379104585,
+   "all_cov_finite_21": true,
+   "first_byte_0xFD": true
+  },
+  "denied_route": {
+   "rejections": 0,
+   "max_streak_s": 0.0,
+   "samples": 8347,
+   "frames": 8347,
+   "rate_hz": 30.00413379104585,
+   "all_cov_finite_21": true,
+   "first_byte_0xFD": true
+  },
+  "denied_vio_only": {
+   "rejections": 0,
+   "max_streak_s": 0.0,
+   "samples": 8347,
+   "frames": 8347,
+   "rate_hz": 30.00413379104585,
+   "all_cov_finite_21": true,
+   "first_byte_0xFD": true
+  },
+  "dragoff_spoof": {
+   "rejections": 0,
+   "max_streak_s": 0.0,
+   "samples": 8347,
+   "frames": 8347,
+   "rate_hz": 30.00413379104585,
+   "all_cov_finite_21": true,
+   "first_byte_0xFD": true
+  },
+  "forest": {
+   "rejections": 0,
+   "max_streak_s": 0.0,
+   "samples": 8347,
+   "frames": 8347,
+   "rate_hz": 30.00413379104585,
+   "all_cov_finite_21": true,
+   "first_byte_0xFD": true
+  },
+  "gps_cutover": {
+   "rejections": 0,
+   "max_streak_s": 0.0,
+   "samples": 8347,
+   "frames": 8347,
+   "rate_hz": 30.00413379104585,
+   "all_cov_finite_21": true,
+   "first_byte_0xFD": true
+  },
+  "twilight": {
+   "rejections": 0,
+   "max_streak_s": 0.0,
+   "samples": 8347,
+   "frames": 8347,
+   "rate_hz": 30.00413379104585,
+   "all_cov_finite_21": true,
+   "first_byte_0xFD": true
+  },
+  "urban_canyon": {
+   "rejections": 0,
+   "max_streak_s": 0.0,
+   "samples": 8347,
+   "frames": 8347,
+   "rate_hz": 30.00413379104585,
+   "all_cov_finite_21": true,
+   "first_byte_0xFD": true
+  }
+ },
+ "exit5_hmi_epochs": {
+  "aggressive": 50,
+  "demo": 0,
+  "denied_route": 0,
+  "denied_vio_only": 0,
+  "dragoff_spoof": 0,
+  "forest": 0,
+  "gps_cutover": 0,
+  "twilight": 0,
+  "urban_canyon": 0
+ },
+ "exit5_pub_nees_time_avg": {
+  "aggressive": 16.360963362,
+  "demo": 4.5563823078,
+  "denied_route": 3.5573927054000003,
+  "denied_vio_only": 14.3015463304,
+  "dragoff_spoof": 3.5365721465999997,
+  "forest": 4.5621763846,
+  "gps_cutover": 3.534324128,
+  "twilight": 25.9700752256,
+  "urban_canyon": 3.551369648
+ },
+ "exit5_band_N5": [
+  1.2524275590086507,
+  5.497678572688595
+ ],
+ "exit6_degradation": {
+  "demo": {
+   "1": {
+    "collapse_t": 150.0,
+    "failed_t": 152.005,
+    "first_fix_after_t": 208.1,
+    "latency_s": 2.005,
+    "max_err_in_outage": 27.111812492,
+    "ref_err_10s_after_fix": 1.296435454
+   },
+   "2": {
+    "collapse_t": 150.0,
+    "failed_t": 152.005,
+    "first_fix_after_t": 211.75,
+    "latency_s": 2.005,
+    "max_err_in_outage": 36.509543418,
+    "ref_err_10s_after_fix": 0.902827645
+   },
+   "3": {
+    "collapse_t": 150.0,
+    "failed_t": 152.005,
+    "first_fix_after_t": 211.15,
+    "latency_s": 2.005,
+    "max_err_in_outage": 44.262063522,
+    "ref_err_10s_after_fix": 0.754550944
+   },
+   "4": {
+    "collapse_t": 150.0,
+    "failed_t": 152.005,
+    "first_fix_after_t": 208.75,
+    "latency_s": 2.005,
+    "max_err_in_outage": 82.960408024,
+    "ref_err_10s_after_fix": 1.653171201
+   },
+   "5": {
+    "collapse_t": 150.0,
+    "failed_t": 152.005,
+    "first_fix_after_t": 210.55,
+    "latency_s": 2.005,
+    "max_err_in_outage": 79.759563082,
+    "ref_err_10s_after_fix": 0.561347031
+   }
+  },
+  "forest": {
+   "1": {
+    "collapse_t": 150.0,
+    "failed_t": 152.005,
+    "first_fix_after_t": 208.1,
+    "latency_s": 2.005,
+    "max_err_in_outage": 27.111812492,
+    "ref_err_10s_after_fix": 1.296435454
+   },
+   "2": {
+    "collapse_t": 150.0,
+    "failed_t": 152.005,
+    "first_fix_after_t": 211.75,
+    "latency_s": 2.005,
+    "max_err_in_outage": 36.509543418,
+    "ref_err_10s_after_fix": 0.902827645
+   },
+   "3": {
+    "collapse_t": 150.0,
+    "failed_t": 152.005,
+    "first_fix_after_t": 211.15,
+    "latency_s": 2.005,
+    "max_err_in_outage": 44.262063522,
+    "ref_err_10s_after_fix": 0.754550944
+   },
+   "4": {
+    "collapse_t": 150.0,
+    "failed_t": 152.005,
+    "first_fix_after_t": 208.75,
+    "latency_s": 2.005,
+    "max_err_in_outage": 82.960408024,
+    "ref_err_10s_after_fix": 1.653171201
+   },
+   "5": {
+    "collapse_t": 150.0,
+    "failed_t": 152.005,
+    "first_fix_after_t": 210.55,
+    "latency_s": 2.005,
+    "max_err_in_outage": 79.759563082,
+    "ref_err_10s_after_fix": 0.561347031
+   }
+  }
+ },
+ "exit8_twilight_map_disabled": {
+  "1": true,
+  "2": true,
+  "3": true,
+  "4": true,
+  "5": true
+ },
+ "exit8_urban_canyon": {
+  "1": {
+   "gate_events": [
+    [
+     0.0,
+     "UNAVAILABLE",
+     "PROBATION",
+     "fix acquired"
+    ],
+    [
+     35.0,
+     "PROBATION",
+     "TRUSTED",
+     "probation passed"
+    ],
+    [
+     70.0,
+     "TRUSTED",
+     "SUSPECT",
+     "position CUSUM 20.8 > 12.0"
+    ],
+    [
+     71.0,
+     "SUSPECT",
+     "REJECTED",
+     "suspect persisted: position CUSUM 20.8 > 12.0"
+    ]
+   ],
+   "hmi": 0
+  },
+  "2": {
+   "gate_events": [
+    [
+     0.0,
+     "UNAVAILABLE",
+     "PROBATION",
+     "fix acquired"
+    ],
+    [
+     35.0,
+     "PROBATION",
+     "TRUSTED",
+     "probation passed"
+    ],
+    [
+     70.0,
+     "TRUSTED",
+     "SUSPECT",
+     "position CUSUM 19.2 > 12.0"
+    ],
+    [
+     71.0,
+     "SUSPECT",
+     "REJECTED",
+     "suspect persisted: position CUSUM 19.2 > 12.0"
+    ]
+   ],
+   "hmi": 0
+  },
+  "3": {
+   "gate_events": [
+    [
+     0.0,
+     "UNAVAILABLE",
+     "PROBATION",
+     "fix acquired"
+    ],
+    [
+     35.0,
+     "PROBATION",
+     "TRUSTED",
+     "probation passed"
+    ],
+    [
+     70.0,
+     "TRUSTED",
+     "SUSPECT",
+     "position CUSUM 15.4 > 12.0"
+    ],
+    [
+     71.0,
+     "SUSPECT",
+     "REJECTED",
+     "suspect persisted: position CUSUM 15.4 > 12.0"
+    ]
+   ],
+   "hmi": 0
+  },
+  "4": {
+   "gate_events": [
+    [
+     0.0,
+     "UNAVAILABLE",
+     "PROBATION",
+     "fix acquired"
+    ],
+    [
+     35.0,
+     "PROBATION",
+     "TRUSTED",
+     "probation passed"
+    ],
+    [
+     70.0,
+     "TRUSTED",
+     "SUSPECT",
+     "position CUSUM 16.5 > 12.0"
+    ],
+    [
+     71.0,
+     "SUSPECT",
+     "REJECTED",
+     "suspect persisted: position CUSUM 16.5 > 12.0"
+    ]
+   ],
+   "hmi": 0
+  },
+  "5": {
+   "gate_events": [
+    [
+     0.0,
+     "UNAVAILABLE",
+     "PROBATION",
+     "fix acquired"
+    ],
+    [
+     35.0,
+     "PROBATION",
+     "TRUSTED",
+     "probation passed"
+    ],
+    [
+     70.0,
+     "TRUSTED",
+     "SUSPECT",
+     "position CUSUM 18.3 > 12.0"
+    ],
+    [
+     71.0,
+     "SUSPECT",
+     "REJECTED",
+     "suspect persisted: position CUSUM 18.3 > 12.0"
+    ]
+   ],
+   "hmi": 0
+  }
+ },
+ "exit8_gps_cutover_ttr": {
+  "1": {
+   "censored": false,
+   "t_star": 100.005,
+   "ttr_s": 0.005
+  },
+  "2": {
+   "censored": false,
+   "t_star": 100.005,
+   "ttr_s": 0.005
+  },
+  "3": {
+   "censored": false,
+   "t_star": 100.005,
+   "ttr_s": 0.005
+  },
+  "4": {
+   "censored": false,
+   "t_star": 100.005,
+   "ttr_s": 0.005
+  },
+  "5": {
+   "censored": false,
+   "t_star": 100.005,
+   "ttr_s": 0.005
+  }
+ },
+ "exit8_aggressive": {
+  "1": {
+   "rmse_h_m": 3.044902226,
+   "max_h_m": 9.969532301
+  },
+  "2": {
+   "rmse_h_m": 4.481489402,
+   "max_h_m": 14.298890096
+  },
+  "3": {
+   "rmse_h_m": 1.709556804,
+   "max_h_m": 5.791249519
+  },
+  "4": {
+   "rmse_h_m": 13.702038763,
+   "max_h_m": 78.058360783
+  },
+  "5": {
+   "rmse_h_m": 8.084573408,
+   "max_h_m": 22.509488381
+  }
+ }
+}

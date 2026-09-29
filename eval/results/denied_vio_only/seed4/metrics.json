@@ -1,0 +1,331 @@
+{
+  "all_h": {
+    "rmse": 14.955562686
+  },
+  "continuity": {
+    "max_bleed_mps": 0.5,
+    "max_jump_m": 0.0175,
+    "p99_jump_m": 0.0175,
+    "reset_counter_increments": 0,
+    "vpe_bad_frames": 0,
+    "vpe_frames": 8347,
+    "vpe_rate_hz": 30.004133791
+  },
+  "filter_stats": {
+    "ALL": {
+      "baro": 1391,
+      "flow": 196,
+      "gps": 0,
+      "gps_rej": 0,
+      "lidar": 1320,
+      "mag": 2782,
+      "map_acc": 0,
+      "map_rej": 0,
+      "vio": 1168,
+      "vio_rej": 79
+    },
+    "REF": {
+      "baro": 1391,
+      "flow": 196,
+      "gps": 0,
+      "gps_rej": 0,
+      "lidar": 1320,
+      "mag": 2782,
+      "map_acc": 0,
+      "map_rej": 0,
+      "vio": 1168,
+      "vio_rej": 79
+    }
+  },
+  "final_after_recovery": {
+    "hpl_m": 118.077720433,
+    "pub_h_m": 24.428383732,
+    "ref_h_m": 19.656413179,
+    "t": 248.005
+  },
+  "gate_events": [
+    [
+      0.0,
+      "UNAVAILABLE",
+      "PROBATION",
+      "fix acquired"
+    ],
+    [
+      0.2,
+      "PROBATION",
+      "UNAVAILABLE",
+      "no fix"
+    ]
+  ],
+  "gate_final": "UNAVAILABLE",
+  "headline": "pub RMSE 15.23 m, final(after recovery) 24.43 m, touchdown 15.8 m, max 28.1 m, HMI 0, gate UNAVAILABLE",
+  "health_events": [
+    [
+      0.0,
+      "RANGE",
+      "UNAVAILABLE",
+      ""
+    ],
+    [
+      0.0,
+      "GPS",
+      "PROBATION",
+      "fix acquired"
+    ],
+    [
+      0.05,
+      "VIO",
+      "FAILED",
+      "dark"
+    ],
+    [
+      0.05,
+      "MAP",
+      "DISABLED",
+      "illumination below threshold"
+    ],
+    [
+      0.2,
+      "GPS",
+      "UNAVAILABLE",
+      "no fix"
+    ],
+    [
+      6.85,
+      "RANGE",
+      "OK",
+      ""
+    ],
+    [
+      8.1,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      160.55,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      161.55,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      163.15,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      164.15,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      166.15,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      167.15,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      170.95,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      171.95,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      185.95,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      186.95,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      200.55,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      201.55,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      205.55,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      206.55,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      244.95,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      245.95,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      258.95,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      259.95,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      270.45,
+      "VIO",
+      "FAILED",
+      "collapse,shock"
+    ],
+    [
+      270.95,
+      "RANGE",
+      "UNAVAILABLE",
+      ""
+    ]
+  ],
+  "hmi_epochs": 0,
+  "hpl_exceed_epochs": 0,
+  "hpl_median": 98.629724965,
+  "manifest": {
+    "config_sha256": "59f15e2d1c7a4c5110528685b3e2f137b0b9e5c38b21a1d6b9886217acd1767a",
+    "git_sha": "6ec7510903c7b33a891ae7baa718cafd19e1e404",
+    "imagery": {
+      "map": {
+        "date": "2017-06-27",
+        "item": "az_m_3511151_ne_12_.6_20170627_20171128+coreg2023"
+      },
+      "render": {
+        "date": "2023-06-15",
+        "item": "az_m_3511151_ne_12_030_20230615_20240328"
+      }
+    },
+    "ovserver": "dd2fdd9b399ad2f154061d01231a48774749265c9351022ba70f8e2976eb1537",
+    "seed": 4,
+    "uv_lock_sha256": "109a24953a7fe1549b8e006af72b1195808dd6d0bb9fec00a1675d386ef3c266",
+    "vio": "ovserver"
+  },
+  "map": {
+    "attempts": 0
+  },
+  "path_m": 2216.761563201,
+  "pub_h": {
+    "final": 15.828589001,
+    "max": 28.057610444,
+    "median": 13.165880315,
+    "p95": 25.135384168,
+    "rmse": 15.22646367
+  },
+  "pub_nees_mean": 27.047012776,
+  "pub_v": {
+    "p95": 3.124562012,
+    "touchdown": 0.4749814
+  },
+  "ref_h": {
+    "max": 29.048294043,
+    "rmse": 14.955562686
+  },
+  "ref_nees_mean": 28.50039597,
+  "scenario": "denied_vio_only",
+  "scoreboard": {
+    "gate_final": "UNAVAILABLE",
+    "hmi_epochs": 0,
+    "map_accept": 0,
+    "map_median_m": null,
+    "max_jump_m": 0.0175,
+    "pub_final_h_m": 24.428383732,
+    "pub_max_h_m": 28.057610444,
+    "pub_rmse_h_m": 15.22646367,
+    "pub_touchdown_h_m": 15.828589001,
+    "textured_median_h_m": 9.126034059,
+    "textured_rmse_h_m": 12.568479632,
+    "ttr_s": 0.005
+  },
+  "seed": 4,
+  "segments": {
+    "seg_forest": {
+      "kind": "forest",
+      "max": 23.029908957,
+      "median": 15.304979888,
+      "p99": 22.603664497,
+      "rmse": 16.023170766
+    },
+    "seg_landing": {
+      "kind": "landing",
+      "max": 24.428383732,
+      "median": 17.452365898,
+      "p99": 24.248519345,
+      "rmse": 18.308428403
+    },
+    "seg_tail": {
+      "kind": "textured",
+      "max": 25.418679404,
+      "median": 24.486711082,
+      "p99": 25.36917462,
+      "rmse": 24.339258336
+    },
+    "seg_town_a": {
+      "kind": "textured",
+      "max": 9.145033948,
+      "median": 5.805899379,
+      "p99": 9.13151796,
+      "rmse": 5.973492035
+    },
+    "seg_town_b": {
+      "kind": "textured",
+      "max": 13.386301372,
+      "median": 11.229088646,
+      "p99": 13.333376959,
+      "rmse": 11.231336086
+    }
+  },
+  "textured": {
+    "median": 9.126034059,
+    "p99": 25.129513786,
+    "rmse": 12.568479632
+  },
+  "ttr": {
+    "censored": false,
+    "t_star": 0.005,
+    "ttr_s": 0.005
+  }
+}

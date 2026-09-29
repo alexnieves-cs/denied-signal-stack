@@ -278,8 +278,10 @@ def run(scn: dict, seed: int, out_dir: Path, vio_mode: str = "auto", rrd: bool =
     fixes_since_reanchor = 0
     refresh_pending = False
     vio_rej_run = 0
+    last_vio_fail_t = -1e9
     last_map_t = -1e9
     last_pub_t = -1e9
+    next_pub_t = 0.0
     last_log_t = -1e9
     last_fix_accept_t = None
     fixes = []
@@ -366,7 +368,7 @@ def run(scn: dict, seed: int, out_dir: Path, vio_mode: str = "auto", rrd: bool =
                         f_.P[:, 15:18] = 0.0
                         f_.P[15:18, 15:18] = np.eye(3) * 0.2**2
                     refresh_pending = False
-                reanchor_t = fr["t"]
+                reanchor_t = fr["t"]  # noqa: F841  (kept for debugging hooks)
                 reanchor_bias_sigma = 0.0
                 fixes_since_reanchor = 0
                 need_reanchor = False
@@ -380,6 +382,8 @@ def run(scn: dict, seed: int, out_dir: Path, vio_mode: str = "auto", rrd: bool =
                     v_meas = (vo.p - prev_vio_p) / dtv
                     t0 = time.perf_counter()
                     sv = sig_vio * (2.0 if vs["state"] == "DEGRADED" else 1.0)
+                    if abs(float(ref.v[2])) > 1.0:
+                        sv *= 3.0  # climb / descent: depth changes fast and mono VIO velocity degrades
                     if refresh_pending:
                         sv = float(np.hypot(sv, reanchor_bias_sigma))  # VIO inherited REF's velocity error
                     ok_v = ref.vio_velocity(v_meas, sv)
@@ -520,7 +524,12 @@ def run(scn: dict, seed: int, out_dir: Path, vio_mode: str = "auto", rrd: bool =
             valid = bool(gnss["valid"][ig])
             sep = separation_stat(allf.p, allf.pos_cov(), ref.p, ref.pos_cov()) if gate.state == gg.TRUSTED else None
             prev = gate.state
-            use = gate.step(tg, valid, gnss["pos"][ig], gnss["vel"][ig], ref.p, ref.pos_cov(), ref.v, ref.P[3:6, 3:6], sep)
+            if health.state["VIO"] == "FAILED":
+                last_vio_fail_t = tg
+            sig_ref_h = float(np.sqrt(np.max(np.linalg.eigvalsh(ref.pos_cov()[:2, :2]))))
+            ref_deg = (tg - last_vio_fail_t < float(scn.get("gate", {}).get("ref_recover_hold_s", 20.0))) or sig_ref_h > 5.0
+            use = gate.step(tg, valid, gnss["pos"][ig], gnss["vel"][ig], ref.p, ref.pos_cov(), ref.v, ref.P[3:6, 3:6], sep,
+                            ref_degraded=ref_deg and tg > vio_init_t + 5.0)
             if gate.state != prev:
                 health.set(tg, "GPS", gate.state, gate.reason)
                 if gate.state in (gg.SUSPECT, gg.REJECTED, gg.UNAVAILABLE) and prev == gg.TRUSTED:
@@ -533,9 +542,11 @@ def run(scn: dict, seed: int, out_dir: Path, vio_mode: str = "auto", rrd: bool =
             ig += 1
 
         # --- published output at 30 Hz
-        if tk - last_pub_t >= 1.0 / 30.0 - 1e-9:
+        if tk >= next_pub_t - 1e-9:
+            # exact 30 Hz schedule: publish the sample nearest each 1/30 s tick (IMU ticks are 5 ms)
             dt = tk - last_pub_t if last_pub_t > -1e8 else 1.0 / 30.0
             last_pub_t = tk
+            next_pub_t += 1.0 / 30.0
             if gate.state == gg.TRUSTED:
                 tp = clamp_target(allf.p, allf.pos_cov(), ref.p, ref.pos_cov())
                 tv, tR, tP = allf.v, allf.R, allf.pos_cov()

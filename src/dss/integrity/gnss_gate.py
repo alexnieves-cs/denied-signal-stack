@@ -41,13 +41,15 @@ class GateConfig:
     vel_k: float = 2.0
     vel_h: float = 10.0
     pregate: float = 13.82
+    pregate_consecutive: int = 5
     sep_K: float = 5.0
     suspect_to_reject_s: float = 1.0
     gps_vel_sigma: float = 0.05
-    ref_vel_floor: float = 0.08
+    ref_vel_floor: float = 0.20
     gm_tau_s: float = 60.0
     gm_sigma_h: float = 1.27
     cusum_gm_inflation: float = 2.0
+    ref_recover_hold_s: float = 20.0
 
     @staticmethod
     def from_dict(d: dict | None) -> GateConfig:
@@ -82,9 +84,17 @@ class GnssGate:
             if s in (SUSPECT, REJECTED) and self.alarm_t is None:
                 self.alarm_t = t
 
-    def step(self, t: float, fix_valid: bool, pos, vel, ref_p, ref_P, ref_v, ref_Pv, sep_stat: float | None) -> bool:
-        """Return True if this GPS sample may be fused into ALL."""
+    def step(self, t: float, fix_valid: bool, pos, vel, ref_p, ref_P, ref_v, ref_Pv, sep_stat: float | None,
+             ref_degraded: bool = False) -> bool:
+        """Return True if this GPS sample may be fused into ALL.
+
+        ``ref_degraded`` (vision FAILED, or < hold s since recovery): REF is coasting and cannot arbitrate, so the
+        gate HOLDS its state: no consistency statistics accumulate, no trust or alarm decisions are made (a
+        documented blind spot: a spoofer acting only during a vision outage is caught when REF recovers)."""
         c = self.cfg
+        if ref_degraded and fix_valid and self.state not in (REJECTED, UNAVAILABLE):
+            self.last_decim_t = t
+            return self.state == TRUSTED
         if self.state == REJECTED:
             return False
         if not fix_valid:
@@ -107,19 +117,19 @@ class GnssGate:
         rv = np.asarray(vel[:2]) - ref_v[:2]
         Sv = ref_Pv[:2, :2] + np.eye(2) * (c.gps_vel_sigma**2 + c.ref_vel_floor**2)
         dv2 = float(rv @ np.linalg.solve(Sv, rv))
-        if t - self.last_decim_t >= 1.0:  # 1 Hz decimation for the correlated position test
+        pre_ok = d2 <= c.pregate
+        if t - self.last_decim_t >= 1.0:  # 1 Hz decimation: 5 Hz samples of the tau=60 s error are not independent
             self.last_decim_t = t
             self.cpos.step(0.5 * d2c)
             self.cvel.step(0.5 * dv2)
-        pre_ok = d2 <= c.pregate
-        self.consec_fail = 0 if pre_ok else self.consec_fail + 1
+            self.consec_fail = 0 if pre_ok else self.consec_fail + 1
         why = None
         if self.cpos.g > c.pos_h:
             why = f"position CUSUM {self.cpos.g:.1f} > {c.pos_h}"
         elif self.cvel.g > c.vel_h:
             why = f"velocity CUSUM {self.cvel.g:.1f} > {c.vel_h}"
-        elif self.consec_fail >= 3:
-            why = "3 consecutive pre-gate failures"
+        elif self.consec_fail >= c.pregate_consecutive:
+            why = f"{c.pregate_consecutive} consecutive 1 Hz pre-gate failures"
         elif sep_stat is not None and sep_stat > c.sep_K:
             why = f"ALL-REF separation {sep_stat:.1f} sigma"
         if why and self.state in (PROBATION, TRUSTED):

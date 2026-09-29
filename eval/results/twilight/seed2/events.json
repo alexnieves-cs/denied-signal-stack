@@ -1,0 +1,205 @@
+{
+ "health": [
+  [
+   0.0,
+   "RANGE",
+   "UNAVAILABLE",
+   ""
+  ],
+  [
+   0.0,
+   "GPS",
+   "PROBATION",
+   "fix acquired"
+  ],
+  [
+   0.05,
+   "VIO",
+   "FAILED",
+   "dark"
+  ],
+  [
+   0.05,
+   "MAP",
+   "DISABLED",
+   "illumination below threshold"
+  ],
+  [
+   6.8500000000000005,
+   "RANGE",
+   "OK",
+   ""
+  ],
+  [
+   9.450000000000001,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   35.0,
+   "GPS",
+   "TRUSTED",
+   "probation passed"
+  ],
+  [
+   42.400000000000006,
+   "GPS",
+   "UNAVAILABLE",
+   "no fix"
+  ],
+  [
+   170.35000000000002,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   171.35000000000002,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   179.35000000000002,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   180.35000000000002,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   186.55,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   187.55,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   191.35000000000002,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   192.35000000000002,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   194.15,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   195.15,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   198.95000000000002,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   199.95000000000002,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   205.35000000000002,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   206.35000000000002,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   211.95000000000002,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   212.95000000000002,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   244.55,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   245.55,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   258.75,
+   "VIO",
+   "FAILED",
+   "velocity inconsistent with REF (5 consecutive gate failures)"
+  ],
+  [
+   259.75,
+   "VIO",
+   "OK",
+   ""
+  ],
+  [
+   270.40000000000003,
+   "VIO",
+   "FAILED",
+   "collapse"
+  ],
+  [
+   270.95,
+   "RANGE",
+   "UNAVAILABLE",
+   ""
+  ]
+ ],
+ "gate": [
+  [
+   0.0,
+   "UNAVAILABLE",
+   "PROBATION",
+   "fix acquired"
+  ],
+  [
+   35.0,
+   "PROBATION",
+   "TRUSTED",
+   "probation passed"
+  ],
+  [
+   42.400000000000006,
+   "TRUSTED",
+   "UNAVAILABLE",
+   "no fix"
+  ]
+ ],
+ "fixes": []
+}

@@ -13,6 +13,19 @@ from dss.integrity import gnss_gate as gg
 from dss.sim import gnss
 
 
+def ref_degraded_mask(L, hold_s: float = 20.0, sigma_max: float = 5.0, t_min: float = 17.0) -> np.ndarray:
+    """Same rule as the in-sim gate: vision FAILED within hold_s, or REF horizontal sigma > sigma_max."""
+    t, vis, Pref = L["t"], L["vision"], L["Pref"]
+    last = -1e9
+    out = np.zeros(len(t), bool)
+    sig = np.sqrt(np.max(np.linalg.eigvalsh(Pref[:, :2, :2]), axis=1))
+    for j in range(len(t)):
+        if vis[j] == 2:
+            last = t[j]
+        out[j] = ((t[j] - last < hold_s) or sig[j] > sigma_max) and t[j] > t_min
+    return out
+
+
 def replay_run(log_path: Path, n_seeds: int, seed0: int = 2000) -> dict:
     L = np.load(log_path)
     t, gt, gv = L["t"], L["gt"], L["gt_v"]
@@ -20,6 +33,7 @@ def replay_run(log_path: Path, n_seeds: int, seed0: int = 2000) -> dict:
     if "ref_v" not in L:
         return {"skipped": "no REF velocity in log"}
     rv, Pv = L["ref_v"], L["Pref_v"]
+    deg = ref_degraded_mask(L)
     c = config.load("sensors/gnss_m9n.yaml")
     alarms = 0
     exposure = 0.0
@@ -30,7 +44,8 @@ def replay_run(log_path: Path, n_seeds: int, seed0: int = 2000) -> dict:
         gate = gg.GnssGate()
         for k in range(len(tg)):
             i = idx[k]
-            gate.step(tg[k], bool(d["valid"][k]), d["pos"][k], d["vel"][k], ref[i], Pref[i], rv[i], Pv[i], None)
+            gate.step(tg[k], bool(d["valid"][k]), d["pos"][k], d["vel"][k], ref[i], Pref[i], rv[i], Pv[i], None,
+                      ref_degraded=bool(deg[i]))
         alarms += int(gate.alarm_t is not None)
         exposure += (tg[-1] - tg[0]) / 3600.0
     return {"alarms": alarms, "exposure_h": exposure}
@@ -68,10 +83,12 @@ SWEEP = [{"kind": "step", "offset_m": 20.0, "label": "step 20 m"}] + \
 ENVELOPE = {"step 20 m": 1.2, "2.0 m/s": 8.0, "1.0 m/s": 20.0, "0.5 m/s": 35.0}
 
 
-def spoof_sweep(results: Path, seeds_per_run: int = 4, t_onset: float = 100.0, horizon: float = 150.0, seed0: int = 3000) -> dict:
+def spoof_sweep(results: Path, seeds_per_run: int = 4, t_onset: float = 100.0, horizon: float = 150.0, seed0: int = 3000,
+                exclude=(), only=None) -> dict:
     """Seamless capture of a TRUSTED receiver at t_onset (probation passed at 35 s), against REF logs."""
     c = config.load("sensors/gnss_m9n.yaml")
-    logs = [lp for lp in sorted(Path(results).glob("*/seed*/log.npz")) if "ref_v" in np.load(lp)]
+    logs = [lp for lp in sorted(Path(results).glob("*/seed*/log.npz")) if "ref_v" in np.load(lp)
+            and lp.parts[-3] not in exclude and (only is None or lp.parts[-3] in only)]
     out = {}
     for prof in SWEEP:
         lat, lat_det, sid = [], [], []
@@ -80,6 +97,7 @@ def spoof_sweep(results: Path, seeds_per_run: int = 4, t_onset: float = 100.0, h
         for lp in logs:
             L = np.load(lp)
             t, gt, gv, ref, Pref, rv, Pv = L["t"], L["gt"], L["gt_v"], L["ref"], L["Pref"], L["ref_v"], L["Pref_v"]
+            deg = ref_degraded_mask(L)
             t_end = min(t[-1], t_onset + horizon)
             tg = np.arange(t[0], t_end, 0.2)
             idx = np.clip(np.searchsorted(t, tg), 0, len(t) - 1)
@@ -90,7 +108,8 @@ def spoof_sweep(results: Path, seeds_per_run: int = 4, t_onset: float = 100.0, h
                 gate = gg.GnssGate()
                 for k in range(len(tg)):
                     i = idx[k]
-                    gate.step(tg[k], bool(d["valid"][k]), d["pos"][k], d["vel"][k], ref[i], Pref[i], rv[i], Pv[i], None)
+                    gate.step(tg[k], bool(d["valid"][k]), d["pos"][k], d["vel"][k], ref[i], Pref[i], rv[i], Pv[i], None,
+                              ref_degraded=bool(deg[i]))
                 n += 1
                 off = np.linalg.norm(d["spoof_offset"][:, :2], axis=1)
                 on = tg[off > 1e-6]

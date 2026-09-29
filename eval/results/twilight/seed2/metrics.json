@@ -1,0 +1,362 @@
+{
+  "all_h": {
+    "rmse": 18.466943495
+  },
+  "continuity": {
+    "max_bleed_mps": 0.5,
+    "max_jump_m": 0.0175,
+    "p99_jump_m": 0.0175,
+    "reset_counter_increments": 0,
+    "vpe_bad_frames": 0,
+    "vpe_frames": 8347,
+    "vpe_rate_hz": 30.004133791
+  },
+  "filter_stats": {
+    "ALL": {
+      "baro": 1391,
+      "flow": 205,
+      "gps": 8,
+      "gps_rej": 0,
+      "lidar": 1320,
+      "mag": 2782,
+      "map_acc": 0,
+      "map_rej": 0,
+      "vio": 1159,
+      "vio_rej": 83
+    },
+    "REF": {
+      "baro": 1391,
+      "flow": 205,
+      "gps": 0,
+      "gps_rej": 0,
+      "lidar": 1320,
+      "mag": 2782,
+      "map_acc": 0,
+      "map_rej": 0,
+      "vio": 1159,
+      "vio_rej": 83
+    }
+  },
+  "final_after_recovery": {
+    "hpl_m": 116.558592745,
+    "pub_h_m": 21.204264256,
+    "ref_h_m": 23.255755214,
+    "t": 248.005
+  },
+  "gate_events": [
+    [
+      0.0,
+      "UNAVAILABLE",
+      "PROBATION",
+      "fix acquired"
+    ],
+    [
+      35.0,
+      "PROBATION",
+      "TRUSTED",
+      "probation passed"
+    ],
+    [
+      42.4,
+      "TRUSTED",
+      "UNAVAILABLE",
+      "no fix"
+    ]
+  ],
+  "gate_final": "UNAVAILABLE",
+  "headline": "pub RMSE 18.32 m, final(after recovery) 21.20 m, touchdown 24.8 m, max 27.3 m, HMI 0, gate UNAVAILABLE",
+  "health_events": [
+    [
+      0.0,
+      "RANGE",
+      "UNAVAILABLE",
+      ""
+    ],
+    [
+      0.0,
+      "GPS",
+      "PROBATION",
+      "fix acquired"
+    ],
+    [
+      0.05,
+      "VIO",
+      "FAILED",
+      "dark"
+    ],
+    [
+      0.05,
+      "MAP",
+      "DISABLED",
+      "illumination below threshold"
+    ],
+    [
+      6.85,
+      "RANGE",
+      "OK",
+      ""
+    ],
+    [
+      9.45,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      35.0,
+      "GPS",
+      "TRUSTED",
+      "probation passed"
+    ],
+    [
+      42.4,
+      "GPS",
+      "UNAVAILABLE",
+      "no fix"
+    ],
+    [
+      170.35,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      171.35,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      179.35,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      180.35,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      186.55,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      187.55,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      191.35,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      192.35,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      194.15,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      195.15,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      198.95,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      199.95,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      205.35,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      206.35,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      211.95,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      212.95,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      244.55,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      245.55,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      258.75,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      259.75,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      270.4,
+      "VIO",
+      "FAILED",
+      "collapse"
+    ],
+    [
+      270.95,
+      "RANGE",
+      "UNAVAILABLE",
+      ""
+    ]
+  ],
+  "hmi_epochs": 0,
+  "hpl_exceed_epochs": 0,
+  "hpl_median": 98.633175805,
+  "manifest": {
+    "config_sha256": "015b6e33ef26df63199ba6e1ef00f716dc5f5d122885d71468ecf8665c5cc734",
+    "git_sha": "6ec7510903c7b33a891ae7baa718cafd19e1e404",
+    "imagery": {
+      "map": {
+        "date": "2017-06-27",
+        "item": "az_m_3511151_ne_12_.6_20170627_20171128+coreg2023"
+      },
+      "render": {
+        "date": "2023-06-15",
+        "item": "az_m_3511151_ne_12_030_20230615_20240328"
+      }
+    },
+    "ovserver": "dd2fdd9b399ad2f154061d01231a48774749265c9351022ba70f8e2976eb1537",
+    "seed": 2,
+    "uv_lock_sha256": "109a24953a7fe1549b8e006af72b1195808dd6d0bb9fec00a1675d386ef3c266",
+    "vio": "ovserver"
+  },
+  "map": {
+    "attempts": 0
+  },
+  "path_m": 2216.761563201,
+  "pub_h": {
+    "final": 24.814440767,
+    "max": 27.280389028,
+    "median": 19.382461477,
+    "p95": 25.34869891,
+    "rmse": 18.323001265
+  },
+  "pub_nees_mean": 11.730979559,
+  "pub_v": {
+    "p95": 2.064757632,
+    "touchdown": 0.109039157
+  },
+  "ref_h": {
+    "max": 27.238284249,
+    "rmse": 18.481822729
+  },
+  "ref_nees_mean": 13.312185852,
+  "scenario": "twilight",
+  "scoreboard": {
+    "gate_final": "UNAVAILABLE",
+    "hmi_epochs": 0,
+    "map_accept": 0,
+    "map_median_m": null,
+    "max_jump_m": 0.0175,
+    "pub_final_h_m": 21.204264256,
+    "pub_max_h_m": 27.280389028,
+    "pub_rmse_h_m": 18.323001265,
+    "pub_touchdown_h_m": 24.814440767,
+    "textured_median_h_m": 15.524130726,
+    "textured_rmse_h_m": 15.728007811,
+    "ttr_s": null,
+    "vision_fail_latency_s": 0.105
+  },
+  "seed": 2,
+  "segments": {
+    "seg_forest": {
+      "kind": "forest",
+      "max": 23.861629643,
+      "median": 21.828991589,
+      "p99": 23.842310535,
+      "rmse": 21.9589859
+    },
+    "seg_landing": {
+      "kind": "landing",
+      "max": 24.901776155,
+      "median": 21.915839954,
+      "p99": 24.900211283,
+      "rmse": 22.107447688
+    },
+    "seg_tail": {
+      "kind": "textured",
+      "max": 23.618864597,
+      "median": 23.017660738,
+      "p99": 23.614795509,
+      "rmse": 22.706973734
+    },
+    "seg_town_a": {
+      "kind": "textured",
+      "max": 15.599967282,
+      "median": 11.451330339,
+      "p99": 15.529953327,
+      "rmse": 10.65712519
+    },
+    "seg_town_b": {
+      "kind": "textured",
+      "max": 19.878457436,
+      "median": 17.9104827,
+      "p99": 19.782580692,
+      "rmse": 17.843726814
+    }
+  },
+  "textured": {
+    "median": 15.524130726,
+    "p99": 23.49400208,
+    "rmse": 15.728007811
+  },
+  "ttr": {
+    "censored": true,
+    "t_star": null,
+    "ttr_s": null
+  },
+  "vision": {
+    "collapse_t": 0.0,
+    "failed_t": 0.105,
+    "latency_s": 0.105,
+    "max_err_in_outage": 27.280389028
+  }
+}

@@ -1,0 +1,497 @@
+{
+ "aggressive": {
+  "gate_final": [
+   "UNAVAILABLE",
+   "UNAVAILABLE",
+   "UNAVAILABLE",
+   "UNAVAILABLE",
+   "UNAVAILABLE"
+  ],
+  "hmi_epochs": {
+   "median": 0.0,
+   "max": 50.0
+  },
+  "map_accept": {
+   "median": 104.0,
+   "max": 107.0
+  },
+  "map_median_m": {
+   "median": 1.214598499,
+   "max": 1.301884699
+  },
+  "max_jump_m": {
+   "median": 0.0175,
+   "max": 0.0175
+  },
+  "pub_final_h_m": {
+   "median": 0.978776244,
+   "max": 78.058360783
+  },
+  "pub_max_h_m": {
+   "median": 14.298890096,
+   "max": 78.058360783
+  },
+  "pub_rmse_h_m": {
+   "median": 4.481489402,
+   "max": 13.702038763
+  },
+  "pub_touchdown_h_m": {
+   "median": 0.978776244,
+   "max": 78.058360783
+  },
+  "textured_median_h_m": {
+   "median": 2.359885215,
+   "max": 2.745962726
+  },
+  "textured_rmse_h_m": {
+   "median": 2.43038036,
+   "max": 3.446754166
+  },
+  "ttr_s": {
+   "median": 0.005,
+   "max": 0.005
+  }
+ },
+ "demo": {
+  "gate_final": [
+   "REJECTED",
+   "REJECTED",
+   "REJECTED",
+   "REJECTED",
+   "REJECTED"
+  ],
+  "hmi_epochs": {
+   "median": 0.0,
+   "max": 0.0
+  },
+  "map_accept": {
+   "median": 164.0,
+   "max": 166.0
+  },
+  "map_median_m": {
+   "median": 0.979422113,
+   "max": 1.021793412
+  },
+  "max_jump_m": {
+   "median": 0.0175,
+   "max": 0.0175
+  },
+  "pub_final_h_m": {
+   "median": 18.829623289,
+   "max": 60.522391463
+  },
+  "pub_max_h_m": {
+   "median": 44.262063522,
+   "max": 82.960408024
+  },
+  "pub_rmse_h_m": {
+   "median": 16.846476016,
+   "max": 38.837444131
+  },
+  "pub_touchdown_h_m": {
+   "median": 8.18643764,
+   "max": 46.211302855
+  },
+  "spoof_latency_s": {
+   "median": 4.0,
+   "max": 6.0
+  },
+  "textured_median_h_m": {
+   "median": 1.314958425,
+   "max": 1.348056437
+  },
+  "textured_rmse_h_m": {
+   "median": 9.702295366,
+   "max": 27.192171287
+  },
+  "ttr_s": {
+   "median": 0.005,
+   "max": 0.005
+  },
+  "vision_fail_latency_s": {
+   "median": 2.005,
+   "max": 2.005
+  }
+ },
+ "denied_route": {
+  "gate_final": [
+   "UNAVAILABLE",
+   "UNAVAILABLE",
+   "UNAVAILABLE",
+   "UNAVAILABLE",
+   "UNAVAILABLE"
+  ],
+  "hmi_epochs": {
+   "median": 0.0,
+   "max": 0.0
+  },
+  "map_accept": {
+   "median": 209.0,
+   "max": 217.0
+  },
+  "map_median_m": {
+   "median": 0.853957729,
+   "max": 0.962091627
+  },
+  "max_jump_m": {
+   "median": 0.0175,
+   "max": 0.0175
+  },
+  "pub_final_h_m": {
+   "median": 2.084123011,
+   "max": 3.913882481
+  },
+  "pub_max_h_m": {
+   "median": 5.011539746,
+   "max": 9.053872722
+  },
+  "pub_rmse_h_m": {
+   "median": 1.479606239,
+   "max": 2.863286706
+  },
+  "pub_touchdown_h_m": {
+   "median": 0.905026146,
+   "max": 3.055858382
+  },
+  "textured_median_h_m": {
+   "median": 1.045801282,
+   "max": 1.207465517
+  },
+  "textured_rmse_h_m": {
+   "median": 1.610419943,
+   "max": 1.708399988
+  },
+  "ttr_s": {
+   "median": 0.005,
+   "max": 8.105
+  }
+ },
+ "denied_vio_only": {
+  "gate_final": [
+   "UNAVAILABLE",
+   "UNAVAILABLE",
+   "UNAVAILABLE",
+   "UNAVAILABLE",
+   "UNAVAILABLE"
+  ],
+  "hmi_epochs": {
+   "median": 0.0,
+   "max": 0.0
+  },
+  "map_accept": {
+   "median": 0.0,
+   "max": 0.0
+  },
+  "map_median_m": [
+   null,
+   null,
+   null,
+   null,
+   null
+  ],
+  "max_jump_m": {
+   "median": 0.0175,
+   "max": 0.0175
+  },
+  "pub_final_h_m": {
+   "median": 13.137555591,
+   "max": 24.428383732
+  },
+  "pub_max_h_m": {
+   "median": 14.437200027,
+   "max": 77.14592252
+  },
+  "pub_rmse_h_m": {
+   "median": 10.554490396,
+   "max": 15.22646367
+  },
+  "pub_touchdown_h_m": {
+   "median": 10.086710861,
+   "max": 77.14592252
+  },
+  "textured_median_h_m": {
+   "median": 9.126034059,
+   "max": 11.039129617
+  },
+  "textured_rmse_h_m": {
+   "median": 9.86257258,
+   "max": 12.568479632
+  },
+  "ttr_s": {
+   "median": 0.005,
+   "max": 8.105
+  }
+ },
+ "dragoff_spoof": {
+  "gate_final": [
+   "REJECTED",
+   "REJECTED",
+   "REJECTED",
+   "REJECTED",
+   "REJECTED"
+  ],
+  "hmi_epochs": {
+   "median": 0.0,
+   "max": 0.0
+  },
+  "map_accept": {
+   "median": 209.0,
+   "max": 217.0
+  },
+  "map_median_m": {
+   "median": 0.853957729,
+   "max": 0.962091627
+  },
+  "max_jump_m": {
+   "median": 0.0175,
+   "max": 0.0175
+  },
+  "pub_final_h_m": {
+   "median": 2.084123011,
+   "max": 3.913882481
+  },
+  "pub_max_h_m": {
+   "median": 5.011539746,
+   "max": 9.053872722
+  },
+  "pub_rmse_h_m": {
+   "median": 1.472271642,
+   "max": 2.852395284
+  },
+  "pub_touchdown_h_m": {
+   "median": 0.905026146,
+   "max": 3.055858382
+  },
+  "spoof_latency_s": {
+   "median": 2.8,
+   "max": 2.8
+  },
+  "textured_median_h_m": {
+   "median": 0.898731417,
+   "max": 1.160703203
+  },
+  "textured_rmse_h_m": {
+   "median": 1.604487958,
+   "max": 1.671941925
+  }
+ },
+ "forest": {
+  "gate_final": [
+   "UNAVAILABLE",
+   "UNAVAILABLE",
+   "UNAVAILABLE",
+   "UNAVAILABLE",
+   "UNAVAILABLE"
+  ],
+  "hmi_epochs": {
+   "median": 0.0,
+   "max": 0.0
+  },
+  "map_accept": {
+   "median": 164.0,
+   "max": 166.0
+  },
+  "map_median_m": {
+   "median": 0.979422113,
+   "max": 1.021793412
+  },
+  "max_jump_m": {
+   "median": 0.0175,
+   "max": 0.0175
+  },
+  "pub_final_h_m": {
+   "median": 18.829623289,
+   "max": 60.522391463
+  },
+  "pub_max_h_m": {
+   "median": 44.262063522,
+   "max": 82.960408024
+  },
+  "pub_rmse_h_m": {
+   "median": 16.846659374,
+   "max": 38.837653862
+  },
+  "pub_touchdown_h_m": {
+   "median": 8.18643764,
+   "max": 46.211302855
+  },
+  "textured_median_h_m": {
+   "median": 1.345272782,
+   "max": 1.416773652
+  },
+  "textured_rmse_h_m": {
+   "median": 9.702925632,
+   "max": 27.192764305
+  },
+  "ttr_s": {
+   "median": 0.005,
+   "max": 8.105
+  },
+  "vision_fail_latency_s": {
+   "median": 2.005,
+   "max": 2.005
+  }
+ },
+ "gps_cutover": {
+  "gate_final": [
+   "UNAVAILABLE",
+   "UNAVAILABLE",
+   "UNAVAILABLE",
+   "UNAVAILABLE",
+   "UNAVAILABLE"
+  ],
+  "hmi_epochs": {
+   "median": 0.0,
+   "max": 0.0
+  },
+  "map_accept": {
+   "median": 209.0,
+   "max": 217.0
+  },
+  "map_median_m": {
+   "median": 0.853957729,
+   "max": 0.962091627
+  },
+  "max_jump_m": {
+   "median": 0.0175,
+   "max": 0.0175
+  },
+  "pub_final_h_m": {
+   "median": 2.084123011,
+   "max": 3.913882481
+  },
+  "pub_max_h_m": {
+   "median": 5.011539746,
+   "max": 9.053872722
+  },
+  "pub_rmse_h_m": {
+   "median": 1.471262116,
+   "max": 2.851565709
+  },
+  "pub_touchdown_h_m": {
+   "median": 0.905026146,
+   "max": 3.055858382
+  },
+  "textured_median_h_m": {
+   "median": 0.886866821,
+   "max": 1.171994562
+  },
+  "textured_rmse_h_m": {
+   "median": 1.604961363,
+   "max": 1.669138123
+  },
+  "ttr_s": {
+   "median": 0.005,
+   "max": 0.005
+  }
+ },
+ "twilight": {
+  "gate_final": [
+   "UNAVAILABLE",
+   "UNAVAILABLE",
+   "UNAVAILABLE",
+   "UNAVAILABLE",
+   "UNAVAILABLE"
+  ],
+  "hmi_epochs": {
+   "median": 0.0,
+   "max": 0.0
+  },
+  "map_accept": {
+   "median": 0.0,
+   "max": 0.0
+  },
+  "map_median_m": [
+   null,
+   null,
+   null,
+   null,
+   null
+  ],
+  "max_jump_m": {
+   "median": 0.0175,
+   "max": 0.0175
+  },
+  "pub_final_h_m": {
+   "median": 22.705043854,
+   "max": 44.154277675
+  },
+  "pub_max_h_m": {
+   "median": 27.341485808,
+   "max": 46.739511458
+  },
+  "pub_rmse_h_m": {
+   "median": 18.323001265,
+   "max": 21.254120188
+  },
+  "pub_touchdown_h_m": {
+   "median": 27.341485808,
+   "max": 37.775834669
+  },
+  "textured_median_h_m": {
+   "median": 10.759215449,
+   "max": 15.524130726
+  },
+  "textured_rmse_h_m": {
+   "median": 15.690228562,
+   "max": 17.113436907
+  },
+  "ttr_s": {
+   "median": 120.105,
+   "max": 120.105
+  },
+  "vision_fail_latency_s": {
+   "median": 0.105,
+   "max": 0.105
+  }
+ },
+ "urban_canyon": {
+  "gate_final": [
+   "REJECTED",
+   "REJECTED",
+   "REJECTED",
+   "REJECTED",
+   "REJECTED"
+  ],
+  "hmi_epochs": {
+   "median": 0.0,
+   "max": 0.0
+  },
+  "map_accept": {
+   "median": 209.0,
+   "max": 217.0
+  },
+  "map_median_m": {
+   "median": 0.853957729,
+   "max": 0.962091627
+  },
+  "max_jump_m": {
+   "median": 0.0175,
+   "max": 0.0175
+  },
+  "pub_final_h_m": {
+   "median": 2.084123011,
+   "max": 3.913882481
+  },
+  "pub_max_h_m": {
+   "median": 5.011539746,
+   "max": 9.053872722
+  },
+  "pub_rmse_h_m": {
+   "median": 1.473678489,
+   "max": 2.857299052
+  },
+  "pub_touchdown_h_m": {
+   "median": 0.905026146,
+   "max": 3.055858382
+  },
+  "textured_median_h_m": {
+   "median": 1.020448122,
+   "max": 1.207465517
+  },
+  "textured_rmse_h_m": {
+   "median": 1.607220782,
+   "max": 1.688437067
+  }
+ }
+}

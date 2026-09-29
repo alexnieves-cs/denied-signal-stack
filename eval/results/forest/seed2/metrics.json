@@ -1,0 +1,312 @@
+{
+  "all_h": {
+    "rmse": 6.4805405
+  },
+  "continuity": {
+    "max_bleed_mps": 0.5,
+    "max_jump_m": 0.0175,
+    "p99_jump_m": 0.0175,
+    "reset_counter_increments": 0,
+    "vpe_bad_frames": 0,
+    "vpe_frames": 8347,
+    "vpe_rate_hz": 30.004133791
+  },
+  "filter_stats": {
+    "ALL": {
+      "baro": 1391,
+      "flow": 202,
+      "gps": 0,
+      "gps_rej": 0,
+      "lidar": 1320,
+      "mag": 2782,
+      "map_acc": 149,
+      "map_rej": 0,
+      "vio": 1036,
+      "vio_rej": 29
+    },
+    "REF": {
+      "baro": 1391,
+      "flow": 202,
+      "gps": 0,
+      "gps_rej": 0,
+      "lidar": 1320,
+      "mag": 2782,
+      "map_acc": 149,
+      "map_rej": 2,
+      "vio": 1036,
+      "vio_rej": 29
+    }
+  },
+  "final_after_recovery": {
+    "hpl_m": 96.47967445,
+    "pub_h_m": 16.263325629,
+    "ref_h_m": 1.313456624,
+    "t": 248.005
+  },
+  "gate_events": [
+    [
+      0.0,
+      "UNAVAILABLE",
+      "PROBATION",
+      "fix acquired"
+    ],
+    [
+      0.2,
+      "PROBATION",
+      "UNAVAILABLE",
+      "no fix"
+    ]
+  ],
+  "gate_final": "UNAVAILABLE",
+  "headline": "pub RMSE 14.49 m, final(after recovery) 16.26 m, touchdown 3.5 m, max 36.5 m, HMI 0, gate UNAVAILABLE",
+  "health_events": [
+    [
+      0.0,
+      "RANGE",
+      "UNAVAILABLE",
+      ""
+    ],
+    [
+      0.0,
+      "GPS",
+      "PROBATION",
+      "fix acquired"
+    ],
+    [
+      0.05,
+      "VIO",
+      "FAILED",
+      "dark"
+    ],
+    [
+      0.05,
+      "MAP",
+      "DISABLED",
+      "illumination below threshold"
+    ],
+    [
+      0.2,
+      "GPS",
+      "UNAVAILABLE",
+      "no fix"
+    ],
+    [
+      6.85,
+      "RANGE",
+      "OK",
+      ""
+    ],
+    [
+      8.1,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      36.1,
+      "MAP",
+      "OK",
+      ""
+    ],
+    [
+      151.3,
+      "MAP",
+      "DISABLED",
+      "illumination below threshold"
+    ],
+    [
+      151.95,
+      "VIO",
+      "FAILED",
+      "dark"
+    ],
+    [
+      194.1,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      198.15,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      199.15,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      202.75,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      203.75,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      211.75,
+      "MAP",
+      "OK",
+      ""
+    ],
+    [
+      227.55,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      228.55,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      270.45,
+      "VIO",
+      "FAILED",
+      "collapse,shock"
+    ],
+    [
+      270.5,
+      "MAP",
+      "DISABLED",
+      "illumination below threshold"
+    ],
+    [
+      270.95,
+      "RANGE",
+      "UNAVAILABLE",
+      ""
+    ]
+  ],
+  "hmi_epochs": 0,
+  "hpl_exceed_epochs": 0,
+  "hpl_median": 11.128964141,
+  "manifest": {
+    "config_sha256": "58d53bbd777a91be7f5d864251c17ec3a9206cb3b8421b210b5eda3945cb7865",
+    "git_sha": "6ec7510903c7b33a891ae7baa718cafd19e1e404",
+    "imagery": {
+      "map": {
+        "date": "2017-06-27",
+        "item": "az_m_3511151_ne_12_.6_20170627_20171128+coreg2023"
+      },
+      "render": {
+        "date": "2023-06-15",
+        "item": "az_m_3511151_ne_12_030_20230615_20240328"
+      }
+    },
+    "ovserver": "dd2fdd9b399ad2f154061d01231a48774749265c9351022ba70f8e2976eb1537",
+    "seed": 2,
+    "uv_lock_sha256": "109a24953a7fe1549b8e006af72b1195808dd6d0bb9fec00a1675d386ef3c266",
+    "vio": "ovserver"
+  },
+  "map": {
+    "accepted": 149,
+    "accepted_median_m": 0.950874824,
+    "attempts": 205,
+    "candidates": 161,
+    "false_accept_rate": 0.0,
+    "median_m": 0.950874824,
+    "p95_m": 2.233808161,
+    "precision": 1.0,
+    "success_rate": 0.726829268
+  },
+  "path_m": 2216.761563201,
+  "pub_h": {
+    "final": 3.5003994,
+    "max": 36.509543418,
+    "median": 2.42839411,
+    "p95": 34.612672744,
+    "rmse": 14.487245425
+  },
+  "pub_nees_mean": 4.258648758,
+  "pub_v": {
+    "p95": 0.779427266,
+    "touchdown": 0.111686486
+  },
+  "ref_h": {
+    "max": 33.717651557,
+    "rmse": 6.4805405
+  },
+  "ref_nees_mean": 4.161971042,
+  "scenario": "forest",
+  "scoreboard": {
+    "gate_final": "UNAVAILABLE",
+    "hmi_epochs": 0,
+    "map_accept": 149,
+    "map_median_m": 0.950874824,
+    "max_jump_m": 0.0175,
+    "pub_final_h_m": 16.263325629,
+    "pub_max_h_m": 36.509543418,
+    "pub_rmse_h_m": 14.487245425,
+    "pub_touchdown_h_m": 3.5003994,
+    "textured_median_h_m": 1.252916563,
+    "textured_rmse_h_m": 8.91023803,
+    "ttr_s": 0.005,
+    "vision_fail_latency_s": 2.005
+  },
+  "seed": 2,
+  "segments": {
+    "seg_forest": {
+      "kind": "forest",
+      "max": 36.509543418,
+      "median": 5.93762842,
+      "p99": 36.466128527,
+      "rmse": 15.231652344
+    },
+    "seg_landing": {
+      "kind": "landing",
+      "max": 16.263325629,
+      "median": 10.328013608,
+      "p99": 16.046891423,
+      "rmse": 10.453437355
+    },
+    "seg_tail": {
+      "kind": "textured",
+      "max": 26.667923816,
+      "median": 21.02904428,
+      "p99": 26.540193834,
+      "rmse": 21.509527103
+    },
+    "seg_town_a": {
+      "kind": "textured",
+      "max": 4.065260923,
+      "median": 0.822499613,
+      "p99": 3.975871894,
+      "rmse": 1.534194684
+    },
+    "seg_town_b": {
+      "kind": "textured",
+      "max": 3.141034541,
+      "median": 1.781073926,
+      "p99": 3.083120312,
+      "rmse": 1.826995327
+    }
+  },
+  "textured": {
+    "median": 1.252916563,
+    "p99": 25.884875328,
+    "rmse": 8.91023803
+  },
+  "ttr": {
+    "censored": false,
+    "t_star": 0.005,
+    "ttr_s": 0.005
+  },
+  "vision": {
+    "collapse_t": 150.0,
+    "failed_t": 152.005,
+    "first_fix_after_t": 211.75,
+    "latency_s": 2.005,
+    "max_err_in_outage": 36.509543418,
+    "ref_err_10s_after_fix": 0.902827645
+  }
+}
