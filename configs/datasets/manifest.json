@@ -1,0 +1,8 @@
+{
+  "tumvi:room1": {
+    "bytes": 1707110400,
+    "provenance": "tofu",
+    "sha256": "20354392eab5cc82c9770ed29cf0130c5acce0db54a257571499008fb34c398f",
+    "url": "https://cdn3.vision.in.tum.de/tumvi/exported/euroc/512_16/dataset-room1_512_16.tar"
+  }
+}

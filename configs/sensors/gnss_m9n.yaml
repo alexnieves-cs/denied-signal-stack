@@ -1,0 +1,11 @@
+# u-blox M9N-class single-frequency receiver, open sky
+name: m9n
+rate_hz: 5.0
+cep_m: 1.5              # horizontal CEP (50%) -> per-axis sigma = CEP/1.1774
+sigma_v_up_m: 2.5
+tau_pos_s: 60.0         # Gauss-Markov correlation time of position error
+sigma_v: 0.05           # per-axis velocity noise, m/s
+tau_vel_s: 1.0
+cn0_nominal_dbhz: 42.0
+cn0_min_dbhz: 28.0      # below this: no fix
+reacquire_hold_s: 5.0   # C/N0 must stay above threshold this long before a fix is reported

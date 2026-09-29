@@ -1,0 +1,4 @@
+name: dr_static
+trajectory: {kind: static, duration: 61.0}
+sensors: {imu: sensors/imu_bmi160.yaml}
+enable: [imu, baro, mag]

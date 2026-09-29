@@ -1,0 +1,8 @@
+name: bmp390
+rate_hz: 25.0
+noise_sigma_pa: 1.5          # ~0.13 m white noise
+bias_sigma_m: 1.0            # Gauss-Markov bias std (altitude-equivalent)
+bias_tau_s: 300.0
+lag_tau_s: 0.05
+p0_pa: 101325.0
+t0_k: 288.15

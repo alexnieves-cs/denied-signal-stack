@@ -1,0 +1,9 @@
+name: mag_default
+rate_hz: 50.0
+noise_sigma_nt: 150.0
+residual_hard_iron_nt: [80.0, -60.0, 40.0]   # post-calibration residual
+residual_soft_iron: [[1.01, 0.005, 0.0], [0.005, 0.99, 0.0], [0.0, 0.0, 1.0]]
+lat_deg: 35.1983
+lon_deg: -111.6513
+alt_km: 2.1
+decimal_year: 2026.75

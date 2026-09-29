@@ -1,0 +1,5 @@
+name: dr_route_2km
+site_elevation_m: 2100.0
+trajectory: {kind: route, length_m: 2000.0, agl_m: 100.0, speed: 9.0}
+sensors: {imu: sensors/imu_bmi160.yaml}
+enable: [imu, baro, mag, gnss, lidar, flow]

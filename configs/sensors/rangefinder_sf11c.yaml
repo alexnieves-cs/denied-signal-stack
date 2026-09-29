@@ -1,0 +1,6 @@
+name: sf11c
+rate_hz: 20.0
+max_range_m: 120.0
+min_range_m: 0.2
+sigma0_m: 0.1
+sigma_rel: 0.005        # sigma = sqrt(sigma0^2 + (sigma_rel r)^2); PLAN wrote 0.05 r, see LEDGER

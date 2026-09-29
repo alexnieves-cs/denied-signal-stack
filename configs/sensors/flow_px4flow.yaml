@@ -1,0 +1,5 @@
+name: px4flow
+rate_hz: 20.0
+max_agl_m: 20.0
+noise_rad: 0.0005        # per-integration-interval flow angle noise
+quality_min: 100

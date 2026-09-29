@@ -1,0 +1,9 @@
+denied-signal-stack — third-party notices
+
+- OpenVINS (GPL-3.0), https://github.com/rpng/open_vins @69488123. Built and linked only under cpp/ (ovserver, a separate
+  process). No GPL code is imported by the MIT-licensed Python package.
+- TUM-VI dataset (CC BY 4.0), Schubert et al., "The TUM VI Benchmark for Evaluating Visual-Inertial Odometry", IROS 2018.
+- EuRoC MAV dataset (ETH ASL, non-commercial). Calibration values in tests/fixtures/euroc_*_sensor.yaml are from its
+  published sensor.yaml files. EuRoC numbers are kept out of commercial material.
+- World Magnetic Model 2025 (NOAA NCEI / BGS, public domain) via pygeomag.
+- NAIP orthoimagery (USDA FSA, public domain) and USGS 3DEP elevation (public domain), when fetched.

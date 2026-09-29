@@ -1,0 +1,29 @@
+{
+  "euroc:MH_01": null,
+  "manifest": {
+    "config_sha256": "31e5e23536b437d40c52a4445a00bd90fb7d1c8a99d6770edc3d1b4bb33d0a68",
+    "git_sha": "2b6501dec6eee541aa74f81cf06c4ff305ffec38",
+    "seed": 42,
+    "uv_lock_sha256": "109a24953a7fe1549b8e006af72b1195808dd6d0bb9fec00a1675d386ef3c266"
+  },
+  "sim": {
+    "dr": {
+      "err_60s_m": 27.302065328,
+      "final_err_m": 4172.6738645,
+      "rmse_m": 1556.296806016,
+      "vert_rmse_m": 79.212310833
+    },
+    "dr+baro+mag": {
+      "err_60s_m": 17.726573232,
+      "final_err_m": 910.038585587,
+      "rmse_m": 518.405475189,
+      "vert_rmse_m": 0.842651049
+    }
+  },
+  "tumvi:room1": {
+    "err_10s_m": 2.531565579,
+    "final_err_m": 107.518712271,
+    "note": "raw IMU, zero initial bias; consumer IMU DR diverges quadratically, as expected",
+    "seconds": 60.0
+  }
+}
