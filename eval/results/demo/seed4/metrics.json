@@ -1,6 +1,6 @@
 {
   "all_h": {
-    "rmse": 13.720985907
+    "rmse": 13.847396803
   },
   "continuity": {
     "max_bleed_mps": 0.5,
@@ -14,33 +14,33 @@
   "filter_stats": {
     "ALL": {
       "baro": 1391,
-      "flow": 194,
+      "flow": 190,
       "gps": 23,
       "gps_rej": 0,
       "lidar": 1320,
       "mag": 2782,
-      "map_acc": 165,
+      "map_acc": 160,
       "map_rej": 0,
-      "vio": 1019,
-      "vio_rej": 36
+      "vio": 1043,
+      "vio_rej": 22
     },
     "REF": {
       "baro": 1391,
-      "flow": 194,
+      "flow": 190,
       "gps": 0,
       "gps_rej": 0,
       "lidar": 1320,
       "mag": 2782,
-      "map_acc": 165,
+      "map_acc": 160,
       "map_rej": 1,
-      "vio": 1019,
-      "vio_rej": 36
+      "vio": 1043,
+      "vio_rej": 22
     }
   },
   "final_after_recovery": {
-    "hpl_m": 320.692279389,
-    "pub_h_m": 57.149717567,
-    "ref_h_m": 1.640251747,
+    "hpl_m": 369.583525173,
+    "pub_h_m": 63.976977895,
+    "ref_h_m": 1.860390468,
     "t": 248.005
   },
   "gate_events": [
@@ -72,17 +72,17 @@
       130.2,
       "PROBATION",
       "SUSPECT",
-      "velocity CUSUM 10.9 > 10.0"
+      "velocity CUSUM 11.0 > 10.0"
     ],
     [
       131.2,
       "SUSPECT",
       "REJECTED",
-      "suspect persisted: velocity CUSUM 10.9 > 10.0"
+      "suspect persisted: velocity CUSUM 11.0 > 10.0"
     ]
   ],
   "gate_final": "REJECTED",
-  "headline": "pub RMSE 38.51 m, final(after recovery) 57.15 m, touchdown 46.2 m, max 83.0 m, HMI 0, gate REJECTED, spoof latency 5.0",
+  "headline": "pub RMSE 41.18 m, final(after recovery) 63.98 m, touchdown 50.3 m, max 83.3 m, HMI 0, gate REJECTED, spoof latency 5.0",
   "health_events": [
     [
       0.0,
@@ -148,13 +148,13 @@
       130.2,
       "GPS",
       "SUSPECT",
-      "velocity CUSUM 10.9 > 10.0"
+      "velocity CUSUM 11.0 > 10.0"
     ],
     [
       131.2,
       "GPS",
       "REJECTED",
-      "suspect persisted: velocity CUSUM 10.9 > 10.0"
+      "suspect persisted: velocity CUSUM 11.0 > 10.0"
     ],
     [
       151.3,
@@ -175,68 +175,44 @@
       ""
     ],
     [
-      195.75,
+      197.35,
       "VIO",
       "FAILED",
       "velocity inconsistent with REF (5 consecutive gate failures)"
     ],
     [
-      196.75,
+      198.35,
       "VIO",
       "OK",
       ""
     ],
     [
-      208.75,
+      204.35,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      205.35,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      206.95,
+      "VIO",
+      "FAILED",
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      207.95,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      213.95,
       "MAP",
-      "OK",
-      ""
-    ],
-    [
-      218.35,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      219.35,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      222.75,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      223.75,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      244.55,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      245.55,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      258.75,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      259.75,
-      "VIO",
       "OK",
       ""
     ],
@@ -261,10 +237,10 @@
   ],
   "hmi_epochs": 0,
   "hpl_exceed_epochs": 0,
-  "hpl_median": 9.667249203,
+  "hpl_median": 9.735470081,
   "manifest": {
     "config_sha256": "00e0918a539029dca984f9ba08fe848266405d6fe2652c4fd38a88da6fac3ca8",
-    "git_sha": "6ec7510903c7b33a891ae7baa718cafd19e1e404",
+    "git_sha": "be7daa8b525cdfb1c96cff2824a1e89e5edb63c2",
     "imagery": {
       "map": {
         "date": "2017-06-27",
@@ -281,48 +257,48 @@
     "vio": "ovserver"
   },
   "map": {
-    "accepted": 165,
-    "accepted_median_m": 0.979422113,
-    "attempts": 203,
-    "candidates": 171,
+    "accepted": 160,
+    "accepted_median_m": 0.929159959,
+    "attempts": 205,
+    "candidates": 169,
     "false_accept_rate": 0.0,
-    "median_m": 0.979422113,
-    "p95_m": 3.154025187,
-    "precision": 0.96969697,
-    "success_rate": 0.78817734
+    "median_m": 0.929159959,
+    "p95_m": 3.170274272,
+    "precision": 0.96875,
+    "success_rate": 0.756097561
   },
   "path_m": 2216.761563201,
   "pub_h": {
-    "final": 46.211302855,
-    "max": 82.960408024,
-    "median": 2.883538537,
-    "p95": 78.233270306,
-    "rmse": 38.505327671
+    "final": 50.336772316,
+    "max": 83.294984538,
+    "median": 2.868828718,
+    "p95": 82.240057173,
+    "rmse": 41.183992425
   },
-  "pub_nees_mean": 6.033351099,
+  "pub_nees_mean": 5.60683782,
   "pub_v": {
-    "p95": 1.298622091,
-    "touchdown": 0.157347793
+    "p95": 0.983061273,
+    "touchdown": 0.074341513
   },
   "ref_h": {
-    "max": 84.79772052,
-    "rmse": 13.721846202
+    "max": 84.944191099,
+    "rmse": 13.848240869
   },
-  "ref_nees_mean": 6.009393485,
+  "ref_nees_mean": 5.739414538,
   "scenario": "demo",
   "scoreboard": {
     "gate_final": "REJECTED",
     "hmi_epochs": 0,
-    "map_accept": 165,
-    "map_median_m": 0.979422113,
+    "map_accept": 160,
+    "map_median_m": 0.929159959,
     "max_jump_m": 0.0175,
-    "pub_final_h_m": 57.149717567,
-    "pub_max_h_m": 82.960408024,
-    "pub_rmse_h_m": 38.505327671,
-    "pub_touchdown_h_m": 46.211302855,
+    "pub_final_h_m": 63.976977895,
+    "pub_max_h_m": 83.294984538,
+    "pub_rmse_h_m": 41.183992425,
+    "pub_touchdown_h_m": 50.336772316,
     "spoof_latency_s": 5.0,
-    "textured_median_h_m": 1.314958425,
-    "textured_rmse_h_m": 26.023058144,
+    "textured_median_h_m": 1.23798605,
+    "textured_rmse_h_m": 29.028763372,
     "ttr_s": 0.005,
     "vision_fail_latency_s": 2.005
   },
@@ -330,55 +306,55 @@
   "segments": {
     "seg_forest": {
       "kind": "forest",
-      "max": 82.960408024,
-      "median": 13.704243392,
-      "p99": 82.760048516,
-      "rmse": 33.163009429
+      "max": 83.172164773,
+      "median": 13.681802807,
+      "p99": 83.030146306,
+      "rmse": 33.227994475
     },
     "seg_landing": {
       "kind": "landing",
-      "max": 57.149717567,
-      "median": 53.675667035,
-      "p99": 57.06588034,
-      "rmse": 52.861287309
+      "max": 63.976977895,
+      "median": 57.689349163,
+      "p99": 63.77903138,
+      "rmse": 57.430890427
     },
     "seg_tail": {
       "kind": "textured",
-      "max": 70.380194367,
-      "median": 63.353971102,
-      "p99": 70.25208028,
-      "rmse": 63.61566195
+      "max": 77.016232441,
+      "median": 71.029249243,
+      "p99": 76.911286849,
+      "rmse": 70.988286875
     },
     "seg_town_a": {
       "kind": "textured",
-      "max": 5.705375032,
-      "median": 0.907546949,
-      "p99": 5.557666194,
-      "rmse": 1.758589675
+      "max": 5.785146952,
+      "median": 0.90557052,
+      "p99": 5.640393048,
+      "rmse": 1.799018766
     },
     "seg_town_b": {
       "kind": "textured",
-      "max": 3.159194227,
-      "median": 1.857891798,
-      "p99": 3.105182597,
-      "rmse": 1.868735367
+      "max": 3.147855734,
+      "median": 1.858577604,
+      "p99": 3.093856058,
+      "rmse": 1.868066819
     }
   },
   "spoof": {
     "gps_ever_trusted_after_onset": false,
     "latency_from_detectable_s": -5.4,
     "latency_from_onset_s": 5.0,
-    "max_pub_minus_ref_after_onset_m": 93.710855879,
-    "sigma_innov_m": 1.758864335,
+    "max_pub_minus_ref_after_onset_m": 88.86452334,
+    "sigma_innov_m": 1.758800323,
     "t_detectable": 135.605,
     "t_flag": 130.205,
     "t_onset": 125.205,
     "within_hpl_until_flag": true
   },
   "textured": {
-    "median": 1.314958425,
-    "p99": 69.596642595,
-    "rmse": 26.023058144
+    "median": 1.23798605,
+    "p99": 76.379358707,
+    "rmse": 29.028763372
   },
   "ttr": {
     "censored": false,
@@ -388,9 +364,9 @@
   "vision": {
     "collapse_t": 150.0,
     "failed_t": 152.005,
-    "first_fix_after_t": 208.75,
+    "first_fix_after_t": 213.95,
     "latency_s": 2.005,
-    "max_err_in_outage": 82.960408024,
-    "ref_err_10s_after_fix": 1.653171201
+    "max_err_in_outage": 83.294984538,
+    "ref_err_10s_after_fix": 1.420087854
   }
 }

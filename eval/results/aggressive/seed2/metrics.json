@@ -1,6 +1,6 @@
 {
   "all_h": {
-    "rmse": 3.080836824
+    "rmse": 2.042003012
   },
   "continuity": {
     "max_bleed_mps": 0.5,
@@ -14,33 +14,33 @@
   "filter_stats": {
     "ALL": {
       "baro": 1114,
-      "flow": 207,
+      "flow": 206,
       "gps": 0,
       "gps_rej": 0,
-      "lidar": 1030,
+      "lidar": 1029,
       "mag": 2227,
-      "map_acc": 99,
+      "map_acc": 107,
       "map_rej": 0,
-      "vio": 756,
-      "vio_rej": 178
+      "vio": 1010,
+      "vio_rej": 4
     },
     "REF": {
       "baro": 1114,
-      "flow": 207,
+      "flow": 206,
       "gps": 0,
       "gps_rej": 0,
-      "lidar": 1030,
+      "lidar": 1029,
       "mag": 2227,
-      "map_acc": 99,
-      "map_rej": 0,
-      "vio": 756,
-      "vio_rej": 178
+      "map_acc": 107,
+      "map_rej": 1,
+      "vio": 1010,
+      "vio_rej": 4
     }
   },
   "final_after_recovery": {
-    "hpl_m": 8.029785476,
-    "pub_h_m": 0.978776244,
-    "ref_h_m": 0.9791202,
+    "hpl_m": 7.963516464,
+    "pub_h_m": 1.232307889,
+    "ref_h_m": 1.232494168,
     "t": 222.605
   },
   "gate_events": [
@@ -58,7 +58,7 @@
     ]
   ],
   "gate_final": "UNAVAILABLE",
-  "headline": "pub RMSE 4.48 m, final(after recovery) 0.98 m, touchdown 1.0 m, max 14.3 m, HMI 0, gate UNAVAILABLE",
+  "headline": "pub RMSE 2.38 m, final(after recovery) 1.23 m, touchdown 1.2 m, max 5.4 m, HMI 0, gate UNAVAILABLE",
   "health_events": [
     [
       0.0,
@@ -109,198 +109,6 @@
       "no fix"
     ],
     [
-      68.15,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      69.15,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      78.15,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      79.15,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      80.75,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      81.75,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      83.15,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      84.15,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      85.75,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      86.75,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      88.35,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      89.35,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      90.75,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      91.75,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      93.15,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      94.15,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      135.75,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      136.75,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      142.15,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      143.15,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      144.15,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      145.15,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      146.75,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      147.75,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      148.75,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      149.75,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      150.75,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      151.75,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      155.75,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      156.75,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      158.15,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      159.15,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
       214.8,
       "VIO",
       "FAILED",
@@ -321,10 +129,10 @@
   ],
   "hmi_epochs": 0,
   "hpl_exceed_epochs": 0,
-  "hpl_median": 9.223907224,
+  "hpl_median": 8.527262873,
   "manifest": {
     "config_sha256": "6ca3f28865ecdfdfc3682cf9ffcfc92769ca6bb15b42db78303c87a3399e0df3",
-    "git_sha": "6ec7510903c7b33a891ae7baa718cafd19e1e404",
+    "git_sha": "be7daa8b525cdfb1c96cff2824a1e89e5edb63c2",
     "imagery": {
       "map": {
         "date": "2017-06-27",
@@ -341,77 +149,77 @@
     "vio": "ovserver"
   },
   "map": {
-    "accepted": 99,
-    "accepted_median_m": 1.214598499,
-    "attempts": 188,
-    "candidates": 101,
+    "accepted": 107,
+    "accepted_median_m": 1.304822432,
+    "attempts": 193,
+    "candidates": 110,
     "false_accept_rate": 0.0,
-    "median_m": 1.214598499,
-    "p95_m": 3.179938123,
-    "precision": 0.98989899,
-    "success_rate": 0.521276596
+    "median_m": 1.304822432,
+    "p95_m": 3.270654088,
+    "precision": 0.990654206,
+    "success_rate": 0.549222798
   },
   "path_m": 2215.137091252,
   "pub_h": {
-    "final": 0.978776244,
-    "max": 14.298890096,
-    "median": 2.060976297,
-    "p95": 10.672476526,
-    "rmse": 4.481489402
+    "final": 1.232307889,
+    "max": 5.365863007,
+    "median": 1.598379376,
+    "p95": 4.555604577,
+    "rmse": 2.37502881
   },
-  "pub_nees_mean": 13.821492349,
+  "pub_nees_mean": 12.976987218,
   "pub_v": {
-    "p95": 2.390970756,
-    "touchdown": 0.002415263
+    "p95": 3.25879665,
+    "touchdown": 0.023257588
   },
   "ref_h": {
-    "max": 14.025476425,
-    "rmse": 3.080836824
+    "max": 5.443713265,
+    "rmse": 2.042003012
   },
-  "ref_nees_mean": 20.621450203,
+  "ref_nees_mean": 22.305836875,
   "scenario": "aggressive",
   "scoreboard": {
     "gate_final": "UNAVAILABLE",
     "hmi_epochs": 0,
-    "map_accept": 99,
-    "map_median_m": 1.214598499,
+    "map_accept": 107,
+    "map_median_m": 1.304822432,
     "max_jump_m": 0.0175,
-    "pub_final_h_m": 0.978776244,
-    "pub_max_h_m": 14.298890096,
-    "pub_rmse_h_m": 4.481489402,
-    "pub_touchdown_h_m": 0.978776244,
-    "textured_median_h_m": 2.745962726,
-    "textured_rmse_h_m": 3.446754166,
+    "pub_final_h_m": 1.232307889,
+    "pub_max_h_m": 5.365863007,
+    "pub_rmse_h_m": 2.37502881,
+    "pub_touchdown_h_m": 1.232307889,
+    "textured_median_h_m": 1.271364677,
+    "textured_rmse_h_m": 2.508950875,
     "ttr_s": 0.005
   },
   "seed": 2,
   "segments": {
     "seg_forest": {
       "kind": "forest",
-      "max": 14.298890096,
-      "median": 3.117916495,
-      "p99": 14.290943347,
-      "rmse": 7.305135876
+      "max": 4.351744073,
+      "median": 2.479430061,
+      "p99": 4.322042569,
+      "rmse": 2.689118691
     },
     "seg_town_a": {
       "kind": "textured",
-      "max": 5.694023107,
-      "median": 1.332185212,
-      "p99": 5.246414727,
-      "rmse": 2.129469203
+      "max": 4.300533459,
+      "median": 0.938816,
+      "p99": 4.170771541,
+      "rmse": 1.501879156
     },
     "seg_town_b": {
       "kind": "textured",
-      "max": 7.201876624,
-      "median": 4.607513921,
-      "p99": 7.199396561,
-      "rmse": 4.82767118
+      "max": 5.365863007,
+      "median": 3.633116813,
+      "p99": 5.299017681,
+      "rmse": 3.546551053
     }
   },
   "textured": {
-    "median": 2.745962726,
-    "p99": 7.174103046,
-    "rmse": 3.446754166
+    "median": 1.271364677,
+    "p99": 5.201345385,
+    "rmse": 2.508950875
   },
   "ttr": {
     "censored": false,

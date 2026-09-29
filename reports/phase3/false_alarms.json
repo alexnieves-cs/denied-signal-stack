@@ -2,7 +2,7 @@
  "runs": 45,
  "gnss_seeds_per_run": 8,
  "exposure_h": 27.18222222222224,
- "alarms": 32,
- "rate_ub95_per_h": 1.5812707794536425,
+ "alarms": 26,
+ "rate_ub95_per_h": 1.3272133451259143,
  "note": "REF logs from rendered runs x fresh GNSS noise; thresholds frozen in configs/integrity/thresholds.yaml"
 }

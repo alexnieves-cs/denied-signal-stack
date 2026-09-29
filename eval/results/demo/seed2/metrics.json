@@ -1,6 +1,6 @@
 {
   "all_h": {
-    "rmse": 6.474832513
+    "rmse": 6.149087259
   },
   "continuity": {
     "max_bleed_mps": 0.5,
@@ -14,33 +14,33 @@
   "filter_stats": {
     "ALL": {
       "baro": 1391,
-      "flow": 202,
+      "flow": 199,
       "gps": 23,
       "gps_rej": 0,
       "lidar": 1320,
       "mag": 2782,
-      "map_acc": 149,
+      "map_acc": 150,
       "map_rej": 0,
-      "vio": 1036,
-      "vio_rej": 29
+      "vio": 1029,
+      "vio_rej": 31
     },
     "REF": {
       "baro": 1391,
-      "flow": 202,
+      "flow": 199,
       "gps": 0,
       "gps_rej": 0,
       "lidar": 1320,
       "mag": 2782,
-      "map_acc": 149,
-      "map_rej": 2,
-      "vio": 1036,
-      "vio_rej": 29
+      "map_acc": 150,
+      "map_rej": 1,
+      "vio": 1029,
+      "vio_rej": 31
     }
   },
   "final_after_recovery": {
-    "hpl_m": 96.47967445,
-    "pub_h_m": 16.263325629,
-    "ref_h_m": 1.313456624,
+    "hpl_m": 105.410810839,
+    "pub_h_m": 17.859688345,
+    "ref_h_m": 0.733510129,
     "t": 248.005
   },
   "gate_events": [
@@ -82,7 +82,7 @@
     ]
   ],
   "gate_final": "REJECTED",
-  "headline": "pub RMSE 14.48 m, final(after recovery) 16.26 m, touchdown 3.5 m, max 36.5 m, HMI 0, gate REJECTED, spoof latency 6.0",
+  "headline": "pub RMSE 15.37 m, final(after recovery) 17.86 m, touchdown 1.1 m, max 36.7 m, HMI 0, gate REJECTED, spoof latency 6.0",
   "health_events": [
     [
       0.0,
@@ -187,13 +187,13 @@
       ""
     ],
     [
-      202.75,
+      203.75,
       "VIO",
       "FAILED",
       "velocity inconsistent with REF (5 consecutive gate failures)"
     ],
     [
-      203.75,
+      204.75,
       "VIO",
       "OK",
       ""
@@ -205,22 +205,34 @@
       ""
     ],
     [
-      227.55,
+      244.95,
       "VIO",
       "FAILED",
       "velocity inconsistent with REF (5 consecutive gate failures)"
     ],
     [
-      228.55,
+      245.95,
       "VIO",
       "OK",
       ""
     ],
     [
-      270.45,
+      259.15,
       "VIO",
       "FAILED",
-      "collapse,shock"
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      260.15,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      270.4,
+      "VIO",
+      "FAILED",
+      "collapse"
     ],
     [
       270.5,
@@ -237,10 +249,10 @@
   ],
   "hmi_epochs": 0,
   "hpl_exceed_epochs": 0,
-  "hpl_median": 10.928121521,
+  "hpl_median": 10.990315777,
   "manifest": {
     "config_sha256": "00e0918a539029dca984f9ba08fe848266405d6fe2652c4fd38a88da6fac3ca8",
-    "git_sha": "6ec7510903c7b33a891ae7baa718cafd19e1e404",
+    "git_sha": "be7daa8b525cdfb1c96cff2824a1e89e5edb63c2",
     "imagery": {
       "map": {
         "date": "2017-06-27",
@@ -257,48 +269,48 @@
     "vio": "ovserver"
   },
   "map": {
-    "accepted": 149,
-    "accepted_median_m": 0.950874824,
+    "accepted": 150,
+    "accepted_median_m": 0.920840457,
     "attempts": 205,
     "candidates": 161,
     "false_accept_rate": 0.0,
-    "median_m": 0.950874824,
-    "p95_m": 2.233808161,
+    "median_m": 0.920840457,
+    "p95_m": 2.226659933,
     "precision": 1.0,
-    "success_rate": 0.726829268
+    "success_rate": 0.731707317
   },
   "path_m": 2216.761563201,
   "pub_h": {
-    "final": 3.5003994,
-    "max": 36.509543418,
-    "median": 2.347202277,
-    "p95": 34.612672744,
-    "rmse": 14.483805503
+    "final": 1.104029345,
+    "max": 36.678420253,
+    "median": 2.226941915,
+    "p95": 34.801130668,
+    "rmse": 15.367570074
   },
-  "pub_nees_mean": 4.236497621,
+  "pub_nees_mean": 2.987537061,
   "pub_v": {
-    "p95": 0.779427266,
-    "touchdown": 0.111686486
+    "p95": 0.825789923,
+    "touchdown": 0.217418248
   },
   "ref_h": {
-    "max": 33.717651557,
-    "rmse": 6.4805405
+    "max": 33.792996883,
+    "rmse": 6.154816008
   },
-  "ref_nees_mean": 4.161971042,
+  "ref_nees_mean": 3.131682271,
   "scenario": "demo",
   "scoreboard": {
     "gate_final": "REJECTED",
     "hmi_epochs": 0,
-    "map_accept": 149,
-    "map_median_m": 0.950874824,
+    "map_accept": 150,
+    "map_median_m": 0.920840457,
     "max_jump_m": 0.0175,
-    "pub_final_h_m": 16.263325629,
-    "pub_max_h_m": 36.509543418,
-    "pub_rmse_h_m": 14.483805503,
-    "pub_touchdown_h_m": 3.5003994,
+    "pub_final_h_m": 17.859688345,
+    "pub_max_h_m": 36.678420253,
+    "pub_rmse_h_m": 15.367570074,
+    "pub_touchdown_h_m": 1.104029345,
     "spoof_latency_s": 6.0,
-    "textured_median_h_m": 1.156573077,
-    "textured_rmse_h_m": 8.899159933,
+    "textured_median_h_m": 1.158150999,
+    "textured_rmse_h_m": 10.458969056,
     "ttr_s": 0.005,
     "vision_fail_latency_s": 2.005
   },
@@ -306,55 +318,55 @@
   "segments": {
     "seg_forest": {
       "kind": "forest",
-      "max": 36.509543418,
-      "median": 5.93762842,
-      "p99": 36.466128527,
-      "rmse": 15.231652344
+      "max": 36.678420253,
+      "median": 5.929854929,
+      "p99": 36.636818044,
+      "rmse": 15.288637848
     },
     "seg_landing": {
       "kind": "landing",
-      "max": 16.263325629,
-      "median": 10.328013608,
-      "p99": 16.046891423,
-      "rmse": 10.453437355
+      "max": 17.859688345,
+      "median": 8.435726501,
+      "p99": 17.683229201,
+      "rmse": 10.156972192
     },
     "seg_tail": {
       "kind": "textured",
-      "max": 26.667923816,
-      "median": 21.02904428,
-      "p99": 26.540193834,
-      "rmse": 21.509527103
+      "max": 31.805546614,
+      "median": 25.219131629,
+      "p99": 31.684935377,
+      "rmse": 25.373632938
     },
     "seg_town_a": {
       "kind": "textured",
-      "max": 4.006195604,
-      "median": 0.787201317,
-      "p99": 3.950686348,
-      "rmse": 1.401713889
+      "max": 4.00813876,
+      "median": 0.792989687,
+      "p99": 3.948264432,
+      "rmse": 1.401624371
     },
     "seg_town_b": {
       "kind": "textured",
-      "max": 3.141034541,
-      "median": 1.781073926,
-      "p99": 3.083120312,
-      "rmse": 1.826995327
+      "max": 3.135462801,
+      "median": 1.783254781,
+      "p99": 3.077578192,
+      "rmse": 1.82828016
     }
   },
   "spoof": {
     "gps_ever_trusted_after_onset": false,
     "latency_from_detectable_s": -4.4,
     "latency_from_onset_s": 6.0,
-    "max_pub_minus_ref_after_onset_m": 44.63922794,
-    "sigma_innov_m": 1.759307958,
+    "max_pub_minus_ref_after_onset_m": 47.888255256,
+    "sigma_innov_m": 1.759232976,
     "t_detectable": 135.605,
     "t_flag": 131.205,
     "t_onset": 125.205,
     "within_hpl_until_flag": true
   },
   "textured": {
-    "median": 1.156573077,
-    "p99": 25.884875328,
-    "rmse": 8.899159933
+    "median": 1.158150999,
+    "p99": 31.039539171,
+    "rmse": 10.458969056
   },
   "ttr": {
     "censored": false,
@@ -366,7 +378,7 @@
     "failed_t": 152.005,
     "first_fix_after_t": 211.75,
     "latency_s": 2.005,
-    "max_err_in_outage": 36.509543418,
-    "ref_err_10s_after_fix": 0.902827645
+    "max_err_in_outage": 36.678420253,
+    "ref_err_10s_after_fix": 1.145369846
   }
 }

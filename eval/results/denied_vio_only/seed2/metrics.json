@@ -1,6 +1,6 @@
 {
   "all_h": {
-    "rmse": 8.901308281
+    "rmse": 8.826694822
   },
   "continuity": {
     "max_bleed_mps": 0.5,
@@ -21,8 +21,8 @@
       "mag": 2782,
       "map_acc": 0,
       "map_rej": 0,
-      "vio": 1287,
-      "vio_rej": 5
+      "vio": 1291,
+      "vio_rej": 1
     },
     "REF": {
       "baro": 1391,
@@ -33,14 +33,14 @@
       "mag": 2782,
       "map_acc": 0,
       "map_rej": 0,
-      "vio": 1287,
-      "vio_rej": 5
+      "vio": 1291,
+      "vio_rej": 1
     }
   },
   "final_after_recovery": {
-    "hpl_m": 150.132005866,
-    "pub_h_m": 7.239024585,
-    "ref_h_m": 7.200190052,
+    "hpl_m": 150.279389032,
+    "pub_h_m": 7.517610514,
+    "ref_h_m": 7.424789666,
     "t": 248.005
   },
   "gate_events": [
@@ -58,7 +58,7 @@
     ]
   ],
   "gate_final": "UNAVAILABLE",
-  "headline": "pub RMSE 8.86 m, final(after recovery) 7.24 m, touchdown 6.8 m, max 11.9 m, HMI 0, gate UNAVAILABLE",
+  "headline": "pub RMSE 8.78 m, final(after recovery) 7.52 m, touchdown 6.9 m, max 11.5 m, HMI 0, gate UNAVAILABLE",
   "health_events": [
     [
       0.0,
@@ -117,10 +117,10 @@
   ],
   "hmi_epochs": 0,
   "hpl_exceed_epochs": 0,
-  "hpl_median": 98.630645528,
+  "hpl_median": 98.632996932,
   "manifest": {
     "config_sha256": "59f15e2d1c7a4c5110528685b3e2f137b0b9e5c38b21a1d6b9886217acd1767a",
-    "git_sha": "6ec7510903c7b33a891ae7baa718cafd19e1e404",
+    "git_sha": "be7daa8b525cdfb1c96cff2824a1e89e5edb63c2",
     "imagery": {
       "map": {
         "date": "2017-06-27",
@@ -141,22 +141,22 @@
   },
   "path_m": 2216.761563201,
   "pub_h": {
-    "final": 6.784763017,
-    "max": 11.852036221,
-    "median": 9.395583946,
-    "p95": 11.154465121,
-    "rmse": 8.857752308
+    "final": 6.859232716,
+    "max": 11.489426427,
+    "median": 9.291055862,
+    "p95": 11.053619137,
+    "rmse": 8.778611139
   },
-  "pub_nees_mean": 10.10561135,
+  "pub_nees_mean": 10.066870391,
   "pub_v": {
-    "p95": 1.738526822,
-    "touchdown": 0.47332081
+    "p95": 1.729491775,
+    "touchdown": 0.484587107
   },
   "ref_h": {
-    "max": 16.470333567,
-    "rmse": 8.901308281
+    "max": 16.726804878,
+    "rmse": 8.826694822
   },
-  "ref_nees_mean": 10.126637429,
+  "ref_nees_mean": 10.108004558,
   "scenario": "denied_vio_only",
   "scoreboard": {
     "gate_final": "UNAVAILABLE",
@@ -164,56 +164,56 @@
     "map_accept": 0,
     "map_median_m": null,
     "max_jump_m": 0.0175,
-    "pub_final_h_m": 7.239024585,
-    "pub_max_h_m": 11.852036221,
-    "pub_rmse_h_m": 8.857752308,
-    "pub_touchdown_h_m": 6.784763017,
-    "textured_median_h_m": 9.915681319,
-    "textured_rmse_h_m": 9.23199659,
+    "pub_final_h_m": 7.517610514,
+    "pub_max_h_m": 11.489426427,
+    "pub_rmse_h_m": 8.778611139,
+    "pub_touchdown_h_m": 6.859232716,
+    "textured_median_h_m": 9.869967426,
+    "textured_rmse_h_m": 9.178842195,
     "ttr_s": 0.005
   },
   "seed": 2,
   "segments": {
     "seg_forest": {
       "kind": "forest",
-      "max": 11.852036221,
-      "median": 10.610283607,
-      "p99": 11.797517,
-      "rmse": 10.590681255
+      "max": 11.489426427,
+      "median": 10.499564306,
+      "p99": 11.454718298,
+      "rmse": 10.420430164
     },
     "seg_landing": {
       "kind": "landing",
-      "max": 8.080652876,
-      "median": 7.0898189,
-      "p99": 8.059345336,
-      "rmse": 7.175559957
+      "max": 8.308767864,
+      "median": 7.347920418,
+      "p99": 8.292161104,
+      "rmse": 7.399329309
     },
     "seg_tail": {
       "kind": "textured",
-      "max": 8.320260334,
-      "median": 7.878465746,
-      "p99": 8.316579087,
-      "rmse": 7.914281687
+      "max": 8.348547569,
+      "median": 7.870832738,
+      "p99": 8.338928615,
+      "rmse": 7.906136619
     },
     "seg_town_a": {
       "kind": "textured",
-      "max": 10.742111116,
-      "median": 9.284045748,
-      "p99": 10.713349071,
-      "rmse": 8.446424538
+      "max": 10.654246278,
+      "median": 9.264611958,
+      "p99": 10.626427134,
+      "rmse": 8.412839057
     },
     "seg_town_b": {
       "kind": "textured",
-      "max": 11.331986849,
-      "median": 10.818157115,
-      "p99": 11.313636626,
-      "rmse": 10.880294364
+      "max": 11.235573826,
+      "median": 10.72278915,
+      "p99": 11.217278035,
+      "rmse": 10.785470365
     }
   },
   "textured": {
-    "median": 9.915681319,
-    "p99": 11.2225944,
-    "rmse": 9.23199659
+    "median": 9.869967426,
+    "p99": 11.126363979,
+    "rmse": 9.178842195
   },
   "ttr": {
     "censored": false,

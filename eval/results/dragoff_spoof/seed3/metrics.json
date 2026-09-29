@@ -1,6 +1,6 @@
 {
   "all_h": {
-    "rmse": 1.391015752
+    "rmse": 1.379925362
   },
   "continuity": {
     "max_bleed_mps": 0.5,
@@ -19,10 +19,10 @@
       "gps_rej": 0,
       "lidar": 1320,
       "mag": 2782,
-      "map_acc": 208,
+      "map_acc": 210,
       "map_rej": 0,
-      "vio": 1281,
-      "vio_rej": 11
+      "vio": 1289,
+      "vio_rej": 3
     },
     "REF": {
       "baro": 1391,
@@ -31,16 +31,16 @@
       "gps_rej": 0,
       "lidar": 1320,
       "mag": 2782,
-      "map_acc": 208,
+      "map_acc": 210,
       "map_rej": 0,
-      "vio": 1281,
-      "vio_rej": 11
+      "vio": 1289,
+      "vio_rej": 3
     }
   },
   "final_after_recovery": {
-    "hpl_m": 9.805047686,
-    "pub_h_m": 2.505952014,
-    "ref_h_m": 1.576173506,
+    "hpl_m": 9.011339989,
+    "pub_h_m": 2.098752379,
+    "ref_h_m": 1.586199079,
     "t": 248.005
   },
   "gate_events": [
@@ -60,17 +60,17 @@
       103.0,
       "TRUSTED",
       "SUSPECT",
-      "velocity CUSUM 14.4 > 10.0"
+      "velocity CUSUM 14.3 > 10.0"
     ],
     [
       104.0,
       "SUSPECT",
       "REJECTED",
-      "suspect persisted: velocity CUSUM 14.4 > 10.0"
+      "suspect persisted: velocity CUSUM 14.3 > 10.0"
     ]
   ],
   "gate_final": "REJECTED",
-  "headline": "pub RMSE 1.44 m, final(after recovery) 2.51 m, touchdown 0.6 m, max 4.1 m, HMI 0, gate REJECTED, spoof latency 2.799999999999997",
+  "headline": "pub RMSE 1.43 m, final(after recovery) 2.10 m, touchdown 0.7 m, max 4.2 m, HMI 0, gate REJECTED, spoof latency 2.799999999999997",
   "health_events": [
     [
       0.0,
@@ -124,13 +124,13 @@
       103.0,
       "GPS",
       "SUSPECT",
-      "velocity CUSUM 14.4 > 10.0"
+      "velocity CUSUM 14.3 > 10.0"
     ],
     [
       104.0,
       "GPS",
       "REJECTED",
-      "suspect persisted: velocity CUSUM 14.4 > 10.0"
+      "suspect persisted: velocity CUSUM 14.3 > 10.0"
     ],
     [
       270.45,
@@ -153,10 +153,10 @@
   ],
   "hmi_epochs": 0,
   "hpl_exceed_epochs": 0,
-  "hpl_median": 6.663483814,
+  "hpl_median": 6.678821015,
   "manifest": {
     "config_sha256": "d2e169b8c337d62da17c160b2bd69a5bfaf5c3c879e0734d7d54eea474dfd680",
-    "git_sha": "6ec7510903c7b33a891ae7baa718cafd19e1e404",
+    "git_sha": "be7daa8b525cdfb1c96cff2824a1e89e5edb63c2",
     "imagery": {
       "map": {
         "date": "2017-06-27",
@@ -173,101 +173,101 @@
     "vio": "ovserver"
   },
   "map": {
-    "accepted": 208,
-    "accepted_median_m": 0.853957729,
+    "accepted": 210,
+    "accepted_median_m": 0.862879075,
     "attempts": 248,
-    "candidates": 210,
+    "candidates": 212,
     "false_accept_rate": 0.0,
-    "median_m": 0.853957729,
-    "p95_m": 2.926995864,
-    "precision": 0.995192308,
-    "success_rate": 0.834677419
+    "median_m": 0.862879075,
+    "p95_m": 2.909746277,
+    "precision": 0.995238095,
+    "success_rate": 0.842741935
   },
   "path_m": 2216.761563201,
   "pub_h": {
-    "final": 0.642188476,
-    "max": 4.079621326,
-    "median": 1.03041402,
-    "p95": 2.923547133,
-    "rmse": 1.443299892
+    "final": 0.655452454,
+    "max": 4.194730846,
+    "median": 0.977224868,
+    "p95": 2.92746069,
+    "rmse": 1.427963103
   },
-  "pub_nees_mean": 2.42125896,
+  "pub_nees_mean": 2.440837477,
   "pub_v": {
-    "p95": 0.637276287,
-    "touchdown": 1.31428906
+    "p95": 0.610040608,
+    "touchdown": 1.313397257
   },
   "ref_h": {
-    "max": 4.334394899,
-    "rmse": 1.396099825
+    "max": 4.430990915,
+    "rmse": 1.384488773
   },
-  "ref_nees_mean": 2.471093901,
+  "ref_nees_mean": 2.45829342,
   "scenario": "dragoff_spoof",
   "scoreboard": {
     "gate_final": "REJECTED",
     "hmi_epochs": 0,
-    "map_accept": 208,
-    "map_median_m": 0.853957729,
+    "map_accept": 210,
+    "map_median_m": 0.862879075,
     "max_jump_m": 0.0175,
-    "pub_final_h_m": 2.505952014,
-    "pub_max_h_m": 4.079621326,
-    "pub_rmse_h_m": 1.443299892,
-    "pub_touchdown_h_m": 0.642188476,
+    "pub_final_h_m": 2.098752379,
+    "pub_max_h_m": 4.194730846,
+    "pub_rmse_h_m": 1.427963103,
+    "pub_touchdown_h_m": 0.655452454,
     "spoof_latency_s": 2.8,
-    "textured_median_h_m": 1.160703203,
-    "textured_rmse_h_m": 1.604487958
+    "textured_median_h_m": 1.140277921,
+    "textured_rmse_h_m": 1.59952508
   },
   "seed": 3,
   "segments": {
     "seg_forest": {
       "kind": "forest",
-      "max": 2.090480944,
-      "median": 1.038749263,
-      "p99": 2.01827202,
-      "rmse": 1.152838465
+      "max": 2.08559267,
+      "median": 0.773599943,
+      "p99": 2.01336352,
+      "rmse": 1.066785087
     },
     "seg_landing": {
       "kind": "landing",
-      "max": 2.505952014,
-      "median": 0.83723859,
-      "p99": 2.393444398,
-      "rmse": 0.960067165
+      "max": 2.098752379,
+      "median": 0.867856761,
+      "p99": 1.999475236,
+      "rmse": 0.893335953
     },
     "seg_tail": {
       "kind": "textured",
-      "max": 2.813298296,
-      "median": 0.962007366,
-      "p99": 2.785465078,
-      "rmse": 1.252698082
+      "max": 2.356657603,
+      "median": 0.966742702,
+      "p99": 2.342488416,
+      "rmse": 1.184411365
     },
     "seg_town_a": {
       "kind": "textured",
-      "max": 4.079621326,
-      "median": 0.951012902,
-      "p99": 3.92375618,
-      "rmse": 1.327954355
+      "max": 4.194730846,
+      "median": 0.950955679,
+      "p99": 4.04742204,
+      "rmse": 1.342316966
     },
     "seg_town_b": {
       "kind": "textured",
-      "max": 3.487933779,
-      "median": 1.925700282,
-      "p99": 3.453981922,
-      "rmse": 2.085555938
+      "max": 3.471381766,
+      "median": 1.935833504,
+      "p99": 3.436954406,
+      "rmse": 2.079947495
     }
   },
   "spoof": {
     "gps_ever_trusted_after_onset": true,
     "latency_from_detectable_s": -12.0,
     "latency_from_onset_s": 2.8,
-    "max_pub_minus_ref_after_onset_m": 1.264455799,
-    "sigma_innov_m": 2.497912189,
+    "max_pub_minus_ref_after_onset_m": 1.258431994,
+    "sigma_innov_m": 2.497880491,
     "t_detectable": 115.005,
     "t_flag": 103.005,
     "t_onset": 100.205,
     "within_hpl_until_flag": true
   },
   "textured": {
-    "median": 1.160703203,
-    "p99": 3.77226906,
-    "rmse": 1.604487958
+    "median": 1.140277921,
+    "p99": 3.899346012,
+    "rmse": 1.59952508
   }
 }

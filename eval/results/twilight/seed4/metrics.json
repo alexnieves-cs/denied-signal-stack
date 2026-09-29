@@ -1,6 +1,6 @@
 {
   "all_h": {
-    "rmse": 21.471359585
+    "rmse": 21.429973409
   },
   "continuity": {
     "max_bleed_mps": 0.5,
@@ -13,34 +13,34 @@
   },
   "filter_stats": {
     "ALL": {
-      "baro": 1391,
+      "baro": 1322,
       "flow": 196,
       "gps": 8,
       "gps_rej": 0,
-      "lidar": 1218,
+      "lidar": 1320,
       "mag": 2782,
       "map_acc": 0,
       "map_rej": 0,
-      "vio": 1196,
-      "vio_rej": 61
+      "vio": 1225,
+      "vio_rej": 42
     },
     "REF": {
-      "baro": 1391,
+      "baro": 1322,
       "flow": 196,
       "gps": 0,
       "gps_rej": 0,
-      "lidar": 1218,
+      "lidar": 1320,
       "mag": 2782,
       "map_acc": 0,
       "map_rej": 0,
-      "vio": 1196,
-      "vio_rej": 61
+      "vio": 1225,
+      "vio_rej": 42
     }
   },
   "final_after_recovery": {
-    "hpl_m": 123.881308798,
-    "pub_h_m": 33.216841523,
-    "ref_h_m": 34.66634493,
+    "hpl_m": 128.305400307,
+    "pub_h_m": 38.279069374,
+    "ref_h_m": 36.745410332,
     "t": 248.005
   },
   "gate_events": [
@@ -64,7 +64,7 @@
     ]
   ],
   "gate_final": "UNAVAILABLE",
-  "headline": "pub RMSE 21.25 m, final(after recovery) 33.22 m, touchdown 37.8 m, max 38.6 m, HMI 0, gate UNAVAILABLE",
+  "headline": "pub RMSE 20.08 m, final(after recovery) 38.28 m, touchdown 37.1 m, max 38.5 m, HMI 0, gate UNAVAILABLE",
   "health_events": [
     [
       0.0,
@@ -115,94 +115,70 @@
       "no fix"
     ],
     [
-      190.95,
+      192.15,
       "VIO",
       "FAILED",
       "velocity inconsistent with REF (5 consecutive gate failures)"
     ],
     [
-      191.95,
+      193.15,
       "VIO",
       "OK",
       ""
     ],
     [
-      195.55,
+      207.15,
       "VIO",
       "FAILED",
       "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      196.55,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      198.95,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      199.95,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      203.75,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      204.75,
-      "VIO",
-      "OK",
-      ""
     ],
     [
       208.15,
       "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      209.15,
-      "VIO",
       "OK",
       ""
     ],
     [
-      217.55,
+      213.35,
       "VIO",
       "FAILED",
       "velocity inconsistent with REF (5 consecutive gate failures)"
     ],
     [
-      218.55,
+      214.35,
       "VIO",
       "OK",
       ""
     ],
     [
-      235.35,
+      244.75,
       "VIO",
       "FAILED",
       "velocity inconsistent with REF (5 consecutive gate failures)"
     ],
     [
-      236.35,
+      245.75,
       "VIO",
       "OK",
       ""
     ],
     [
-      270.4,
+      258.95,
       "VIO",
       "FAILED",
-      "collapse"
+      "velocity inconsistent with REF (5 consecutive gate failures)"
+    ],
+    [
+      259.95,
+      "VIO",
+      "OK",
+      ""
+    ],
+    [
+      270.45,
+      "VIO",
+      "FAILED",
+      "collapse,shock,dark"
     ],
     [
       270.95,
@@ -213,10 +189,10 @@
   ],
   "hmi_epochs": 0,
   "hpl_exceed_epochs": 0,
-  "hpl_median": 98.628421082,
+  "hpl_median": 98.630726419,
   "manifest": {
     "config_sha256": "015b6e33ef26df63199ba6e1ef00f716dc5f5d122885d71468ecf8665c5cc734",
-    "git_sha": "6ec7510903c7b33a891ae7baa718cafd19e1e404",
+    "git_sha": "be7daa8b525cdfb1c96cff2824a1e89e5edb63c2",
     "imagery": {
       "map": {
         "date": "2017-06-27",
@@ -237,22 +213,22 @@
   },
   "path_m": 2216.761563201,
   "pub_h": {
-    "final": 37.775834669,
-    "max": 38.6495995,
-    "median": 16.952242342,
-    "p95": 37.661653563,
-    "rmse": 21.254120188
+    "final": 37.136762282,
+    "max": 38.472137639,
+    "median": 14.106718513,
+    "p95": 37.039994359,
+    "rmse": 20.078785406
   },
-  "pub_nees_mean": 28.109948361,
+  "pub_nees_mean": 34.894357046,
   "pub_v": {
-    "p95": 3.03671231,
-    "touchdown": 0.31328442
+    "p95": 8.350795464,
+    "touchdown": 0.835614505
   },
   "ref_h": {
-    "max": 40.530897102,
-    "rmse": 21.475382495
+    "max": 43.883953981,
+    "rmse": 21.433912889
   },
-  "ref_nees_mean": 35.937241926,
+  "ref_nees_mean": 94.565003698,
   "scenario": "twilight",
   "scoreboard": {
     "gate_final": "UNAVAILABLE",
@@ -260,12 +236,12 @@
     "map_accept": 0,
     "map_median_m": null,
     "max_jump_m": 0.0175,
-    "pub_final_h_m": 33.216841523,
-    "pub_max_h_m": 38.6495995,
-    "pub_rmse_h_m": 21.254120188,
-    "pub_touchdown_h_m": 37.775834669,
-    "textured_median_h_m": 10.759215449,
-    "textured_rmse_h_m": 17.113436907,
+    "pub_final_h_m": 38.279069374,
+    "pub_max_h_m": 38.472137639,
+    "pub_rmse_h_m": 20.078785406,
+    "pub_touchdown_h_m": 37.136762282,
+    "textured_median_h_m": 10.87919472,
+    "textured_rmse_h_m": 17.45909573,
     "ttr_s": null,
     "vision_fail_latency_s": 0.105
   },
@@ -273,44 +249,44 @@
   "segments": {
     "seg_forest": {
       "kind": "forest",
-      "max": 22.299430318,
-      "median": 21.313622694,
-      "p99": 22.286899512,
-      "rmse": 20.834901728
+      "max": 22.474972872,
+      "median": 21.437631285,
+      "p99": 22.452201931,
+      "rmse": 20.853544066
     },
     "seg_landing": {
       "kind": "landing",
-      "max": 38.6495995,
-      "median": 37.541945268,
-      "p99": 38.6235692,
-      "rmse": 37.036347907
+      "max": 38.279069374,
+      "median": 35.966061721,
+      "p99": 38.216975735,
+      "rmse": 36.060378187
     },
     "seg_tail": {
       "kind": "textured",
-      "max": 37.261747269,
-      "median": 35.314818942,
-      "p99": 37.257792688,
-      "rmse": 34.76462593
+      "max": 38.472137639,
+      "median": 36.016317774,
+      "p99": 38.471384044,
+      "rmse": 35.639756642
     },
     "seg_town_a": {
       "kind": "textured",
-      "max": 11.04281823,
-      "median": 6.932472744,
-      "p99": 10.832503593,
-      "rmse": 6.838494232
+      "max": 11.164331147,
+      "median": 6.940469291,
+      "p99": 10.952885024,
+      "rmse": 6.887421366
     },
     "seg_town_b": {
       "kind": "textured",
-      "max": 18.040825455,
-      "median": 14.144016572,
-      "p99": 17.985381869,
-      "rmse": 14.410759513
+      "max": 18.194952782,
+      "median": 14.2878864,
+      "p99": 18.139371244,
+      "rmse": 14.552725078
     }
   },
   "textured": {
-    "median": 10.759215449,
-    "p99": 37.162673946,
-    "rmse": 17.113436907
+    "median": 10.87919472,
+    "p99": 38.456047066,
+    "rmse": 17.45909573
   },
   "ttr": {
     "censored": true,
@@ -321,6 +297,6 @@
     "collapse_t": 0.0,
     "failed_t": 0.105,
     "latency_s": 0.105,
-    "max_err_in_outage": 38.6495995
+    "max_err_in_outage": 38.472137639
   }
 }

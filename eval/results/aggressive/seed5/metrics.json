@@ -1,6 +1,6 @@
 {
   "all_h": {
-    "rmse": 6.124391009
+    "rmse": 2.568239191
   },
   "continuity": {
     "max_bleed_mps": 0.5,
@@ -14,34 +14,33 @@
   "filter_stats": {
     "ALL": {
       "baro": 1114,
-      "flow": 203,
+      "flow": 197,
       "gps": 0,
       "gps_rej": 0,
-      "lidar": 1012,
+      "lidar": 1030,
       "mag": 2227,
-      "map_acc": 79,
-      "map_rej": 1,
-      "vio": 726,
-      "vio_rej": 198
+      "map_acc": 114,
+      "map_rej": 0,
+      "vio": 1013,
+      "vio_rej": 1
     },
     "REF": {
       "baro": 1114,
-      "flow": 203,
+      "flow": 197,
       "gps": 0,
       "gps_rej": 0,
-      "lidar": 1012,
+      "lidar": 1030,
       "mag": 2227,
-      "map_acc": 79,
-      "map_rej": 16,
-      "map_reloc": 1,
-      "vio": 726,
-      "vio_rej": 198
+      "map_acc": 114,
+      "map_rej": 0,
+      "vio": 1013,
+      "vio_rej": 1
     }
   },
   "final_after_recovery": {
-    "hpl_m": 7.401275667,
-    "pub_h_m": 0.667913187,
-    "ref_h_m": 0.666995976,
+    "hpl_m": 6.859369541,
+    "pub_h_m": 1.282303932,
+    "ref_h_m": 1.282052257,
     "t": 222.605
   },
   "gate_events": [
@@ -59,7 +58,7 @@
     ]
   ],
   "gate_final": "UNAVAILABLE",
-  "headline": "pub RMSE 8.08 m, final(after recovery) 0.67 m, touchdown 0.7 m, max 22.5 m, HMI 0, gate UNAVAILABLE",
+  "headline": "pub RMSE 3.04 m, final(after recovery) 1.28 m, touchdown 1.3 m, max 8.3 m, HMI 0, gate UNAVAILABLE",
   "health_events": [
     [
       0.0,
@@ -110,222 +109,6 @@
       "no fix"
     ],
     [
-      48.35,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      49.35,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      50.95,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      51.95,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      56.95,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      57.95,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      59.35,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      60.35,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      61.95,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      62.95,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      66.55,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      67.55,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      72.75,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      73.75,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      75.15,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      76.15,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      81.15,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      82.15,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      86.15,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      87.15,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      88.55,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      89.55,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      143.15,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      144.15,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      145.95,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      146.95,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      148.35,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      149.35,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      152.95,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      153.95,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      163.35,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      164.35,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      181.95,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      182.95,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
-      185.15,
-      "VIO",
-      "FAILED",
-      "velocity inconsistent with REF (5 consecutive gate failures)"
-    ],
-    [
-      186.15,
-      "VIO",
-      "OK",
-      ""
-    ],
-    [
       214.8,
       "VIO",
       "FAILED",
@@ -346,10 +129,10 @@
   ],
   "hmi_epochs": 0,
   "hpl_exceed_epochs": 0,
-  "hpl_median": 9.868566832,
+  "hpl_median": 8.859768737,
   "manifest": {
     "config_sha256": "6ca3f28865ecdfdfc3682cf9ffcfc92769ca6bb15b42db78303c87a3399e0df3",
-    "git_sha": "6ec7510903c7b33a891ae7baa718cafd19e1e404",
+    "git_sha": "be7daa8b525cdfb1c96cff2824a1e89e5edb63c2",
     "imagery": {
       "map": {
         "date": "2017-06-27",
@@ -366,77 +149,77 @@
     "vio": "ovserver"
   },
   "map": {
-    "accepted": 80,
-    "accepted_median_m": 1.08578942,
-    "attempts": 185,
-    "candidates": 99,
+    "accepted": 114,
+    "accepted_median_m": 1.13916151,
+    "attempts": 192,
+    "candidates": 116,
     "false_accept_rate": 0.0,
-    "median_m": 1.08578942,
-    "p95_m": 3.726788449,
-    "precision": 0.9625,
-    "success_rate": 0.416216216
+    "median_m": 1.13916151,
+    "p95_m": 3.458433832,
+    "precision": 0.973684211,
+    "success_rate": 0.578125
   },
   "path_m": 2215.137091252,
   "pub_h": {
-    "final": 0.667913187,
-    "max": 22.509488381,
-    "median": 2.843146286,
-    "p95": 20.399663347,
-    "rmse": 8.084573408
+    "final": 1.282303932,
+    "max": 8.278454562,
+    "median": 1.985087634,
+    "p95": 6.869169424,
+    "rmse": 3.036562335
   },
-  "pub_nees_mean": 20.052975546,
+  "pub_nees_mean": 10.818504928,
   "pub_v": {
-    "p95": 4.363076842,
-    "touchdown": 0.722714962
+    "p95": 2.713342529,
+    "touchdown": 0.633564905
   },
   "ref_h": {
-    "max": 18.317823167,
-    "rmse": 5.978660866
+    "max": 8.519921227,
+    "rmse": 2.568239191
   },
-  "ref_nees_mean": 41.799630062,
+  "ref_nees_mean": 22.789123907,
   "scenario": "aggressive",
   "scoreboard": {
     "gate_final": "UNAVAILABLE",
     "hmi_epochs": 0,
-    "map_accept": 80,
-    "map_median_m": 1.08578942,
+    "map_accept": 114,
+    "map_median_m": 1.13916151,
     "max_jump_m": 0.0175,
-    "pub_final_h_m": 0.667913187,
-    "pub_max_h_m": 22.509488381,
-    "pub_rmse_h_m": 8.084573408,
-    "pub_touchdown_h_m": 0.667913187,
-    "textured_median_h_m": 2.363412036,
-    "textured_rmse_h_m": 2.43038036,
+    "pub_final_h_m": 1.282303932,
+    "pub_max_h_m": 8.278454562,
+    "pub_rmse_h_m": 3.036562335,
+    "pub_touchdown_h_m": 1.282303932,
+    "textured_median_h_m": 1.90295213,
+    "textured_rmse_h_m": 3.472021599,
     "ttr_s": 0.005
   },
   "seed": 5,
   "segments": {
     "seg_forest": {
       "kind": "forest",
-      "max": 22.509488381,
-      "median": 16.394110402,
-      "p99": 22.482247248,
-      "rmse": 16.096409723
+      "max": 4.25134449,
+      "median": 3.086671163,
+      "p99": 4.174207843,
+      "rmse": 2.935736832
     },
     "seg_town_a": {
       "kind": "textured",
-      "max": 4.102985311,
-      "median": 2.125681771,
-      "p99": 4.085956819,
-      "rmse": 2.377786698
+      "max": 6.087386165,
+      "median": 1.323912123,
+      "p99": 5.363989573,
+      "rmse": 2.014872103
     },
     "seg_town_b": {
       "kind": "textured",
-      "max": 3.73707677,
-      "median": 2.528443782,
-      "p99": 3.68699964,
-      "rmse": 2.510003226
+      "max": 8.278454562,
+      "median": 3.55875116,
+      "p99": 8.262701641,
+      "rmse": 4.948934198
     }
   },
   "textured": {
-    "median": 2.363412036,
-    "p99": 4.077644821,
-    "rmse": 2.43038036
+    "median": 1.90295213,
+    "p99": 8.239461469,
+    "rmse": 3.472021599
   },
   "ttr": {
     "censored": false,

@@ -9,43 +9,43 @@
   ],
   "hmi_epochs": {
    "median": 0.0,
-   "max": 50.0
+   "max": 0.0
   },
   "map_accept": {
-   "median": 104.0,
-   "max": 107.0
+   "median": 111.0,
+   "max": 114.0
   },
   "map_median_m": {
-   "median": 1.214598499,
-   "max": 1.301884699
+   "median": 1.180920607,
+   "max": 1.304822432
   },
   "max_jump_m": {
    "median": 0.0175,
    "max": 0.0175
   },
   "pub_final_h_m": {
-   "median": 0.978776244,
-   "max": 78.058360783
+   "median": 0.86292675,
+   "max": 1.282303932
   },
   "pub_max_h_m": {
-   "median": 14.298890096,
-   "max": 78.058360783
+   "median": 6.108304833,
+   "max": 9.48502483
   },
   "pub_rmse_h_m": {
-   "median": 4.481489402,
-   "max": 13.702038763
+   "median": 2.37502881,
+   "max": 3.363954512
   },
   "pub_touchdown_h_m": {
-   "median": 0.978776244,
-   "max": 78.058360783
+   "median": 0.86292675,
+   "max": 1.282303932
   },
   "textured_median_h_m": {
-   "median": 2.359885215,
-   "max": 2.745962726
+   "median": 1.271364677,
+   "max": 1.90295213
   },
   "textured_rmse_h_m": {
-   "median": 2.43038036,
-   "max": 3.446754166
+   "median": 2.508950875,
+   "max": 4.187415058
   },
   "ttr_s": {
    "median": 0.005,
@@ -65,44 +65,44 @@
    "max": 0.0
   },
   "map_accept": {
-   "median": 164.0,
-   "max": 166.0
+   "median": 160.0,
+   "max": 163.0
   },
   "map_median_m": {
-   "median": 0.979422113,
-   "max": 1.021793412
+   "median": 0.929159959,
+   "max": 1.009007659
   },
   "max_jump_m": {
    "median": 0.0175,
    "max": 0.0175
   },
   "pub_final_h_m": {
-   "median": 18.829623289,
-   "max": 60.522391463
+   "median": 18.070653278,
+   "max": 63.976977895
   },
   "pub_max_h_m": {
-   "median": 44.262063522,
-   "max": 82.960408024
+   "median": 43.888831065,
+   "max": 83.294984538
   },
   "pub_rmse_h_m": {
-   "median": 16.846476016,
-   "max": 38.837444131
+   "median": 16.376569883,
+   "max": 41.183992425
   },
   "pub_touchdown_h_m": {
-   "median": 8.18643764,
-   "max": 46.211302855
+   "median": 5.153733386,
+   "max": 50.376215728
   },
   "spoof_latency_s": {
    "median": 4.0,
    "max": 6.0
   },
   "textured_median_h_m": {
-   "median": 1.314958425,
-   "max": 1.348056437
+   "median": 1.23798605,
+   "max": 1.296955234
   },
   "textured_rmse_h_m": {
-   "median": 9.702295366,
-   "max": 27.192171287
+   "median": 10.458969056,
+   "max": 29.028763372
   },
   "ttr_s": {
    "median": 0.005,
@@ -126,40 +126,40 @@
    "max": 0.0
   },
   "map_accept": {
-   "median": 209.0,
-   "max": 217.0
+   "median": 212.0,
+   "max": 215.0
   },
   "map_median_m": {
-   "median": 0.853957729,
-   "max": 0.962091627
+   "median": 0.865355672,
+   "max": 0.914405578
   },
   "max_jump_m": {
    "median": 0.0175,
    "max": 0.0175
   },
   "pub_final_h_m": {
-   "median": 2.084123011,
-   "max": 3.913882481
+   "median": 1.800450172,
+   "max": 2.098752379
   },
   "pub_max_h_m": {
-   "median": 5.011539746,
-   "max": 9.053872722
+   "median": 5.063250072,
+   "max": 5.785146952
   },
   "pub_rmse_h_m": {
-   "median": 1.479606239,
-   "max": 2.863286706
+   "median": 1.487534134,
+   "max": 1.739066704
   },
   "pub_touchdown_h_m": {
-   "median": 0.905026146,
-   "max": 3.055858382
+   "median": 0.821593246,
+   "max": 1.88318494
   },
   "textured_median_h_m": {
-   "median": 1.045801282,
-   "max": 1.207465517
+   "median": 1.068448242,
+   "max": 1.136509185
   },
   "textured_rmse_h_m": {
-   "median": 1.610419943,
-   "max": 1.708399988
+   "median": 1.598865863,
+   "max": 1.730188641
   },
   "ttr_s": {
    "median": 0.005,
@@ -194,28 +194,28 @@
    "max": 0.0175
   },
   "pub_final_h_m": {
-   "median": 13.137555591,
-   "max": 24.428383732
+   "median": 7.517610514,
+   "max": 28.285221194
   },
   "pub_max_h_m": {
-   "median": 14.437200027,
-   "max": 77.14592252
+   "median": 11.489426427,
+   "max": 30.697867973
   },
   "pub_rmse_h_m": {
-   "median": 10.554490396,
-   "max": 15.22646367
+   "median": 8.778611139,
+   "max": 17.035375046
   },
   "pub_touchdown_h_m": {
-   "median": 10.086710861,
-   "max": 77.14592252
+   "median": 9.131262204,
+   "max": 30.697867973
   },
   "textured_median_h_m": {
-   "median": 9.126034059,
-   "max": 11.039129617
+   "median": 9.225262208,
+   "max": 11.161764478
   },
   "textured_rmse_h_m": {
-   "median": 9.86257258,
-   "max": 12.568479632
+   "median": 9.178842195,
+   "max": 13.708803774
   },
   "ttr_s": {
    "median": 0.005,
@@ -235,44 +235,44 @@
    "max": 0.0
   },
   "map_accept": {
-   "median": 209.0,
-   "max": 217.0
+   "median": 212.0,
+   "max": 215.0
   },
   "map_median_m": {
-   "median": 0.853957729,
-   "max": 0.962091627
+   "median": 0.865355672,
+   "max": 0.914405578
   },
   "max_jump_m": {
    "median": 0.0175,
    "max": 0.0175
   },
   "pub_final_h_m": {
-   "median": 2.084123011,
-   "max": 3.913882481
+   "median": 1.800450172,
+   "max": 2.098752379
   },
   "pub_max_h_m": {
-   "median": 5.011539746,
-   "max": 9.053872722
+   "median": 5.063250072,
+   "max": 5.785146952
   },
   "pub_rmse_h_m": {
-   "median": 1.472271642,
-   "max": 2.852395284
+   "median": 1.480445921,
+   "max": 1.721284857
   },
   "pub_touchdown_h_m": {
-   "median": 0.905026146,
-   "max": 3.055858382
+   "median": 0.821593246,
+   "max": 1.88318494
   },
   "spoof_latency_s": {
    "median": 2.8,
    "max": 2.8
   },
   "textured_median_h_m": {
-   "median": 0.898731417,
-   "max": 1.160703203
+   "median": 0.941910053,
+   "max": 1.140277921
   },
   "textured_rmse_h_m": {
-   "median": 1.604487958,
-   "max": 1.671941925
+   "median": 1.555198446,
+   "max": 1.694620405
   }
  },
  "forest": {
@@ -288,40 +288,40 @@
    "max": 0.0
   },
   "map_accept": {
-   "median": 164.0,
-   "max": 166.0
+   "median": 160.0,
+   "max": 163.0
   },
   "map_median_m": {
-   "median": 0.979422113,
-   "max": 1.021793412
+   "median": 0.929159959,
+   "max": 1.009007659
   },
   "max_jump_m": {
    "median": 0.0175,
    "max": 0.0175
   },
   "pub_final_h_m": {
-   "median": 18.829623289,
-   "max": 60.522391463
+   "median": 18.070653278,
+   "max": 63.976977895
   },
   "pub_max_h_m": {
-   "median": 44.262063522,
-   "max": 82.960408024
+   "median": 43.888831065,
+   "max": 83.294984538
   },
   "pub_rmse_h_m": {
-   "median": 16.846659374,
-   "max": 38.837653862
+   "median": 16.376724283,
+   "max": 41.184278691
   },
   "pub_touchdown_h_m": {
-   "median": 8.18643764,
-   "max": 46.211302855
+   "median": 5.153733386,
+   "max": 50.376215728
   },
   "textured_median_h_m": {
-   "median": 1.345272782,
-   "max": 1.416773652
+   "median": 1.29197146,
+   "max": 1.308775346
   },
   "textured_rmse_h_m": {
-   "median": 9.702925632,
-   "max": 27.192764305
+   "median": 10.468138669,
+   "max": 29.029567393
   },
   "ttr_s": {
    "median": 0.005,
@@ -345,40 +345,40 @@
    "max": 0.0
   },
   "map_accept": {
-   "median": 209.0,
-   "max": 217.0
+   "median": 212.0,
+   "max": 215.0
   },
   "map_median_m": {
-   "median": 0.853957729,
-   "max": 0.962091627
+   "median": 0.865355672,
+   "max": 0.914405578
   },
   "max_jump_m": {
    "median": 0.0175,
    "max": 0.0175
   },
   "pub_final_h_m": {
-   "median": 2.084123011,
-   "max": 3.913882481
+   "median": 1.800450172,
+   "max": 2.098752379
   },
   "pub_max_h_m": {
-   "median": 5.011539746,
-   "max": 9.053872722
+   "median": 5.063250072,
+   "max": 5.785146952
   },
   "pub_rmse_h_m": {
-   "median": 1.471262116,
-   "max": 2.851565709
+   "median": 1.479466469,
+   "max": 1.719910535
   },
   "pub_touchdown_h_m": {
-   "median": 0.905026146,
-   "max": 3.055858382
+   "median": 0.821593246,
+   "max": 1.88318494
   },
   "textured_median_h_m": {
-   "median": 0.886866821,
-   "max": 1.171994562
+   "median": 0.908198356,
+   "max": 1.147835603
   },
   "textured_rmse_h_m": {
-   "median": 1.604961363,
-   "max": 1.669138123
+   "median": 1.556425083,
+   "max": 1.691855684
   },
   "ttr_s": {
    "median": 0.005,
@@ -413,32 +413,32 @@
    "max": 0.0175
   },
   "pub_final_h_m": {
-   "median": 22.705043854,
-   "max": 44.154277675
+   "median": 12.438820125,
+   "max": 38.279069374
   },
   "pub_max_h_m": {
-   "median": 27.341485808,
-   "max": 46.739511458
+   "median": 22.520827228,
+   "max": 38.472137639
   },
   "pub_rmse_h_m": {
-   "median": 18.323001265,
-   "max": 21.254120188
+   "median": 13.332959896,
+   "max": 20.078785406
   },
   "pub_touchdown_h_m": {
-   "median": 27.341485808,
-   "max": 37.775834669
+   "median": 13.424052263,
+   "max": 37.136762282
   },
   "textured_median_h_m": {
-   "median": 10.759215449,
-   "max": 15.524130726
+   "median": 10.866551962,
+   "max": 15.237030039
   },
   "textured_rmse_h_m": {
-   "median": 15.690228562,
-   "max": 17.113436907
+   "median": 11.326650502,
+   "max": 17.45909573
   },
   "ttr_s": {
-   "median": 120.105,
-   "max": 120.105
+   "median": 119.805,
+   "max": 119.805
   },
   "vision_fail_latency_s": {
    "median": 0.105,
@@ -458,40 +458,40 @@
    "max": 0.0
   },
   "map_accept": {
-   "median": 209.0,
-   "max": 217.0
+   "median": 212.0,
+   "max": 215.0
   },
   "map_median_m": {
-   "median": 0.853957729,
-   "max": 0.962091627
+   "median": 0.865355672,
+   "max": 0.914405578
   },
   "max_jump_m": {
    "median": 0.0175,
    "max": 0.0175
   },
   "pub_final_h_m": {
-   "median": 2.084123011,
-   "max": 3.913882481
+   "median": 1.800450172,
+   "max": 2.098752379
   },
   "pub_max_h_m": {
-   "median": 5.011539746,
-   "max": 9.053872722
+   "median": 5.063250072,
+   "max": 5.785146952
   },
   "pub_rmse_h_m": {
-   "median": 1.473678489,
-   "max": 2.857299052
+   "median": 1.481886628,
+   "max": 1.729315743
   },
   "pub_touchdown_h_m": {
-   "median": 0.905026146,
-   "max": 3.055858382
+   "median": 0.821593246,
+   "max": 1.88318494
   },
   "textured_median_h_m": {
-   "median": 1.020448122,
-   "max": 1.207465517
+   "median": 1.035410756,
+   "max": 1.137271137
   },
   "textured_rmse_h_m": {
-   "median": 1.607220782,
-   "max": 1.688437067
+   "median": 1.590667555,
+   "max": 1.710730492
   }
  }
 }

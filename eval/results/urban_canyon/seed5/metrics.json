@@ -1,6 +1,6 @@
 {
   "all_h": {
-    "rmse": 1.400738356
+    "rmse": 1.404018595
   },
   "continuity": {
     "max_bleed_mps": 0.5,
@@ -19,10 +19,10 @@
       "gps_rej": 0,
       "lidar": 1320,
       "mag": 2782,
-      "map_acc": 217,
+      "map_acc": 215,
       "map_rej": 0,
-      "vio": 1288,
-      "vio_rej": 4
+      "vio": 1290,
+      "vio_rej": 2
     },
     "REF": {
       "baro": 1391,
@@ -31,16 +31,16 @@
       "gps_rej": 0,
       "lidar": 1320,
       "mag": 2782,
-      "map_acc": 217,
+      "map_acc": 215,
       "map_rej": 1,
-      "vio": 1288,
-      "vio_rej": 4
+      "vio": 1290,
+      "vio_rej": 2
     }
   },
   "final_after_recovery": {
-    "hpl_m": 8.163809709,
-    "pub_h_m": 1.288211121,
-    "ref_h_m": 1.207617106,
+    "hpl_m": 8.505763201,
+    "pub_h_m": 1.172179433,
+    "ref_h_m": 1.130249258,
     "t": 248.005
   },
   "gate_events": [
@@ -70,7 +70,7 @@
     ]
   ],
   "gate_final": "REJECTED",
-  "headline": "pub RMSE 1.47 m, final(after recovery) 1.29 m, touchdown 0.8 m, max 5.0 m, HMI 0, gate REJECTED",
+  "headline": "pub RMSE 1.48 m, final(after recovery) 1.17 m, touchdown 0.8 m, max 5.1 m, HMI 0, gate REJECTED",
   "health_events": [
     [
       0.0,
@@ -153,10 +153,10 @@
   ],
   "hmi_epochs": 0,
   "hpl_exceed_epochs": 0,
-  "hpl_median": 6.653899539,
+  "hpl_median": 6.693357913,
   "manifest": {
     "config_sha256": "20efcafa2d78d5844a9cb4e6e475fb049c29544a7a699a6e121be396332061ba",
-    "git_sha": "6ec7510903c7b33a891ae7baa718cafd19e1e404",
+    "git_sha": "be7daa8b525cdfb1c96cff2824a1e89e5edb63c2",
     "imagery": {
       "map": {
         "date": "2017-06-27",
@@ -173,89 +173,89 @@
     "vio": "ovserver"
   },
   "map": {
-    "accepted": 217,
-    "accepted_median_m": 0.784406339,
+    "accepted": 215,
+    "accepted_median_m": 0.738188593,
     "attempts": 247,
-    "candidates": 220,
+    "candidates": 218,
     "false_accept_rate": 0.0,
-    "median_m": 0.784406339,
-    "p95_m": 2.81422974,
-    "precision": 0.97235023,
-    "success_rate": 0.854251012
+    "median_m": 0.738188593,
+    "p95_m": 2.841788102,
+    "precision": 0.972093023,
+    "success_rate": 0.846153846
   },
   "path_m": 2216.761563201,
   "pub_h": {
-    "final": 0.790678412,
-    "max": 5.011539746,
-    "median": 0.992540293,
-    "p95": 2.705644745,
-    "rmse": 1.473678489
+    "final": 0.806241291,
+    "max": 5.074572369,
+    "median": 1.006320177,
+    "p95": 2.720855564,
+    "rmse": 1.481886628
   },
-  "pub_nees_mean": 2.68703693,
+  "pub_nees_mean": 2.712266889,
   "pub_v": {
-    "p95": 0.481584129,
-    "touchdown": 0.066121863
+    "p95": 0.486436438,
+    "touchdown": 0.06434225
   },
   "ref_h": {
-    "max": 4.96990365,
-    "rmse": 1.408006157
+    "max": 5.032902339,
+    "rmse": 1.411133184
   },
-  "ref_nees_mean": 2.686734876,
+  "ref_nees_mean": 2.688294302,
   "scenario": "urban_canyon",
   "scoreboard": {
     "gate_final": "REJECTED",
     "hmi_epochs": 0,
-    "map_accept": 217,
-    "map_median_m": 0.784406339,
+    "map_accept": 215,
+    "map_median_m": 0.738188593,
     "max_jump_m": 0.0175,
-    "pub_final_h_m": 1.288211121,
-    "pub_max_h_m": 5.011539746,
-    "pub_rmse_h_m": 1.473678489,
-    "pub_touchdown_h_m": 0.790678412,
-    "textured_median_h_m": 0.74522138,
-    "textured_rmse_h_m": 1.532425382
+    "pub_final_h_m": 1.172179433,
+    "pub_max_h_m": 5.074572369,
+    "pub_rmse_h_m": 1.481886628,
+    "pub_touchdown_h_m": 0.806241291,
+    "textured_median_h_m": 0.77381515,
+    "textured_rmse_h_m": 1.544436904
   },
   "seed": 5,
   "segments": {
     "seg_forest": {
       "kind": "forest",
-      "max": 2.426831983,
-      "median": 1.418413297,
-      "p99": 2.402900162,
-      "rmse": 1.453768377
+      "max": 2.442457775,
+      "median": 1.406018793,
+      "p99": 2.418567901,
+      "rmse": 1.42942935
     },
     "seg_landing": {
       "kind": "landing",
-      "max": 1.288211121,
-      "median": 0.498359164,
-      "p99": 1.208746626,
-      "rmse": 0.582425129
+      "max": 1.172179433,
+      "median": 0.510243439,
+      "p99": 1.102649952,
+      "rmse": 0.581905719
     },
     "seg_tail": {
       "kind": "textured",
-      "max": 1.688567501,
-      "median": 0.85650282,
-      "p99": 1.674784408,
-      "rmse": 0.995015451
+      "max": 1.396834369,
+      "median": 0.858501347,
+      "p99": 1.380737759,
+      "rmse": 0.937382424
     },
     "seg_town_a": {
       "kind": "textured",
-      "max": 5.011539746,
-      "median": 0.537940242,
-      "p99": 4.872591295,
-      "rmse": 1.399156273
+      "max": 5.074572369,
+      "median": 0.5330973,
+      "p99": 4.938508695,
+      "rmse": 1.43863105
     },
     "seg_town_b": {
       "kind": "textured",
-      "max": 2.855838071,
-      "median": 1.987548618,
-      "p99": 2.827711606,
-      "rmse": 1.910574321
+      "max": 2.847453394,
+      "median": 1.977229404,
+      "p99": 2.818856339,
+      "rmse": 1.90952847
     }
   },
   "textured": {
-    "median": 0.74522138,
-    "p99": 4.736357841,
-    "rmse": 1.532425382
+    "median": 0.77381515,
+    "p99": 4.808106534,
+    "rmse": 1.544436904
   }
 }

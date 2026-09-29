@@ -384,6 +384,12 @@ def run(scn: dict, seed: int, out_dir: Path, vio_mode: str = "auto", rrd: bool =
                     sv = sig_vio * (2.0 if vs["state"] == "DEGRADED" else 1.0)
                     if abs(float(ref.v[2])) > 1.0:
                         sv *= 3.0  # climb / descent: depth changes fast and mono VIO velocity degrades
+                    # high dynamics (horizontal acceleration, fast yaw): mono VIO velocity error grows; de-weight
+                    a_w = ref.R @ (acc[k] - ref.f.ba) + np.array([0.0, 0.0, -9.81])
+                    w_z = abs(float((ref.R @ (gyro[k] - ref.f.bg))[2]))
+                    dyn = max(float(np.linalg.norm(a_w[:2])) / 0.5, w_z / 0.3)
+                    if dyn > 1.0:
+                        sv *= min(1.0 + dyn, 5.0)
                     if refresh_pending:
                         sv = float(np.hypot(sv, reanchor_bias_sigma))  # VIO inherited REF's velocity error
                     ok_v = ref.vio_velocity(v_meas, sv)

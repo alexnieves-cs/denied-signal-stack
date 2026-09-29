@@ -49,46 +49,10 @@
    "no fix"
   ],
   [
-   178.55,
+   270.45,
    "VIO",
    "FAILED",
-   "velocity inconsistent with REF (5 consecutive gate failures)"
-  ],
-  [
-   179.55,
-   "VIO",
-   "OK",
-   ""
-  ],
-  [
-   245.75000000000003,
-   "VIO",
-   "FAILED",
-   "velocity inconsistent with REF (5 consecutive gate failures)"
-  ],
-  [
-   246.75000000000003,
-   "VIO",
-   "OK",
-   ""
-  ],
-  [
-   258.75,
-   "VIO",
-   "FAILED",
-   "velocity inconsistent with REF (5 consecutive gate failures)"
-  ],
-  [
-   259.75,
-   "VIO",
-   "OK",
-   ""
-  ],
-  [
-   270.40000000000003,
-   "VIO",
-   "FAILED",
-   "collapse"
+   "collapse,shock,dark"
   ],
   [
    270.95,
